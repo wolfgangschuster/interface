@@ -92,6 +92,8 @@
 
     <cd:command name="enspace" level="style" category="whitespace" file="spac-hor.mkiv"/>
 
+    <cd:command name="negenspace" level="style" category="whitespace" file="spac-hor.mkiv"/>
+
     <cd:command name="enskip" level="style" category="whitespace" file="spac-hor.mkiv"/>
 
     <cd:command name="quad" level="style" category="whitespace" file="spac-hor.mkiv"/>
@@ -99,6 +101,8 @@
     <cd:command name="qquad" level="style" category="whitespace" file="spac-hor.mkiv"/>
 
     <cd:command name="emspace" level="style" category="whitespace" file="spac-hor.mkiv"/>
+
+    <cd:command name="negemspace" level="style" category="whitespace" file="spac-hor.mkiv"/>
 
     <cd:command name="dotfskip" level="system" category="whitespace" file="spac-hor.mkiv">
         <cd:arguments>

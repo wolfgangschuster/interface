@@ -34,6 +34,9 @@
                 <cd:parameter name="features">
                     <cd:constant type="cd:name"/>
                 </cd:parameter>
+                <cd:parameter name="factor">
+                    <cd:constant type="cd:number"/>
+                </cd:parameter>
             </cd:assignments>
         </cd:arguments>
     </cd:command>
@@ -418,8 +421,30 @@
             <cd:resolve name="argument-false"/>
         </cd:arguments>
     </cd:command>
-
     <cd:command name="doifcurrentfonthasfeatureelse" level="system" category="fonts conditional" file="font-fea.mkvi">
+        <cd:arguments>
+            <cd:resolve name="argument-name"/>
+            <cd:resolve name="argument-true"/>
+            <cd:resolve name="argument-false"/>
+        </cd:arguments>
+    </cd:command>
+
+    <cd:command name="doifelsefontfeature" level="system" category="fonts conditional" file="font-fea.mkvi">
+        <cd:arguments>
+            <cd:resolve name="argument-name"/>
+            <cd:resolve name="argument-true"/>
+            <cd:resolve name="argument-false"/>
+        </cd:arguments>
+    </cd:command>
+    <cd:command name="doiffontfeatureelse" level="system" category="fonts conditional" file="font-fea.mkvi">
+        <cd:arguments>
+            <cd:resolve name="argument-name"/>
+            <cd:resolve name="argument-true"/>
+            <cd:resolve name="argument-false"/>
+        </cd:arguments>
+    </cd:command>
+
+    <cd:command name="doifunknownfontfeature" level="system" category="fonts conditional" file="font-fea.mkvi">
         <cd:arguments>
             <cd:resolve name="argument-name"/>
             <cd:resolve name="argument-true"/>
@@ -1712,6 +1737,14 @@
     <cd:command name="blockligatures" level="style" category="fonts" file="font-fea.mkvi">
         <cd:arguments>
             <cd:resolve name="keyword-text-list"/>
+        </cd:arguments>
+    </cd:command>
+
+    <!-- question for ws: maybe move to i-file with ... level="system" category="structure" ... -->
+
+    <cd:command name="addfontpath" level="style" category="fonts" file="font-ini.mkvi">
+        <cd:arguments>
+            <cd:resolve name="keyword-path-list"/>
         </cd:arguments>
     </cd:command>
 

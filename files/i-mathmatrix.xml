@@ -41,6 +41,9 @@
                 <cd:parameter name="distance">
                     <cd:constant type="cd:dimension"/>
                 </cd:parameter>
+                <cd:parameter name="simplecommand">
+                    <cd:constant type="cd:text"/>
+                </cd:parameter>
                 <cd:parameter name="location">
                     <cd:constant type="top"/>
                     <cd:constant type="bottom"/>
@@ -86,6 +89,15 @@
         </cd:command>
 
     -->
+
+    <cd:command name="mathmatrix" generated="yes" level="document" category="mathematics tables" file="math-ali.mkiv">
+        <cd:sequence>
+            <cd:variable value="mathmatrix"/>
+        </cd:sequence>
+        <cd:arguments>
+            <cd:content/>
+        </cd:arguments>
+    </cd:command>
 
     <cd:command name="matrices" type="environment" level="document" category="mathematics tables" file="math-ali.mkiv">
         <cd:arguments>
