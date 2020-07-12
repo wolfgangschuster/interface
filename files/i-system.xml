@@ -1007,6 +1007,12 @@
         </cd:arguments>
     </cd:command>
 
+    <cd:command name="firstinlist" level="system" file="syst-aux.mkiv">
+        <cd:arguments>
+            <cd:resolve name="keyword-command-list"/>
+        </cd:arguments>
+    </cd:command>
+
     <cd:command name="dogetcommacommandelement" level="system" file="syst-aux.mkiv">
         <cd:arguments>
             <cd:resolve name="string-number"/>
@@ -1831,6 +1837,22 @@
             <cd:delimiter name="else"/>
             <cd:resolve name="string-false"/>
             <cd:delimiter name="fi"/>
+        </cd:arguments>
+    </cd:command>
+
+    <cd:command name="doifelseassignmentcs" level="system" file="syst-aux.mkiv">
+        <cd:arguments>
+            <cd:resolve name="argument-text"/>
+            <cd:csname/>
+            <cd:csname/>
+        </cd:arguments>
+    </cd:command>
+
+    <cd:command name="doifassignmentelsecs" level="system" file="syst-aux.mkiv">
+        <cd:arguments>
+            <cd:resolve name="argument-text"/>
+            <cd:csname/>
+            <cd:csname/>
         </cd:arguments>
     </cd:command>
 
