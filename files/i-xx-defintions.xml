@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<cd:interface xmlns:cd="http://www.pragma-ade.com/commands">
+
+    <cd:interfacefile filename="i-xx-argument.xml"/>
+    <cd:interfacefile filename="i-xx-assignment.xml"/>
+    <cd:interfacefile filename="i-xx-keyword.xml"/>
+    <cd:interfacefile filename="i-xx-string.xml"/>
+    <cd:interfacefile filename="i-xx-value.xml"/>
+
+</cd:interface>
