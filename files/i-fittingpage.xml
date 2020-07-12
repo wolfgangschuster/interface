@@ -50,9 +50,9 @@
         </cd:arguments>
     </cd:command>
 
-    <cd:command name="fittingpage" type="environment" generated="yes" variant="example" file="page-app.mkiv">
+    <cd:command name="fittingpage" type="environment" generated="yes" variant="instance" file="page-app.mkiv">
         <cd:sequence>
-            <cd:variable value="fittingpage"/>
+            <cd:instance value="fittingpage"/>
         </cd:sequence>
         <cd:arguments>
             <cd:assignments list="yes" optional="yes">
@@ -60,30 +60,33 @@
             </cd:assignments>
         </cd:arguments>
         <cd:instances>
-            <cd:constant value="TEXpage"/>
-            <cd:constant value="MPpage"/>
+            <cd:resolve name="instance-fittingpage"/>
         </cd:instances>
     </cd:command>
 
-    <cd:command name="TEXpage" type="environment" file="page-app.mkiv">
-        <cd:arguments>
-            <cd:assignments list="yes" optional="yes">
-                <cd:inherit name="setupfittingpage"/>
-            </cd:assignments>
-        </cd:arguments>
-    </cd:command>
+    <!--
+
+        <cd:command name="TEXpage" type="environment" file="page-app.mkiv">
+            <cd:arguments>
+                <cd:assignments list="yes" optional="yes">
+                    <cd:inherit name="setupfittingpage"/>
+                </cd:assignments>
+            </cd:arguments>
+        </cd:command>
+
+        <cd:command name="MPpage" type="environment" file="meta-fig.mkiv">
+            <cd:arguments>
+                <cd:assignments list="yes" optional="yes">
+                    <cd:inherit name="setupfittingpage"/>
+                </cd:assignments>
+            </cd:arguments>
+        </cd:command>
+
+    -->
 
     <cd:command name="setupTEXpage" file="page-app.mkiv">
         <cd:arguments>
             <cd:assignments list="yes">
-                <cd:inherit name="setupfittingpage"/>
-            </cd:assignments>
-        </cd:arguments>
-    </cd:command>
-
-    <cd:command name="MPpage" type="environment" file="meta-fig.mkiv">
-        <cd:arguments>
-            <cd:assignments list="yes" optional="yes">
                 <cd:inherit name="setupfittingpage"/>
             </cd:assignments>
         </cd:arguments>

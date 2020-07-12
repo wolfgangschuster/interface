@@ -91,9 +91,9 @@
         </cd:arguments>
     </cd:command>
 
-    <cd:command name="comment" generated="yes" variant="example" file="scrn-wid.mkvi">
+    <cd:command name="comment" generated="yes" variant="instance" file="scrn-wid.mkvi">
         <cd:sequence>
-            <cd:variable value="comment"/>
+            <cd:instance value="comment"/>
         </cd:sequence>
         <cd:arguments>
             <cd:resolve name="keyword-text-optional"/>
@@ -103,13 +103,13 @@
             <cd:resolve name="argument-text"/>
         </cd:arguments>
         <cd:instances>
-            <cd:constant value="comment"/>
+            <cd:resolve name="instance-comment"/>
         </cd:instances>
     </cd:command>
 
-    <cd:command name="comment" type="environment" generated="yes" variant="example" file="scrn-wid.mkvi">
+    <cd:command name="comment" type="environment" generated="yes" variant="instance" file="scrn-wid.mkvi">
         <cd:sequence>
-            <cd:variable value="comment"/>
+            <cd:instance value="comment"/>
         </cd:sequence>
         <cd:arguments>
             <cd:resolve name="keyword-text-optional"/>
@@ -118,29 +118,33 @@
             </cd:assignments>
         </cd:arguments>
         <cd:instances>
-            <cd:constant value="comment"/>
+            <cd:resolve name="instance-comment"/>
         </cd:instances>
     </cd:command>
 
     <cd:command name="placecomments" file="scrn-wid.mkvi"/>
 
-    <cd:command name="comment" file="scrn-wid.mkvi">
-        <cd:arguments>
-            <cd:resolve name="keyword-text-optional"/>
-            <cd:assignments list="yes" optional="yes">
-                <cd:inherit name="setupcomment"/>
-            </cd:assignments>
-            <cd:resolve name="argument-text"/>
-        </cd:arguments>
-    </cd:command>
+    <!--
 
-    <cd:command name="comment" type="environment" file="scrn-wid.mkvi">
-        <cd:arguments>
-            <cd:resolve name="keyword-text-optional"/>
-            <cd:assignments list="yes" optional="yes">
-                <cd:inherit name="setupcomment"/>
-            </cd:assignments>
-        </cd:arguments>
-    </cd:command>
+        <cd:command name="comment" file="scrn-wid.mkvi">
+            <cd:arguments>
+                <cd:resolve name="keyword-text-optional"/>
+                <cd:assignments list="yes" optional="yes">
+                    <cd:inherit name="setupcomment"/>
+                </cd:assignments>
+                <cd:resolve name="argument-text"/>
+            </cd:arguments>
+        </cd:command>
+
+        <cd:command name="comment" type="environment" file="scrn-wid.mkvi">
+            <cd:arguments>
+                <cd:resolve name="keyword-text-optional"/>
+                <cd:assignments list="yes" optional="yes">
+                    <cd:inherit name="setupcomment"/>
+                </cd:assignments>
+            </cd:arguments>
+        </cd:command>
+
+    -->
 
 </cd:interface>

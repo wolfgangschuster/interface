@@ -82,43 +82,24 @@
         </cd:arguments>
     </cd:command>
 
-    <!--
+    <cd:command name="setupbars" file="node-rul.mkiv">
+        <cd:arguments>
+            <cd:resolve name="keyword-name-list-optional"/>
+            <cd:assignments list="yes">
+                <cd:inherit name="setupbar"/>
+            </cd:assignments>
+        </cd:arguments>
+    </cd:command>
 
-        <cd:command name="setupbars" file="node-rul.mkiv">
-            <cd:arguments>
-                <cd:resolve name="keyword-name-list-optional"/>
-                <cd:assignments list="yes">
-                    <cd:inherit name="setupbar"/>
-                </cd:assignments>
-            </cd:arguments>
-        </cd:command>
-
-    -->
-
-    <cd:command name="bar" generated="yes" variant="example" file="node-rul.mkiv">
+    <cd:command name="bar" generated="yes" variant="instance" file="node-rul.mkiv">
         <cd:sequence>
-            <cd:variable value="bar"/>
+            <cd:instance value="bar"/>
         </cd:sequence>
         <cd:arguments>
             <cd:content/>
         </cd:arguments>
         <cd:instances>
-            <cd:constant value="overbar"/>
-            <cd:constant value="underbar"/>
-            <cd:constant value="overstrike"/>
-            <cd:constant value="understrike"/>
-            <cd:constant value="overbars"/>
-            <cd:constant value="underbars"/>
-            <cd:constant value="overstrikes"/>
-            <cd:constant value="understrikes"/>
-            <cd:constant value="underrandom"/>
-            <cd:constant value="underrandoms"/>
-            <cd:constant value="underdash"/>
-            <cd:constant value="underdashes"/>
-            <cd:constant value="underdot"/>
-            <cd:constant value="underdots"/>
-            <cd:constant value="nobar"/>
-            <cd:constant value="hiddenbar"/>
+            <cd:resolve name="instance-bar"/>
         </cd:instances>
     </cd:command>
 
@@ -146,101 +127,105 @@
         </cd:arguments>
     </cd:command>
 
-    <cd:command name="overbar" file="node-rul.mkiv">
-        <cd:arguments>
-            <cd:content/>
-        </cd:arguments>
-    </cd:command>
+    <!--
 
-    <cd:command name="underbar" file="node-rul.mkiv">
-        <cd:arguments>
-            <cd:content/>
-        </cd:arguments>
-    </cd:command>
+        <cd:command name="overbar" file="node-rul.mkiv">
+            <cd:arguments>
+                <cd:content/>
+            </cd:arguments>
+        </cd:command>
 
-    <cd:command name="hiddenbar" file="node-rul.mkiv">
-        <cd:arguments>
-            <cd:content/>
-        </cd:arguments>
-    </cd:command>
+        <cd:command name="underbar" file="node-rul.mkiv">
+            <cd:arguments>
+                <cd:content/>
+            </cd:arguments>
+        </cd:command>
 
-    <cd:command name="overstrike" file="node-rul.mkiv">
-        <cd:arguments>
-            <cd:content/>
-        </cd:arguments>
-    </cd:command>
+        <cd:command name="hiddenbar" file="node-rul.mkiv">
+            <cd:arguments>
+                <cd:content/>
+            </cd:arguments>
+        </cd:command>
 
-    <cd:command name="understrike" file="node-rul.mkiv">
-        <cd:arguments>
-            <cd:content/>
-        </cd:arguments>
-    </cd:command>
+        <cd:command name="overstrike" file="node-rul.mkiv">
+            <cd:arguments>
+                <cd:content/>
+            </cd:arguments>
+        </cd:command>
 
-    <cd:command name="overbars" file="node-rul.mkiv">
-        <cd:arguments>
-            <cd:content/>
-        </cd:arguments>
-    </cd:command>
+        <cd:command name="understrike" file="node-rul.mkiv">
+            <cd:arguments>
+                <cd:content/>
+            </cd:arguments>
+        </cd:command>
 
-    <cd:command name="underbars" file="node-rul.mkiv">
-        <cd:arguments>
-            <cd:content/>
-        </cd:arguments>
-    </cd:command>
+        <cd:command name="overbars" file="node-rul.mkiv">
+            <cd:arguments>
+                <cd:content/>
+            </cd:arguments>
+        </cd:command>
 
-    <cd:command name="overstrikes" file="node-rul.mkiv">
-        <cd:arguments>
-            <cd:content/>
-        </cd:arguments>
-    </cd:command>
+        <cd:command name="underbars" file="node-rul.mkiv">
+            <cd:arguments>
+                <cd:content/>
+            </cd:arguments>
+        </cd:command>
 
-    <cd:command name="understrikes" file="node-rul.mkiv">
-        <cd:arguments>
-            <cd:content/>
-        </cd:arguments>
-    </cd:command>
+        <cd:command name="overstrikes" file="node-rul.mkiv">
+            <cd:arguments>
+                <cd:content/>
+            </cd:arguments>
+        </cd:command>
 
-    <cd:command name="underrandom" file="node-rul.mkiv">
-        <cd:arguments>
-            <cd:content/>
-        </cd:arguments>
-    </cd:command>
+        <cd:command name="understrikes" file="node-rul.mkiv">
+            <cd:arguments>
+                <cd:content/>
+            </cd:arguments>
+        </cd:command>
 
-    <cd:command name="underrandoms" file="node-rul.mkiv">
-        <cd:arguments>
-            <cd:content/>
-        </cd:arguments>
-    </cd:command>
+        <cd:command name="underrandom" file="node-rul.mkiv">
+            <cd:arguments>
+                <cd:content/>
+            </cd:arguments>
+        </cd:command>
 
-    <cd:command name="underdash" file="node-rul.mkiv">
-        <cd:arguments>
-            <cd:content/>
-        </cd:arguments>
-    </cd:command>
+        <cd:command name="underrandoms" file="node-rul.mkiv">
+            <cd:arguments>
+                <cd:content/>
+            </cd:arguments>
+        </cd:command>
 
-    <cd:command name="underdashes" file="node-rul.mkiv">
-        <cd:arguments>
-            <cd:content/>
-        </cd:arguments>
-    </cd:command>
+        <cd:command name="underdash" file="node-rul.mkiv">
+            <cd:arguments>
+                <cd:content/>
+            </cd:arguments>
+        </cd:command>
 
-    <cd:command name="underdot" file="node-rul.mkiv">
-        <cd:arguments>
-            <cd:content/>
-        </cd:arguments>
-    </cd:command>
+        <cd:command name="underdashes" file="node-rul.mkiv">
+            <cd:arguments>
+                <cd:content/>
+            </cd:arguments>
+        </cd:command>
 
-    <cd:command name="underdots" file="node-rul.mkiv">
-        <cd:arguments>
-            <cd:content/>
-        </cd:arguments>
-    </cd:command>
+        <cd:command name="underdot" file="node-rul.mkiv">
+            <cd:arguments>
+                <cd:content/>
+            </cd:arguments>
+        </cd:command>
 
-    <cd:command name="nobar" file="node-rul.mkiv">
-        <cd:arguments>
-            <cd:content/>
-        </cd:arguments>
-    </cd:command>
+        <cd:command name="underdots" file="node-rul.mkiv">
+            <cd:arguments>
+                <cd:content/>
+            </cd:arguments>
+        </cd:command>
+
+        <cd:command name="nobar" file="node-rul.mkiv">
+            <cd:arguments>
+                <cd:content/>
+            </cd:arguments>
+        </cd:command>
+
+    -->
 
     <cd:command name="resetbar" file="node-rul.mkiv"/>
 

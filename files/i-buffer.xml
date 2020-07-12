@@ -97,23 +97,27 @@
         </cd:arguments>
     </cd:command>
 
-    <cd:command name="buffer" type="environment" generated="yes" variant="example" file="buff-ini.mkiv">
+    <cd:command name="buffer" type="environment" generated="yes" variant="instance" file="buff-ini.mkiv">
         <cd:sequence>
-            <cd:variable value="buffer"/>
+            <cd:instance value="buffer"/>
         </cd:sequence>
         <cd:instances>
-            <cd:constant value="hiding"/>
+            <cd:resolve name="instance-buffer"/>
         </cd:instances>
     </cd:command>
 
-    <cd:command name="getbuffer" generated="yes" variant="example" file="buff-ini.mkiv">
+    <cd:command name="getbuffer" generated="yes" variant="instance" file="buff-ini.mkiv">
         <cd:sequence>
             <cd:string value="get"/>
-            <cd:variable value="buffer"/>
+            <cd:instance value="buffer"/>
         </cd:sequence>
     </cd:command>
 
-    <cd:command name="hiding" type="environment" file="buff-ini.mkiv"/>
+    <!--
+
+        <cd:command name="hiding" type="environment" file="buff-ini.mkiv"/>
+
+    -->
 
     <cd:command name="processtexbuffer" file="buff-ini.mkiv">
         <cd:sequence>
@@ -175,10 +179,10 @@
         </cd:arguments>
     </cd:command>
 
-    <cd:command name="typebuffer" generated="yes" variant="example" file="buff-ver.mkiv">
+    <cd:command name="typebuffer" generated="yes" variant="instance" file="buff-ver.mkiv">
         <cd:sequence>
             <cd:string value="type"/>
-            <cd:variable value="buffer"/>
+            <cd:instance value="buffer"/>
         </cd:sequence>
         <cd:arguments>
             <cd:assignments list="yes" optional="yes">

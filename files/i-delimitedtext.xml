@@ -90,26 +90,22 @@
         </cd:arguments>
     </cd:command>
 
-    <cd:command name="delimitedtext" generated="yes" variant="example" file="typo-del.mkiv">
+    <cd:command name="delimitedtext" generated="yes" variant="instance" file="typo-del.mkiv">
         <cd:sequence>
-            <cd:variable value="delimitedtext"/>
+            <cd:instance value="delimitedtext"/>
         </cd:sequence>
         <cd:arguments>
             <cd:resolve name="keyword-language-optional"/>
             <cd:content/>
         </cd:arguments>
         <cd:instances>
-            <cd:constant value="quotation"/>
-            <cd:constant value="quote"/>
-            <cd:constant value="blockquote"/>
-            <cd:constant value="speech"/>
-            <cd:constant value="aside"/>
+            <cd:resolve name="instance-delimitedtext"/>
         </cd:instances>
     </cd:command>
 
-    <cd:command name="delimitedtext" type="environment" generated="yes" variant="example" file="typo-del.mkiv">
+    <cd:command name="delimitedtext" type="environment" generated="yes" variant="instance" file="typo-del.mkiv">
         <cd:sequence>
-            <cd:variable value="delimitedtext"/>
+            <cd:instance value="delimitedtext"/>
         </cd:sequence>
         <cd:arguments>
             <cd:resolve name="keyword-language-optional"/>
@@ -118,11 +114,7 @@
             </cd:keywords>
         </cd:arguments>
         <cd:instances>
-            <cd:constant value="quotation"/>
-            <cd:constant value="quote"/>
-            <cd:constant value="blockquote"/>
-            <cd:constant value="speech"/>
-            <cd:constant value="aside"/>
+            <cd:resolve name="instance-delimitedtext"/>
         </cd:instances>
     </cd:command>
 
@@ -162,81 +154,85 @@
         </cd:arguments>
     </cd:command>
 
-    <cd:command name="quotation" file="typo-del.mkiv">
-        <cd:arguments>
-            <cd:resolve name="keyword-language-optional"/>
-            <cd:content/>
-        </cd:arguments>
-    </cd:command>
+    <!--
 
-    <cd:command name="quotation" type="environment" file="typo-del.mkiv">
-        <cd:arguments>
-            <cd:resolve name="keyword-language-optional"/>
-            <cd:keywords list="yes" optional="yes">
-                <cd:inherit name="startnarrower"/>
-            </cd:keywords>
-        </cd:arguments>
-    </cd:command>
+        <cd:command name="quotation" file="typo-del.mkiv">
+            <cd:arguments>
+                <cd:resolve name="keyword-language-optional"/>
+                <cd:content/>
+            </cd:arguments>
+        </cd:command>
 
-    <cd:command name="quote" file="typo-del.mkiv">
-        <cd:arguments>
-            <cd:resolve name="keyword-language-optional"/>
-            <cd:content/>
-        </cd:arguments>
-    </cd:command>
+        <cd:command name="quotation" type="environment" file="typo-del.mkiv">
+            <cd:arguments>
+                <cd:resolve name="keyword-language-optional"/>
+                <cd:keywords list="yes" optional="yes">
+                    <cd:inherit name="startnarrower"/>
+                </cd:keywords>
+            </cd:arguments>
+        </cd:command>
 
-    <cd:command name="quote" type="environment" file="typo-del.mkiv">
-        <cd:arguments>
-            <cd:resolve name="keyword-language-optional"/>
-        </cd:arguments>
-    </cd:command>
+        <cd:command name="quote" file="typo-del.mkiv">
+            <cd:arguments>
+                <cd:resolve name="keyword-language-optional"/>
+                <cd:content/>
+            </cd:arguments>
+        </cd:command>
 
-    <cd:command name="blockquote" file="typo-del.mkiv">
-        <cd:arguments>
-            <cd:resolve name="keyword-language-optional"/>
-            <cd:content/>
-        </cd:arguments>
-    </cd:command>
+        <cd:command name="quote" type="environment" file="typo-del.mkiv">
+            <cd:arguments>
+                <cd:resolve name="keyword-language-optional"/>
+            </cd:arguments>
+        </cd:command>
 
-    <cd:command name="blockquote" type="environment" file="typo-del.mkiv">
-        <cd:arguments>
-            <cd:resolve name="keyword-language-optional"/>
-            <cd:keywords list="yes" optional="yes">
-                <cd:inherit name="startnarrower"/>
-            </cd:keywords>
-        </cd:arguments>
-    </cd:command>
+        <cd:command name="blockquote" file="typo-del.mkiv">
+            <cd:arguments>
+                <cd:resolve name="keyword-language-optional"/>
+                <cd:content/>
+            </cd:arguments>
+        </cd:command>
 
-    <cd:command name="speech" file="typo-del.mkiv">
-        <cd:arguments>
-            <cd:resolve name="keyword-language-optional"/>
-            <cd:content/>
-        </cd:arguments>
-    </cd:command>
+        <cd:command name="blockquote" type="environment" file="typo-del.mkiv">
+            <cd:arguments>
+                <cd:resolve name="keyword-language-optional"/>
+                <cd:keywords list="yes" optional="yes">
+                    <cd:inherit name="startnarrower"/>
+                </cd:keywords>
+            </cd:arguments>
+        </cd:command>
 
-    <cd:command name="aside" type="environment" file="typo-del.mkiv">
-        <cd:arguments>
-            <cd:resolve name="keyword-language-optional"/>
-            <cd:keywords list="yes" optional="yes">
-                <cd:inherit name="startnarrower"/>
-            </cd:keywords>
-        </cd:arguments>
-    </cd:command>
+        <cd:command name="speech" file="typo-del.mkiv">
+            <cd:arguments>
+                <cd:resolve name="keyword-language-optional"/>
+                <cd:content/>
+            </cd:arguments>
+        </cd:command>
 
-    <cd:command name="aside" file="typo-del.mkiv">
-        <cd:arguments>
-            <cd:resolve name="keyword-language-optional"/>
-            <cd:content/>
-        </cd:arguments>
-    </cd:command>
+        <cd:command name="aside" type="environment" file="typo-del.mkiv">
+            <cd:arguments>
+                <cd:resolve name="keyword-language-optional"/>
+                <cd:keywords list="yes" optional="yes">
+                    <cd:inherit name="startnarrower"/>
+                </cd:keywords>
+            </cd:arguments>
+        </cd:command>
 
-    <cd:command name="speech" type="environment" file="typo-del.mkiv">
-        <cd:arguments>
-            <cd:keywords list="yes" optional="yes">
-                <cd:inherit name="startnarrower"/>
-            </cd:keywords>
-        </cd:arguments>
-    </cd:command>
+        <cd:command name="aside" file="typo-del.mkiv">
+            <cd:arguments>
+                <cd:resolve name="keyword-language-optional"/>
+                <cd:content/>
+            </cd:arguments>
+        </cd:command>
+
+        <cd:command name="speech" type="environment" file="typo-del.mkiv">
+            <cd:arguments>
+                <cd:keywords list="yes" optional="yes">
+                    <cd:inherit name="startnarrower"/>
+                </cd:keywords>
+            </cd:arguments>
+        </cd:command>
+
+    -->
 
     <cd:command name="setupquotation" file="typo-del.mkiv">
         <cd:arguments>

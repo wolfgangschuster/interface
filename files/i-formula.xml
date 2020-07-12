@@ -86,23 +86,33 @@
                 <cd:parameter name="frame">
                     <cd:constant type="number"/>
                 </cd:parameter>
+                <cd:parameter name="expansion">
+                    <cd:constant type="yes"/>
+                    <cd:constant type="no" default="yes"/>
+                    <cd:constant type="xml"/>
+                </cd:parameter>
+                <cd:parameter name="referenceprefix">
+                    <cd:resolve name="value-referenceprefix"/>
+                </cd:parameter>
+                <cd:parameter name="xmlsetup">
+                    <cd:constant type="cd:name"/>
+                </cd:parameter>
+                <cd:parameter name="catcodes">
+                    <cd:constant type="cd:name"/>
+                </cd:parameter>
                 <cd:inherit name="setupcounter"/>
             </cd:assignments>
         </cd:arguments>
     </cd:command>
 
-    <!--
-
-        <cd:command name="setupformulas" file="math-for.mkiv">
-            <cd:arguments>
-                <cd:resolve name="keyword-name-list-optional"/>
-                <cd:assignments list="yes">
-                    <cd:inherit name="setupformula"/>
-                </cd:assignments>
-            </cd:arguments>
-        </cd:command>
-
-    -->
+    <cd:command name="setupformulas" file="math-for.mkiv">
+        <cd:arguments>
+            <cd:resolve name="keyword-name-list-optional"/>
+            <cd:assignments list="yes">
+                <cd:inherit name="setupformula"/>
+            </cd:assignments>
+        </cd:arguments>
+    </cd:command>
 
     <cd:command name="definesubformula" file="math-for.mkiv">
         <cd:arguments>
@@ -125,32 +135,25 @@
         </cd:arguments>
     </cd:command>
 
-    <!--
+    <cd:command name="setupsubformulas" file="math-for.mkiv">
+        <cd:arguments>
+            <cd:resolve name="keyword-name-list-optional"/>
+            <cd:assignments list="yes">
+                <cd:inherit name="setupsubformula"/>
+            </cd:assignments>
+        </cd:arguments>
+    </cd:command>
 
-        <cd:command name="setupsubformulas" file="math-for.mkiv">
-            <cd:arguments>
-                <cd:resolve name="keyword-name-list-optional"/>
-                <cd:assignments list="yes">
-                    <cd:inherit name="setupsubformula"/>
-                </cd:assignments>
-            </cd:arguments>
-        </cd:command>
-
-    -->
-
-    <cd:command name="formula" type="environment" generated="yes" variant="example" file="strc-mat.mkiv">
+    <cd:command name="formula" type="environment" generated="yes" variant="instance" file="strc-mat.mkiv">
         <cd:sequence>
-            <cd:variable value="formula"/>
+            <cd:instance value="formula"/>
             <cd:string value="formula"/>
         </cd:sequence>
         <cd:arguments>
             <cd:resolve name="keyword-formula-list-optional"/>
         </cd:arguments>
         <cd:instances>
-            <cd:constant value="sp"/>
-            <cd:constant value="sd"/>
-            <cd:constant value="mp"/>
-            <cd:constant value="md"/>
+            <cd:resolve name="instance-formula"/>
         </cd:instances>
     </cd:command>
 
@@ -160,29 +163,33 @@
         </cd:arguments>
     </cd:command>
 
-    <cd:command name="spformula" type="environment" file="strc-mat.mkiv">
-        <cd:arguments>
-            <cd:resolve name="keyword-formula-list-optional"/>
-        </cd:arguments>
-    </cd:command>
+    <!--
 
-    <cd:command name="sdformula" type="environment" file="strc-mat.mkiv">
-        <cd:arguments>
-            <cd:resolve name="keyword-formula-list-optional"/>
-        </cd:arguments>
-    </cd:command>
+        <cd:command name="spformula" type="environment" file="strc-mat.mkiv">
+            <cd:arguments>
+                <cd:resolve name="keyword-formula-list-optional"/>
+            </cd:arguments>
+        </cd:command>
 
-    <cd:command name="mpformula" type="environment" file="strc-mat.mkiv">
-        <cd:arguments>
-            <cd:resolve name="keyword-formula-list-optional"/>
-        </cd:arguments>
-    </cd:command>
+        <cd:command name="sdformula" type="environment" file="strc-mat.mkiv">
+            <cd:arguments>
+                <cd:resolve name="keyword-formula-list-optional"/>
+            </cd:arguments>
+        </cd:command>
 
-    <cd:command name="mdformula" type="environment" file="strc-mat.mkiv">
-        <cd:arguments>
-            <cd:resolve name="keyword-formula-list-optional"/>
-        </cd:arguments>
-    </cd:command>
+        <cd:command name="mpformula" type="environment" file="strc-mat.mkiv">
+            <cd:arguments>
+                <cd:resolve name="keyword-formula-list-optional"/>
+            </cd:arguments>
+        </cd:command>
+
+        <cd:command name="mdformula" type="environment" file="strc-mat.mkiv">
+            <cd:arguments>
+                <cd:resolve name="keyword-formula-list-optional"/>
+            </cd:arguments>
+        </cd:command>
+
+    -->
 
     <cd:command name="defineformulaalternative" file="strc-mat.mkiv">
         <cd:arguments>

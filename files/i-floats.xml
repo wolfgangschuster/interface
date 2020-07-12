@@ -7,11 +7,17 @@
     <cd:command name="definefloat" file="strc-flt.mkvi">
         <cd:arguments>
             <cd:resolve name="keyword-singular"/>
-            <cd:resolve name="keyword-plural-optional"/>
+            <cd:keywords optional="yes">
+                <cd:constant type="cd:singular"/>
+                <cd:constant type="cd:plural"/>
+            </cd:keywords>
             <cd:assignments list="yes" optional="yes">
                 <cd:inherit name="setupfloat"/>
             </cd:assignments>
         </cd:arguments>
+        <cd:instances>
+            <cd:resolve name="instance-float"/>
+        </cd:instances>
     </cd:command>
 
     <cd:command name="definefloat" variant="name" file="strc-flt.mkvi">
@@ -20,6 +26,9 @@
             <cd:resolve name="keyword-plural-optional"/>
             <cd:resolve name="keyword-singular-optional"/>
         </cd:arguments>
+        <cd:instances>
+            <cd:resolve name="instance-float"/>
+        </cd:instances>
     </cd:command>
 
     <cd:command name="setupfloat" file="strc-flt.mkvi">
@@ -112,6 +121,20 @@
                 <cd:parameter name="bottomafter">
                     <cd:constant type="cd:command"/>
                 </cd:parameter>
+                <cd:parameter name="expansion">
+                    <cd:constant type="yes"/>
+                    <cd:constant type="no" default="yes"/>
+                    <cd:constant type="xml"/>
+                </cd:parameter>
+                <cd:parameter name="referenceprefix">
+                    <cd:resolve name="value-referenceprefix"/>
+                </cd:parameter>
+                <cd:parameter name="xmlsetup">
+                    <cd:constant type="cd:name"/>
+                </cd:parameter>
+                <cd:parameter name="catcodes">
+                    <cd:constant type="cd:name"/>
+                </cd:parameter>
                 <!-- begin root only -->
                 <cd:parameter name="spacebefore">
                     <cd:constant type="none"/>
@@ -168,16 +191,16 @@
         </cd:arguments>
     </cd:command>
 
-    <!--
+    <cd:command name="setupfloats" file="strc-flt.mkvi">
+        <cd:arguments>
+            <cd:resolve name="keyword-singular-list-optional"/>
+            <cd:assignments list="yes">
+                <cd:inherit name="setupfloat"/>
+            </cd:assignments>
+        </cd:arguments>
+    </cd:command>
 
-        <cd:command name="setupfloats" file="strc-flt.mkvi">
-            <cd:arguments>
-                <cd:resolve name="keyword-singular-list-optional"/>
-                <cd:assignments list="yes">
-                    <cd:inherit name="setupfloat"/>
-                </cd:assignments>
-            </cd:arguments>
-        </cd:command>
+    <!--
 
         <cd:command name="definefloatcaption" file="strc-flt.mkvi">
             <cd:arguments>
@@ -312,23 +335,19 @@
         </cd:arguments>
     </cd:command>
 
-    <!--
+    <cd:command name="setupcaptions" file="strc-flt.mkvi">
+        <cd:arguments>
+            <cd:resolve name="keyword-name-list-optional"/>
+            <cd:assignments list="yes">
+                <cd:inherit name="setupfloatcaption"/>
+            </cd:assignments>
+        </cd:arguments>
+    </cd:command>
 
-        <cd:command name="setupcaptions" file="strc-flt.mkvi">
-            <cd:arguments>
-                <cd:resolve name="keyword-name-list-optional"/>
-                <cd:assignments list="yes">
-                    <cd:inherit name="setupfloatcaption"/>
-                </cd:assignments>
-            </cd:arguments>
-        </cd:command>
-
-    -->
-
-    <cd:command name="placefloat" generated="yes" variant="example" file="strc-flt.mkvi">
+    <cd:command name="placefloat" generated="yes" variant="instance" file="strc-flt.mkvi">
         <cd:sequence>
             <cd:string value="place"/>
-            <cd:variable value="float"/>
+            <cd:instance value="float"/>
         </cd:sequence>
         <cd:arguments>
             <cd:resolve name="keyword-floatlocation-list-optional"/>
@@ -337,11 +356,7 @@
             <cd:content/>
         </cd:arguments>
         <cd:instances>
-            <cd:constant value="chemical"/>
-            <cd:constant value="figure"/>
-            <cd:constant value="table"/>
-            <cd:constant value="intermezzo"/>
-            <cd:constant value="graphic"/>
+            <cd:resolve name="instance-float"/>
         </cd:instances>
     </cd:command>
 
@@ -355,21 +370,17 @@
         </cd:arguments>
     </cd:command>
 
-    <cd:command name="placefloat" type="environment" generated="yes" variant="example" file="strc-flt.mkvi">
+    <cd:command name="placefloat" type="environment" generated="yes" variant="instance" file="strc-flt.mkvi">
         <cd:sequence>
             <cd:string value="place"/>
-            <cd:variable value="float"/>
+            <cd:instance value="float"/>
         </cd:sequence>
         <cd:arguments>
             <cd:resolve name="assignment-floatdata-list-optional"/>
             <cd:resolve name="assignment-userdata-list-optional"/>
         </cd:arguments>
         <cd:instances>
-            <cd:constant value="chemical"/>
-            <cd:constant value="figure"/>
-            <cd:constant value="table"/>
-            <cd:constant value="intermezzo"/>
-            <cd:constant value="graphic"/>
+            <cd:resolve name="instance-float"/>
         </cd:instances>
     </cd:command>
 
@@ -381,9 +392,9 @@
         </cd:arguments>
     </cd:command>
 
-    <cd:command name="floattext" type="environment" generated="yes" variant="example" file="strc-flt.mkvi">
+    <cd:command name="floattext" type="environment" generated="yes" variant="instance" file="strc-flt.mkvi">
         <cd:sequence>
-            <cd:variable value="float"/>
+            <cd:instance value="float"/>
             <cd:string value="text"/>
         </cd:sequence>
         <cd:arguments>
@@ -391,30 +402,39 @@
             <cd:resolve name="keyword-reference-list-optional"/>
             <cd:resolve name="argument-text"/>
         </cd:arguments>
+        <cd:instances>
+            <cd:resolve name="instance-float"/>
+        </cd:instances>
     </cd:command>
 
-    <cd:command name="placelistoffloats" generated="yes" variant="example" file="strc-flt.mkvi">
+    <cd:command name="placelistoffloats" generated="yes" variant="instance" file="strc-flt.mkvi">
         <cd:sequence>
             <cd:string value="placelistof"/>
-            <cd:variable value="floats"/>
+            <cd:instance value="floats"/>
         </cd:sequence>
         <cd:arguments>
             <cd:assignments list="yes" optional="yes">
                 <cd:inherit name="setuplist"/>
             </cd:assignments>
         </cd:arguments>
+        <cd:instances>
+            <cd:resolve name="instance-floatlist"/>
+        </cd:instances>
     </cd:command>
 
-    <cd:command name="completelistoffloats" generated="yes" variant="example" file="strc-flt.mkvi">
+    <cd:command name="completelistoffloats" generated="yes" variant="instance" file="strc-flt.mkvi">
         <cd:sequence>
             <cd:string value="completelistof"/>
-            <cd:variable value="floats"/>
+            <cd:instance value="floats"/>
         </cd:sequence>
         <cd:arguments>
             <cd:assignments list="yes" optional="yes">
                 <cd:inherit name="setuplist"/>
             </cd:assignments>
         </cd:arguments>
+        <cd:instances>
+            <cd:resolve name="instance-floatlist"/>
+        </cd:instances>
     </cd:command>
 
     <cd:command name="floatuserdataparameter" file="strc-flt.mkvi">
@@ -465,197 +485,201 @@
         </cd:arguments>
     </cd:command>
 
-    <cd:command name="placefigure" file="strc-flt.mkvi">
-        <cd:arguments>
-            <cd:resolve name="keyword-floatlocation-list-optional"/>
-            <cd:resolve name="keyword-reference-list-optional"/>
-            <cd:resolve name="argument-text"/>
-            <cd:content/>
-        </cd:arguments>
-    </cd:command>
+    <!--
 
-    <cd:command name="placefigure" type="environment" file="strc-flt.mkvi">
-        <cd:arguments>
-            <cd:resolve name="assignment-floatdata-list-optional"/>
-            <cd:resolve name="assignment-userdata-list-optional"/>
-        </cd:arguments>
-    </cd:command>
+        <cd:command name="placefigure" file="strc-flt.mkvi">
+            <cd:arguments>
+                <cd:resolve name="keyword-floatlocation-list-optional"/>
+                <cd:resolve name="keyword-reference-list-optional"/>
+                <cd:resolve name="argument-text"/>
+                <cd:content/>
+            </cd:arguments>
+        </cd:command>
 
-    <cd:command name="figuretext" type="environment" file="strc-flt.mkvi">
-        <cd:arguments>
-            <cd:resolve name="keyword-floatlocation-list-optional"/>
-            <cd:resolve name="keyword-reference-list-optional"/>
-            <cd:resolve name="argument-text"/>
-        </cd:arguments>
-    </cd:command>
+        <cd:command name="placefigure" type="environment" file="strc-flt.mkvi">
+            <cd:arguments>
+                <cd:resolve name="assignment-floatdata-list-optional"/>
+                <cd:resolve name="assignment-userdata-list-optional"/>
+            </cd:arguments>
+        </cd:command>
 
-    <cd:command name="placelistoffigures" file="strc-flt.mkvi">
-        <cd:arguments>
-            <cd:assignments list="yes" optional="yes">
-                <cd:inherit name="setuplist"/>
-            </cd:assignments>
-        </cd:arguments>
-    </cd:command>
+        <cd:command name="figuretext" type="environment" file="strc-flt.mkvi">
+            <cd:arguments>
+                <cd:resolve name="keyword-floatlocation-list-optional"/>
+                <cd:resolve name="keyword-reference-list-optional"/>
+                <cd:resolve name="argument-text"/>
+            </cd:arguments>
+        </cd:command>
 
-    <cd:command name="completelistoffigures" file="strc-flt.mkvi">
-        <cd:arguments>
-            <cd:assignments list="yes" optional="yes">
-                <cd:inherit name="setuplist"/>
-            </cd:assignments>
-        </cd:arguments>
-    </cd:command>
+        <cd:command name="placelistoffigures" file="strc-flt.mkvi">
+            <cd:arguments>
+                <cd:assignments list="yes" optional="yes">
+                    <cd:inherit name="setuplist"/>
+                </cd:assignments>
+            </cd:arguments>
+        </cd:command>
 
-    <cd:command name="placetable" file="strc-flt.mkvi">
-        <cd:arguments>
-            <cd:resolve name="keyword-floatlocation-list-optional"/>
-            <cd:resolve name="keyword-reference-list-optional"/>
-            <cd:resolve name="argument-text"/>
-            <cd:content/>
-        </cd:arguments>
-    </cd:command>
+        <cd:command name="completelistoffigures" file="strc-flt.mkvi">
+            <cd:arguments>
+                <cd:assignments list="yes" optional="yes">
+                    <cd:inherit name="setuplist"/>
+                </cd:assignments>
+            </cd:arguments>
+        </cd:command>
 
-    <cd:command name="placetable" type="environment" file="strc-flt.mkvi">
-        <cd:arguments>
-            <cd:resolve name="assignment-floatdata-list-optional"/>
-            <cd:resolve name="assignment-userdata-list-optional"/>
-        </cd:arguments>
-    </cd:command>
+        <cd:command name="placetable" file="strc-flt.mkvi">
+            <cd:arguments>
+                <cd:resolve name="keyword-floatlocation-list-optional"/>
+                <cd:resolve name="keyword-reference-list-optional"/>
+                <cd:resolve name="argument-text"/>
+                <cd:content/>
+            </cd:arguments>
+        </cd:command>
 
-    <cd:command name="tabletext" type="environment" file="strc-flt.mkvi">
-        <cd:arguments>
-            <cd:resolve name="keyword-floatlocation-list-optional"/>
-            <cd:resolve name="keyword-reference-list-optional"/>
-            <cd:resolve name="argument-text"/>
-        </cd:arguments>
-    </cd:command>
+        <cd:command name="placetable" type="environment" file="strc-flt.mkvi">
+            <cd:arguments>
+                <cd:resolve name="assignment-floatdata-list-optional"/>
+                <cd:resolve name="assignment-userdata-list-optional"/>
+            </cd:arguments>
+        </cd:command>
 
-    <cd:command name="placelistoftables" file="strc-flt.mkvi">
-        <cd:arguments>
-            <cd:assignments list="yes" optional="yes">
-                <cd:inherit name="setuplist"/>
-            </cd:assignments>
-        </cd:arguments>
-    </cd:command>
+        <cd:command name="tabletext" type="environment" file="strc-flt.mkvi">
+            <cd:arguments>
+                <cd:resolve name="keyword-floatlocation-list-optional"/>
+                <cd:resolve name="keyword-reference-list-optional"/>
+                <cd:resolve name="argument-text"/>
+            </cd:arguments>
+        </cd:command>
 
-    <cd:command name="completelistoftables" file="strc-flt.mkvi">
-        <cd:arguments>
-            <cd:assignments list="yes" optional="yes">
-                <cd:inherit name="setuplist"/>
-            </cd:assignments>
-        </cd:arguments>
-    </cd:command>
+        <cd:command name="placelistoftables" file="strc-flt.mkvi">
+            <cd:arguments>
+                <cd:assignments list="yes" optional="yes">
+                    <cd:inherit name="setuplist"/>
+                </cd:assignments>
+            </cd:arguments>
+        </cd:command>
 
-    <cd:command name="placegraphic" file="strc-flt.mkvi">
-        <cd:arguments>
-            <cd:resolve name="keyword-floatlocation-list-optional"/>
-            <cd:resolve name="keyword-reference-list-optional"/>
-            <cd:resolve name="argument-text"/>
-            <cd:content/>
-        </cd:arguments>
-    </cd:command>
+        <cd:command name="completelistoftables" file="strc-flt.mkvi">
+            <cd:arguments>
+                <cd:assignments list="yes" optional="yes">
+                    <cd:inherit name="setuplist"/>
+                </cd:assignments>
+            </cd:arguments>
+        </cd:command>
 
-    <cd:command name="placegraphic" type="environment" file="strc-flt.mkvi">
-        <cd:arguments>
-            <cd:resolve name="assignment-floatdata-list-optional"/>
-            <cd:resolve name="assignment-userdata-list-optional"/>
-        </cd:arguments>
-    </cd:command>
+        <cd:command name="placegraphic" file="strc-flt.mkvi">
+            <cd:arguments>
+                <cd:resolve name="keyword-floatlocation-list-optional"/>
+                <cd:resolve name="keyword-reference-list-optional"/>
+                <cd:resolve name="argument-text"/>
+                <cd:content/>
+            </cd:arguments>
+        </cd:command>
 
-    <cd:command name="graphictext" type="environment" file="strc-flt.mkvi">
-        <cd:arguments>
-            <cd:resolve name="keyword-floatlocation-list-optional"/>
-            <cd:resolve name="keyword-reference-list-optional"/>
-            <cd:resolve name="argument-text"/>
-        </cd:arguments>
-    </cd:command>
+        <cd:command name="placegraphic" type="environment" file="strc-flt.mkvi">
+            <cd:arguments>
+                <cd:resolve name="assignment-floatdata-list-optional"/>
+                <cd:resolve name="assignment-userdata-list-optional"/>
+            </cd:arguments>
+        </cd:command>
 
-    <cd:command name="placelistofgraphics" file="strc-flt.mkvi">
-        <cd:arguments>
-            <cd:assignments list="yes" optional="yes">
-                <cd:inherit name="setuplist"/>
-            </cd:assignments>
-        </cd:arguments>
-    </cd:command>
+        <cd:command name="graphictext" type="environment" file="strc-flt.mkvi">
+            <cd:arguments>
+                <cd:resolve name="keyword-floatlocation-list-optional"/>
+                <cd:resolve name="keyword-reference-list-optional"/>
+                <cd:resolve name="argument-text"/>
+            </cd:arguments>
+        </cd:command>
 
-    <cd:command name="completelistofgraphics" file="strc-flt.mkvi">
-        <cd:arguments>
-            <cd:assignments list="yes" optional="yes">
-                <cd:inherit name="setuplist"/>
-            </cd:assignments>
-        </cd:arguments>
-    </cd:command>
+        <cd:command name="placelistofgraphics" file="strc-flt.mkvi">
+            <cd:arguments>
+                <cd:assignments list="yes" optional="yes">
+                    <cd:inherit name="setuplist"/>
+                </cd:assignments>
+            </cd:arguments>
+        </cd:command>
 
-    <cd:command name="placeintermezzo" file="strc-flt.mkvi">
-        <cd:arguments>
-            <cd:resolve name="keyword-floatlocation-list-optional"/>
-            <cd:resolve name="keyword-reference-list-optional"/>
-            <cd:resolve name="argument-text"/>
-            <cd:content/>
-        </cd:arguments>
-    </cd:command>
+        <cd:command name="completelistofgraphics" file="strc-flt.mkvi">
+            <cd:arguments>
+                <cd:assignments list="yes" optional="yes">
+                    <cd:inherit name="setuplist"/>
+                </cd:assignments>
+            </cd:arguments>
+        </cd:command>
 
-    <cd:command name="placeintermezzo" type="environment" file="strc-flt.mkvi">
-        <cd:arguments>
-            <cd:resolve name="assignment-floatdata-list-optional"/>
-            <cd:resolve name="assignment-userdata-list-optional"/>
-        </cd:arguments>
-    </cd:command>
+        <cd:command name="placeintermezzo" file="strc-flt.mkvi">
+            <cd:arguments>
+                <cd:resolve name="keyword-floatlocation-list-optional"/>
+                <cd:resolve name="keyword-reference-list-optional"/>
+                <cd:resolve name="argument-text"/>
+                <cd:content/>
+            </cd:arguments>
+        </cd:command>
 
-    <cd:command name="intermezzotext" type="environment" file="strc-flt.mkvi">
-        <cd:arguments>
-            <cd:resolve name="keyword-floatlocation-list-optional"/>
-            <cd:resolve name="keyword-reference-list-optional"/>
-            <cd:resolve name="argument-text"/>
-        </cd:arguments>
-    </cd:command>
+        <cd:command name="placeintermezzo" type="environment" file="strc-flt.mkvi">
+            <cd:arguments>
+                <cd:resolve name="assignment-floatdata-list-optional"/>
+                <cd:resolve name="assignment-userdata-list-optional"/>
+            </cd:arguments>
+        </cd:command>
 
-    <cd:command name="placelistofintermezzi" file="strc-flt.mkvi">
-        <cd:arguments>
-            <cd:assignments list="yes" optional="yes">
-                <cd:inherit name="setuplist"/>
-            </cd:assignments>
-        </cd:arguments>
-    </cd:command>
+        <cd:command name="intermezzotext" type="environment" file="strc-flt.mkvi">
+            <cd:arguments>
+                <cd:resolve name="keyword-floatlocation-list-optional"/>
+                <cd:resolve name="keyword-reference-list-optional"/>
+                <cd:resolve name="argument-text"/>
+            </cd:arguments>
+        </cd:command>
 
-    <cd:command name="completelistofintermezzi" file="strc-flt.mkvi">
-        <cd:arguments>
-            <cd:assignments list="yes" optional="yes">
-                <cd:inherit name="setuplist"/>
-            </cd:assignments>
-        </cd:arguments>
-    </cd:command>
+        <cd:command name="placelistofintermezzi" file="strc-flt.mkvi">
+            <cd:arguments>
+                <cd:assignments list="yes" optional="yes">
+                    <cd:inherit name="setuplist"/>
+                </cd:assignments>
+            </cd:arguments>
+        </cd:command>
 
-    <cd:command name="placechemical" file="strc-flt.mkvi">
-        <cd:arguments>
-            <cd:resolve name="keyword-floatlocation-list-optional"/>
-            <cd:resolve name="keyword-reference-list-optional"/>
-            <cd:resolve name="argument-text"/>
-            <cd:content/>
-        </cd:arguments>
-    </cd:command>
+        <cd:command name="completelistofintermezzi" file="strc-flt.mkvi">
+            <cd:arguments>
+                <cd:assignments list="yes" optional="yes">
+                    <cd:inherit name="setuplist"/>
+                </cd:assignments>
+            </cd:arguments>
+        </cd:command>
 
-    <cd:command name="placechemical" type="environment" file="strc-flt.mkvi">
-        <cd:arguments>
-            <cd:resolve name="assignment-floatdata-list-optional"/>
-            <cd:resolve name="assignment-userdata-list-optional"/>
-        </cd:arguments>
-    </cd:command>
+        <cd:command name="placechemical" file="strc-flt.mkvi">
+            <cd:arguments>
+                <cd:resolve name="keyword-floatlocation-list-optional"/>
+                <cd:resolve name="keyword-reference-list-optional"/>
+                <cd:resolve name="argument-text"/>
+                <cd:content/>
+            </cd:arguments>
+        </cd:command>
 
-    <cd:command name="placelistofchemicals" file="strc-flt.mkvi">
-        <cd:arguments>
-            <cd:assignments list="yes" optional="yes">
-                <cd:inherit name="setuplist"/>
-            </cd:assignments>
-        </cd:arguments>
-    </cd:command>
+        <cd:command name="placechemical" type="environment" file="strc-flt.mkvi">
+            <cd:arguments>
+                <cd:resolve name="assignment-floatdata-list-optional"/>
+                <cd:resolve name="assignment-userdata-list-optional"/>
+            </cd:arguments>
+        </cd:command>
 
-    <cd:command name="completelistofchemicals" file="strc-flt.mkvi">
-        <cd:arguments>
-            <cd:assignments list="yes" optional="yes">
-                <cd:inherit name="setuplist"/>
-            </cd:assignments>
-        </cd:arguments>
-    </cd:command>
+        <cd:command name="placelistofchemicals" file="strc-flt.mkvi">
+            <cd:arguments>
+                <cd:assignments list="yes" optional="yes">
+                    <cd:inherit name="setuplist"/>
+                </cd:assignments>
+            </cd:arguments>
+        </cd:command>
+
+        <cd:command name="completelistofchemicals" file="strc-flt.mkvi">
+            <cd:arguments>
+                <cd:assignments list="yes" optional="yes">
+                    <cd:inherit name="setuplist"/>
+                </cd:assignments>
+            </cd:arguments>
+        </cd:command>
+
+    -->
 
     <cd:command name="setuplocalfloats" file="strc-flt.mkvi">
         <cd:arguments>

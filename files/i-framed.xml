@@ -241,9 +241,9 @@
         </cd:arguments>
     </cd:command>
 
-    <cd:command name="framed" generated="yes" variant="example" file="pack-rul.mkiv">
+    <cd:command name="framed" generated="yes" variant="instance" file="pack-rul.mkiv">
         <cd:sequence>
-            <cd:variable value="framed"/>
+            <cd:instance value="framed"/>
         </cd:sequence>
         <cd:arguments>
             <cd:assignments list="yes" optional="yes">
@@ -252,8 +252,7 @@
             <cd:content/>
         </cd:arguments>
         <cd:instances>
-            <cd:constant value="unframed"/>
-            <cd:constant value="fitfieldframed"/>
+            <cd:resolve name="instance-framed"/>
         </cd:instances>
     </cd:command>
 
@@ -331,14 +330,18 @@
         </cd:arguments>
     </cd:command>
 
-    <cd:command name="unframed" file="pack-rul.mkiv">
-        <cd:arguments>
-            <cd:assignments list="yes" optional="yes">
-                <cd:inherit name="setupframed"/>
-            </cd:assignments>
-            <cd:content/>
-        </cd:arguments>
-    </cd:command>
+    <!--
+
+        <cd:command name="unframed" file="pack-rul.mkiv">
+            <cd:arguments>
+                <cd:assignments list="yes" optional="yes">
+                    <cd:inherit name="setupframed"/>
+                </cd:assignments>
+                <cd:content/>
+            </cd:arguments>
+        </cd:command>
+
+    -->
 
     <cd:command name="definemathframed" file="pack-rul.mkiv">
         <cd:arguments>
@@ -359,9 +362,9 @@
         </cd:arguments>
     </cd:command>
 
-    <cd:command name="mathframed" generated="yes" variant="example" file="pack-rul.mkiv">
+    <cd:command name="mathframed" generated="yes" variant="instance" file="pack-rul.mkiv">
         <cd:sequence>
-            <cd:variable value="mathframed"/>
+            <cd:instance value="mathframed"/>
         </cd:sequence>
         <cd:arguments>
             <cd:assignments list="yes" optional="yes">
@@ -370,38 +373,40 @@
             <cd:content/>
         </cd:arguments>
         <cd:instances>
-            <cd:constant value="mframed"/>
-            <cd:constant value="inmframed"/>
-            <cd:constant value="mcframed"/>
+            <cd:resolve name="instance-mathframed"/>
         </cd:instances>
     </cd:command>
 
-    <cd:command name="mframed" file="pack-rul.mkiv">
-        <cd:arguments>
-            <cd:assignments list="yes" optional="yes">
-                <cd:inherit name="setupmathframed"/>
-            </cd:assignments>
-            <cd:content/>
-        </cd:arguments>
-    </cd:command>
+    <!--
 
-    <cd:command name="inmframed" file="pack-rul.mkiv">
-        <cd:arguments>
-            <cd:assignments list="yes" optional="yes">
-                <cd:inherit name="setupmathframed"/>
-            </cd:assignments>
-            <cd:content/>
-        </cd:arguments>
-    </cd:command>
+        <cd:command name="mframed" file="pack-rul.mkiv">
+            <cd:arguments>
+                <cd:assignments list="yes" optional="yes">
+                    <cd:inherit name="setupmathframed"/>
+                </cd:assignments>
+                <cd:content/>
+            </cd:arguments>
+        </cd:command>
 
-    <cd:command name="mcframed" file="pack-rul.mkiv">
-        <cd:arguments>
-            <cd:assignments list="yes" optional="yes">
-                <cd:inherit name="setupmathframed"/>
-            </cd:assignments>
-            <cd:content/>
-        </cd:arguments>
-    </cd:command>
+        <cd:command name="inmframed" file="pack-rul.mkiv">
+            <cd:arguments>
+                <cd:assignments list="yes" optional="yes">
+                    <cd:inherit name="setupmathframed"/>
+                </cd:assignments>
+                <cd:content/>
+            </cd:arguments>
+        </cd:command>
+
+        <cd:command name="mcframed" file="pack-rul.mkiv">
+            <cd:arguments>
+                <cd:assignments list="yes" optional="yes">
+                    <cd:inherit name="setupmathframed"/>
+                </cd:assignments>
+                <cd:content/>
+            </cd:arguments>
+        </cd:command>
+
+    -->
 
     <cd:command name="defineformulaframed" file="math-for.mkiv">
         <cd:arguments>
@@ -473,76 +478,76 @@
         </cd:arguments>
     </cd:command>
 
+    <cd:command name="setupframedtexts" file="pack-rul.mkiv">
+        <cd:arguments>
+            <cd:resolve name="keyword-name-list-optional"/>
+            <cd:assignments list="yes">
+                <cd:inherit name="setupframedtext"/>
+            </cd:assignments>
+        </cd:arguments>
+    </cd:command>
+
+    <cd:command name="framedtext" generated="yes" variant="instance" file="pack-rul.mkiv">
+        <cd:sequence>
+            <cd:instance value="framedtext"/>
+        </cd:sequence>
+        <cd:arguments>
+            <cd:assignments list="yes" optional="yes">
+                <cd:inherit name="setupframedtext"/>
+            </cd:assignments>
+            <cd:content/>
+        </cd:arguments>
+        <cd:instances>
+            <cd:resolve name="instance-framedtext"/>
+        </cd:instances>
+    </cd:command>
+
+    <cd:command name="framedtext" type="environment" generated="yes" variant="instance" file="pack-rul.mkiv">
+        <cd:sequence>
+            <cd:instance value="framedtext"/>
+        </cd:sequence>
+        <cd:arguments>
+            <cd:keywords optional="yes">
+                <cd:constant type="left"/>
+                <cd:constant type="right"/>
+                <cd:constant type="middle"/>
+                <cd:constant type="none"/>
+            </cd:keywords>
+            <cd:assignments list="yes" optional="yes">
+                <cd:inherit name="setupframedtext"/>
+            </cd:assignments>
+        </cd:arguments>
+        <cd:instances>
+            <cd:resolve name="instance-framedtext"/>
+        </cd:instances>
+    </cd:command>
+
     <!--
 
-        <cd:command name="setupframedtexts" file="pack-rul.mkiv">
+        <cd:command name="framedtext" file="pack-rul.mkiv">
             <cd:arguments>
-                <cd:resolve name="keyword-name-list-optional"/>
-                <cd:assignments list="yes">
+                <cd:assignments list="yes" optional="yes">
+                    <cd:inherit name="setupframedtext"/>
+                </cd:assignments>
+                <cd:content/>
+            </cd:arguments>
+        </cd:command>
+
+        <cd:command name="framedtext" type="environment" file="pack-rul.mkiv">
+            <cd:arguments>
+                <cd:keywords optional="yes">
+                    <cd:constant type="left"/>
+                    <cd:constant type="right"/>
+                    <cd:constant type="middle"/>
+                    <cd:constant type="none"/>
+                </cd:keywords>
+                <cd:assignments list="yes" optional="yes">
                     <cd:inherit name="setupframedtext"/>
                 </cd:assignments>
             </cd:arguments>
         </cd:command>
 
     -->
-
-    <cd:command name="framedtext" generated="yes" variant="example" file="pack-rul.mkiv">
-        <cd:sequence>
-            <cd:variable value="framedtext"/>
-        </cd:sequence>
-        <cd:arguments>
-            <cd:assignments list="yes" optional="yes">
-                <cd:inherit name="setupframedtext"/>
-            </cd:assignments>
-            <cd:content/>
-        </cd:arguments>
-        <cd:instances>
-            <cd:constant value="framedtext"/>
-        </cd:instances>
-    </cd:command>
-
-    <cd:command name="framedtext" type="environment" generated="yes" variant="example" file="pack-rul.mkiv">
-        <cd:sequence>
-            <cd:variable value="framedtext"/>
-        </cd:sequence>
-        <cd:arguments>
-            <cd:keywords optional="yes">
-                <cd:constant type="left"/>
-                <cd:constant type="right"/>
-                <cd:constant type="middle"/>
-                <cd:constant type="none"/>
-            </cd:keywords>
-            <cd:assignments list="yes" optional="yes">
-                <cd:inherit name="setupframedtext"/>
-            </cd:assignments>
-        </cd:arguments>
-        <cd:instances>
-            <cd:constant value="framedtext"/>
-        </cd:instances>
-    </cd:command>
-
-    <cd:command name="framedtext" file="pack-rul.mkiv">
-        <cd:arguments>
-            <cd:assignments list="yes" optional="yes">
-                <cd:inherit name="setupframedtext"/>
-            </cd:assignments>
-            <cd:content/>
-        </cd:arguments>
-    </cd:command>
-
-    <cd:command name="framedtext" type="environment" file="pack-rul.mkiv">
-        <cd:arguments>
-            <cd:keywords optional="yes">
-                <cd:constant type="left"/>
-                <cd:constant type="right"/>
-                <cd:constant type="middle"/>
-                <cd:constant type="none"/>
-            </cd:keywords>
-            <cd:assignments list="yes" optional="yes">
-                <cd:inherit name="setupframedtext"/>
-            </cd:assignments>
-        </cd:arguments>
-    </cd:command>
 
     <cd:command name="defineframedcontent" file="pack-rul.mkiv">
         <cd:arguments>

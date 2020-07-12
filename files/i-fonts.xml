@@ -1255,15 +1255,15 @@
         </cd:arguments>
     </cd:command>
 
-    <cd:command name="style" type="environment" generated="yes" variant="example" file="font-sty.mkvi">
+    <cd:command name="style" type="environment" generated="yes" variant="instance" file="font-sty.mkvi">
         <cd:sequence>
-            <cd:variable value="style"/>
+            <cd:instance value="style"/>
         </cd:sequence>
     </cd:command>
 
-    <cd:command name="style" generated="yes" variant="example" file="font-sty.mkvi">
+    <cd:command name="style" generated="yes" variant="instance" file="font-sty.mkvi">
         <cd:sequence>
-            <cd:variable value="style"/>
+            <cd:instance value="style"/>
         </cd:sequence>
         <cd:arguments>
             <cd:resolve name="argument-text"/>

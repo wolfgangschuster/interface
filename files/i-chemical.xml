@@ -23,7 +23,7 @@
             <cd:resolve name="keyword-name-list-optional"/>
             <cd:assignments list="yes">
                 <cd:parameter name="strut">
-                    <cd:inherit name="value-strut"/>
+                    <cd:resolve name="value-strut"/>
                 </cd:parameter>
                 <cd:parameter name="width">
                     <cd:constant type="fit" default="yes"/>

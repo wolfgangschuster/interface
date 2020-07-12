@@ -45,6 +45,7 @@
             <cd:keywords list="yes" optional="yes">
                 <cd:constant type="+"/>
                 <cd:constant type="-"/>
+                <cd:constant type="cd:name"/>
             </cd:keywords>
         </cd:arguments>
     </cd:command>
@@ -52,30 +53,21 @@
     <cd:command name="hideblocks" file="strc-blk.mkiv">
         <cd:arguments>
             <cd:resolve name="keyword-name-list"/>
-            <cd:keywords list="yes" optional="yes">
-                <cd:constant type="+"/>
-                <cd:constant type="-"/>
-            </cd:keywords>
+            <cd:resolve name="keyword-name-list-optional"/>
         </cd:arguments>
     </cd:command>
 
     <cd:command name="keepblocks" file="strc-blk.mkiv">
         <cd:arguments>
             <cd:resolve name="keyword-name-list"/>
-            <cd:keywords list="yes" optional="yes">
-                <cd:constant type="+"/>
-                <cd:constant type="-"/>
-            </cd:keywords>
+            <cd:resolve name="keyword-name-list-optional"/>
         </cd:arguments>
     </cd:command>
 
     <cd:command name="useblocks" file="strc-blk.mkiv">
         <cd:arguments>
             <cd:resolve name="keyword-name-list"/>
-            <cd:keywords list="yes" optional="yes">
-                <cd:constant type="+"/>
-                <cd:constant type="-"/>
-            </cd:keywords>
+            <cd:resolve name="keyword-name-list-optional"/>
             <cd:assignments list="yes" optional="yes">
                 <cd:parameter name="criterium">
                     <cd:constant type="text" default="yes"/>
@@ -88,10 +80,7 @@
     <cd:command name="processblocks" file="strc-blk.mkiv">
         <cd:arguments>
             <cd:resolve name="keyword-name-list"/>
-            <cd:keywords list="yes" optional="yes">
-                <cd:constant type="+"/>
-                <cd:constant type="-"/>
-            </cd:keywords>
+            <cd:resolve name="keyword-name-list-optional"/>
             <cd:assignments list="yes" optional="yes">
                 <cd:parameter name="criterium">
                     <cd:constant type="text" default="yes"/>
@@ -104,10 +93,7 @@
     <cd:command name="selectblocks" file="strc-blk.mkiv">
         <cd:arguments>
             <cd:resolve name="keyword-name-list"/>
-            <cd:keywords list="yes" optional="yes">
-                <cd:constant type="+"/>
-                <cd:constant type="-"/>
-            </cd:keywords>
+            <cd:resolve name="keyword-name-list-optional"/>
             <cd:assignments list="yes" optional="yes">
                 <cd:parameter name="criterium">
                     <cd:constant type="text" default="yes"/>
