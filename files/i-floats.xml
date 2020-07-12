@@ -502,6 +502,10 @@
                 <cd:parameter name="maxwidth">
                     <cd:constant type="cd:dimension"/>
                 </cd:parameter>
+                <cd:parameter name="hang">
+                    <cd:constant type="yes"/>
+                    <cd:constant type="no" default="yes"/>
+                </cd:parameter>
                 <cd:inherit name="setupcounter"/>
                 <cd:inherit name="setupframed"/>
             </cd:assignments>

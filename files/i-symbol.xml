@@ -151,8 +151,8 @@
         <cd:arguments>
             <cd:assignments list="yes">
                 <cd:parameter name="stylealternative">
-                    <cd:constant type="text" default="yes">
-                    <cd:constant type="math">
+                    <cd:constant type="text" default="yes"/>
+                    <cd:constant type="math"/>
                 </cd:parameter>
             </cd:assignments>
         </cd:arguments>
