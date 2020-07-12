@@ -517,8 +517,8 @@
 
     <cd:command name="doifelseinset" level="system" file="syst-aux.mkiv">
         <cd:arguments>
-            <cd:content/>
-            <cd:resolve name="argument-content-list"/>
+            <cd:resolve name="argument-text"/>
+            <cd:resolve name="argument-text-list"/>
             <cd:resolve name="argument-true"/>
             <cd:resolve name="argument-false"/>
         </cd:arguments>
@@ -526,8 +526,8 @@
 
     <cd:command name="doifinsetelse" level="system" file="syst-aux.mkiv">
         <cd:arguments>
-            <cd:content/>
-            <cd:resolve name="argument-content-list"/>
+            <cd:resolve name="argument-text"/>
+            <cd:resolve name="argument-text-list"/>
             <cd:resolve name="argument-true"/>
             <cd:resolve name="argument-false"/>
         </cd:arguments>
@@ -535,24 +535,24 @@
 
     <cd:command name="doifinset" level="system" file="syst-aux.mkiv">
         <cd:arguments>
-            <cd:content/>
-            <cd:resolve name="argument-content-list"/>
+            <cd:resolve name="argument-text"/>
+            <cd:resolve name="argument-text-list"/>
             <cd:resolve name="argument-true"/>
         </cd:arguments>
     </cd:command>
 
     <cd:command name="doifnotinset" level="system" file="syst-aux.mkiv">
         <cd:arguments>
-            <cd:content/>
-            <cd:resolve name="argument-content-list"/>
+            <cd:resolve name="argument-text"/>
+            <cd:resolve name="argument-text-list"/>
             <cd:resolve name="argument-true"/>
         </cd:arguments>
     </cd:command>
 
     <cd:command name="doifelsecommon" level="system" file="syst-aux.mkiv">
         <cd:arguments>
-            <cd:resolve name="argument-content-list"/>
-            <cd:resolve name="argument-content-list"/>
+            <cd:resolve name="argument-text-list"/>
+            <cd:resolve name="argument-text-list"/>
             <cd:resolve name="argument-true"/>
             <cd:resolve name="argument-false"/>
         </cd:arguments>
@@ -560,8 +560,8 @@
 
     <cd:command name="doifcommonelse" level="system" file="syst-aux.mkiv">
         <cd:arguments>
-            <cd:resolve name="argument-content-list"/>
-            <cd:resolve name="argument-content-list"/>
+            <cd:resolve name="argument-text-list"/>
+            <cd:resolve name="argument-text-list"/>
             <cd:resolve name="argument-true"/>
             <cd:resolve name="argument-false"/>
         </cd:arguments>
@@ -569,16 +569,16 @@
 
     <cd:command name="doifcommon" level="system" file="syst-aux.mkiv">
         <cd:arguments>
-            <cd:resolve name="argument-content-list"/>
-            <cd:resolve name="argument-content-list"/>
+            <cd:resolve name="argument-text-list"/>
+            <cd:resolve name="argument-text-list"/>
             <cd:resolve name="argument-true"/>
         </cd:arguments>
     </cd:command>
 
     <cd:command name="doifnotcommon" level="system" file="syst-aux.mkiv">
         <cd:arguments>
-            <cd:resolve name="argument-content-list"/>
-            <cd:resolve name="argument-content-list"/>
+            <cd:resolve name="argument-text-list"/>
+            <cd:resolve name="argument-text-list"/>
             <cd:resolve name="argument-true"/>
         </cd:arguments>
     </cd:command>
@@ -816,8 +816,8 @@
 
     <cd:command name="rawdoifelseinset" level="system" file="syst-aux.mkiv">
         <cd:arguments>
-            <cd:content/>
-            <cd:resolve name="argument-content-list"/>
+            <cd:resolve name="argument-text"/>
+            <cd:resolve name="argument-text-list"/>
             <cd:resolve name="argument-true"/>
             <cd:resolve name="argument-false"/>
         </cd:arguments>
@@ -825,8 +825,8 @@
 
     <cd:command name="rawdoifinsetelse" level="system" file="syst-aux.mkiv">
         <cd:arguments>
-            <cd:content/>
-            <cd:resolve name="argument-content-list"/>
+            <cd:resolve name="argument-text"/>
+            <cd:resolve name="argument-text-list"/>
             <cd:resolve name="argument-true"/>
             <cd:resolve name="argument-false"/>
         </cd:arguments>
@@ -834,8 +834,8 @@
 
     <cd:command name="rawdoifinset" level="system" file="syst-aux.mkiv">
         <cd:arguments>
-            <cd:content/>
-            <cd:resolve name="argument-content-list"/>
+            <cd:resolve name="argument-text"/>
+            <cd:resolve name="argument-text-list"/>
             <cd:resolve name="argument-true"/>
         </cd:arguments>
     </cd:command>
@@ -1703,6 +1703,8 @@
 
     <cd:command name="recurselevel" level="system" file="syst-aux.mkiv"/>
 
+    <cd:command name="resetrecurselevel" level="system" file="syst-aux.mkiv"/>
+
     <cd:command name="dostepwiserecurse" level="system" file="syst-aux.mkiv">
         <cd:arguments>
             <cd:resolve name="argument-number"/>
@@ -1745,12 +1747,16 @@
 
     <cd:command name="exitloopnow" level="system" file="syst-aux.mkiv"/>
 
-    <cd:command name="dorecurse" level="system" file="syst-aux.mkiv">
+    <cd:command name="dofastloopcs" level="system" file="syst-aux.mkiv">
         <cd:arguments>
             <cd:resolve name="argument-number"/>
             <cd:csname/>
         </cd:arguments>
     </cd:command>
+
+    <cd:command name="fastloopindex" level="system" file="syst-aux.mkiv"/>
+
+    <cd:command name="fastloopfinal" level="system" file="syst-aux.mkiv"/>
 
     <cd:command name="doloopoverlist" level="system" file="syst-aux.mkiv">
         <cd:arguments>
@@ -2338,8 +2344,8 @@
 
     <cd:command name="robustdoifelseinset" level="system" file="syst-aux.mkiv">
         <cd:arguments>
-            <cd:resolve name="argument-content"/>
-            <cd:resolve name="argument-content-list"/>
+            <cd:resolve name="argument-text"/>
+            <cd:resolve name="argument-text-list"/>
             <cd:resolve name="argument-true"/>
             <cd:resolve name="argument-false"/>
         </cd:arguments>
@@ -2347,8 +2353,8 @@
 
     <cd:command name="robustdoifinsetelse" level="system" file="syst-aux.mkiv">
         <cd:arguments>
-            <cd:resolve name="argument-content"/>
-            <cd:resolve name="argument-content-list"/>
+            <cd:resolve name="argument-text"/>
+            <cd:resolve name="argument-text-list"/>
             <cd:resolve name="argument-true"/>
             <cd:resolve name="argument-false"/>
         </cd:arguments>
@@ -2678,8 +2684,8 @@
 
     <cd:command name="doifelseallcommon" level="system" file="syst-aux.mkiv">
         <cd:arguments>
-            <cd:resolve name="argument-content-list"/>
-            <cd:resolve name="argument-content-list"/>
+            <cd:resolve name="argument-text-list"/>
+            <cd:resolve name="argument-text-list"/>
             <cd:resolve name="argument-true"/>
             <cd:resolve name="argument-false"/>
         </cd:arguments>
@@ -2687,8 +2693,8 @@
 
     <cd:command name="doifallcommonelse" level="system" file="syst-aux.mkiv">
         <cd:arguments>
-            <cd:resolve name="argument-content-list"/>
-            <cd:resolve name="argument-content-list"/>
+            <cd:resolve name="argument-text-list"/>
+            <cd:resolve name="argument-text-list"/>
             <cd:resolve name="argument-true"/>
             <cd:resolve name="argument-false"/>
         </cd:arguments>
@@ -2696,16 +2702,16 @@
 
     <cd:command name="doifallcommon" level="system" file="syst-aux.mkiv">
         <cd:arguments>
-            <cd:resolve name="argument-content-list"/>
-            <cd:resolve name="argument-content-list"/>
+            <cd:resolve name="argument-text-list"/>
+            <cd:resolve name="argument-text-list"/>
             <cd:resolve name="argument-true"/>
         </cd:arguments>
     </cd:command>
 
     <cd:command name="doifnotallcommon" level="system" file="syst-aux.mkiv">
         <cd:arguments>
-            <cd:resolve name="argument-content-list"/>
-            <cd:resolve name="argument-content-list"/>
+            <cd:resolve name="argument-text-list"/>
+            <cd:resolve name="argument-text-list"/>
             <cd:resolve name="argument-true"/>
         </cd:arguments>
     </cd:command>
@@ -3100,11 +3106,11 @@
         <cd:arguments>
             <cd:resolve name="argument-number"/>
             <cd:resolve name="argument-number"/>
-            <cd:resolve name="argument-content-optional"/>
-            <cd:resolve name="argument-content-optional"/>
-            <cd:resolve name="argument-content-optional"/>
-            <cd:resolve name="argument-content-optional"/>
-            <cd:resolve name="argument-content-optional"/>
+            <cd:content optional="yes"/>
+            <cd:content optional="yes"/>
+            <cd:content optional="yes"/>
+            <cd:content optional="yes"/>
+            <cd:content optional="yes"/>
         </cd:arguments>
     </cd:command>
 
@@ -3402,7 +3408,7 @@
     <cd:command name="testfeature" level="system" file="syst-aux.mkiv">
         <cd:arguments>
             <cd:resolve name="argument-number"/>
-            <cd:resolve name="argument-content"/>
+            <cd:content/>
         </cd:arguments>
     </cd:command>
 
@@ -3415,7 +3421,7 @@
     <cd:command name="testfeatureonce" level="system" file="syst-aux.mkiv">
         <cd:arguments>
             <cd:resolve name="argument-number"/>
-            <cd:resolve name="argument-content"/>
+            <cd:content/>
         </cd:arguments>
     </cd:command>
 
@@ -3597,8 +3603,8 @@
 
     <cd:command name="expdoifelsecommon" level="system" file="syst-lua.mkiv">
         <cd:arguments>
-            <cd:resolve name="argument-content-list"/>
-            <cd:resolve name="argument-content-list"/>
+            <cd:resolve name="argument-text-list"/>
+            <cd:resolve name="argument-text-list"/>
             <cd:resolve name="argument-true"/>
             <cd:resolve name="argument-false"/>
         </cd:arguments>
@@ -3606,8 +3612,8 @@
 
     <cd:command name="expdoifcommonelse" level="system" file="syst-lua.mkiv">
         <cd:arguments>
-            <cd:resolve name="argument-content-list"/>
-            <cd:resolve name="argument-content-list"/>
+            <cd:resolve name="argument-text-list"/>
+            <cd:resolve name="argument-text-list"/>
             <cd:resolve name="argument-true"/>
             <cd:resolve name="argument-false"/>
         </cd:arguments>
@@ -3615,8 +3621,8 @@
 
     <cd:command name="expdoifelseinset" level="system" file="syst-lua.mkiv">
         <cd:arguments>
-            <cd:content/>
-            <cd:resolve name="argument-content-list"/>
+            <cd:resolve name="argument-text"/>
+            <cd:resolve name="argument-text-list"/>
             <cd:resolve name="argument-true"/>
             <cd:resolve name="argument-false"/>
         </cd:arguments>
@@ -3624,8 +3630,8 @@
 
     <cd:command name="expdoifinsetelse" level="system" file="syst-lua.mkiv">
         <cd:arguments>
-            <cd:content/>
-            <cd:resolve name="argument-content-list"/>
+            <cd:resolve name="argument-text"/>
+            <cd:resolve name="argument-text-list"/>
             <cd:resolve name="argument-true"/>
             <cd:resolve name="argument-false"/>
         </cd:arguments>
