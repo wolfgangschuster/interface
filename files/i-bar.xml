@@ -4,7 +4,7 @@
 
 <cd:interface xmlns:cd="http://www.pragma-ade.com/commands">
 
-    <cd:command name="definebar" file="node-rul.mkiv">
+    <cd:command name="definebar" level="style" file="node-rul.mkiv">
         <cd:arguments>
             <cd:resolve name="keyword-name"/>
             <cd:resolve name="keyword-name-optional"/>
@@ -14,7 +14,7 @@
         </cd:arguments>
     </cd:command>
 
-    <cd:command name="setupbar" file="node-rul.mkiv">
+    <cd:command name="setupbar" level="style" file="node-rul.mkiv">
         <cd:arguments>
             <cd:resolve name="keyword-name-list-optional"/>
             <cd:assignments list="yes">
@@ -82,7 +82,7 @@
         </cd:arguments>
     </cd:command>
 
-    <cd:command name="setupbars" file="node-rul.mkiv">
+    <cd:command name="setupbars" level="style" file="node-rul.mkiv">
         <cd:arguments>
             <cd:resolve name="keyword-name-list-optional"/>
             <cd:assignments list="yes">
@@ -91,7 +91,7 @@
         </cd:arguments>
     </cd:command>
 
-    <cd:command name="bar" generated="yes" variant="instance" file="node-rul.mkiv">
+    <cd:command name="bar" generated="yes" variant="instance" level="document" file="node-rul.mkiv">
         <cd:sequence>
             <cd:instance value="bar"/>
         </cd:sequence>
@@ -103,25 +103,25 @@
         </cd:instances>
     </cd:command>
 
-    <cd:command name="bar" type="environment" file="node-rul.mkiv">
+    <cd:command name="bar" type="environment" level="document" file="node-rul.mkiv">
         <cd:arguments>
             <cd:resolve name="keyword-name"/>
         </cd:arguments>
     </cd:command>
 
-    <cd:command name="setbar" file="node-rul.mkiv">
+    <cd:command name="setbar" level="document" file="node-rul.mkiv">
         <cd:arguments>
             <cd:resolve name="keyword-name"/>
         </cd:arguments>
     </cd:command>
 
-    <cd:command name="directsetbar" file="node-rul.mkiv">
+    <cd:command name="directsetbar" level="document" file="node-rul.mkiv">
         <cd:arguments>
             <cd:resolve name="argument-name"/>
         </cd:arguments>
     </cd:command>
 
-    <cd:command name="bar" type="environment" begin="push" end="pop" file="node-rul.mkiv">
+    <cd:command name="bar" type="environment" begin="push" end="pop" level="system" file="node-rul.mkiv">
         <cd:arguments>
             <cd:resolve name="keyword-name"/>
         </cd:arguments>

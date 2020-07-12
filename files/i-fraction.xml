@@ -4,7 +4,7 @@
 
 <cd:interface xmlns:cd="http://www.pragma-ade.com/commands">
 
-    <cd:command name="definemathfraction" file="math-frc.mkiv">
+    <cd:command name="definemathfraction" category="mathematics" level="style" file="math-frc.mkiv">
         <cd:arguments>
             <cd:resolve name="keyword-name"/>
             <cd:resolve name="keyword-name-optional"/>
@@ -14,7 +14,7 @@
         </cd:arguments>
     </cd:command>
 
-    <cd:command name="setupmathfraction" file="math-frc.mkiv">
+    <cd:command name="setupmathfraction" category="mathematics" level="style" file="math-frc.mkiv">
         <cd:arguments>
             <cd:resolve name="keyword-name-list-optional"/>
             <cd:assignments list="yes">
@@ -67,7 +67,7 @@
         </cd:arguments>
     </cd:command>
 
-    <cd:command name="setupmathfractions" file="math-frc.mkiv">
+    <cd:command name="setupmathfractions" category="mathematics" level="style" file="math-frc.mkiv">
         <cd:arguments>
             <cd:resolve name="keyword-name-list-optional"/>
             <cd:assignments list="yes">
@@ -76,7 +76,7 @@
         </cd:arguments>
     </cd:command>
 
-    <cd:command name="fraction" generated="yes" variant="instance" file="math-frc.mkiv">
+    <cd:command name="fraction" generated="yes" variant="instance" category="mathematics" level="document" file="math-frc.mkiv">
         <cd:sequence>
             <cd:instance value="fraction"/>
         </cd:sequence>
@@ -156,21 +156,21 @@
 
     -->
 
-    <cd:command name="splitfrac" file="math-frc.mkiv">
+    <cd:command name="splitfrac" category="mathematics" level="document" file="math-frc.mkiv">
         <cd:arguments>
             <cd:content/>
             <cd:content/>
         </cd:arguments>
     </cd:command>
 
-    <cd:command name="splitdfrac" file="math-frc.mkiv">
+    <cd:command name="splitdfrac" category="mathematics" level="document" file="math-frc.mkiv">
         <cd:arguments>
             <cd:content/>
             <cd:content/>
         </cd:arguments>
     </cd:command>
 
-    <cd:command name="cfrac" file="math-frc.mkiv">
+    <cd:command name="cfrac" category="mathematics" level="document" file="math-frc.mkiv">
         <cd:arguments>
             <cd:keywords optional="yes">
                 <cd:constant type="l"/>

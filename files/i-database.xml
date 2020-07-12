@@ -4,7 +4,7 @@
 
 <cd:interface xmlns:cd="http://www.pragma-ade.com/commands">
 
-    <cd:command name="definedatabase" file="m-database.mkiv">
+    <cd:command name="definedatabase" level="style" file="m-database.mkiv">
         <cd:arguments>
             <cd:resolve name="keyword-name"/>
             <cd:resolve name="keyword-name-optional"/>
@@ -14,7 +14,7 @@
         </cd:arguments>
     </cd:command>
 
-    <cd:command name="setupdatabase" file="m-database.mkiv">
+    <cd:command name="setupdatabase" level="style" file="m-database.mkiv">
         <cd:arguments>
             <cd:resolve name="keyword-name-list-optional"/>
             <cd:assignments list="yes">
@@ -78,7 +78,7 @@
         </cd:arguments>
     </cd:command>
 
-    <cd:command name="defineseparatedlist" file="m-database.mkiv">
+    <cd:command name="defineseparatedlist" level="style" file="m-database.mkiv">
         <cd:arguments>
             <cd:resolve name="keyword-name"/>
             <cd:assignments list="yes" optional="yes">
@@ -106,7 +106,7 @@
         </cd:arguments>
     </cd:command>
 
-    <cd:command name="setupseparatedlist" file="m-database.mkiv">
+    <cd:command name="setupseparatedlist" level="style" file="m-database.mkiv">
         <cd:arguments>
             <cd:resolve name="keyword-name-list-optional"/>
             <cd:assignments list="yes">

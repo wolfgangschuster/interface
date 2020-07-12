@@ -298,6 +298,8 @@
         <cd:constant type="rightpage"/>
         <cd:constant type="somewhere"/>
         <cd:constant type="effective"/>
+        <cd:constant type="header"/>
+        <cd:constant type="footer"/>
     </cd:define>
 
     <!-- sortorder = ... -->
@@ -641,6 +643,20 @@
             <cd:constant type="center"/>
             <cd:constant type="middle"/>
         -->
+    </cd:define>
+
+    <!-- tochar = ... --->
+
+    <cd:define name="value-tochar">
+        <cd:constant prefix="e" type="cd:name" method="range"/>
+        <cd:constant prefix="x" type="cd:number" method="range"/>
+        <cd:constant prefix="d" type="cd:number" method="range"/>
+        <cd:constant prefix="s" type="cd:number" method="range"/>
+        <cd:constant prefix="i" type="cd:number" method="range"/>
+        <cd:constant prefix="n" type="cd:name" method="range"/>
+        <cd:constant prefix="c" type="cd:name" method="range"/>
+        <cd:constant prefix="u" type="cd:name" method="range"/>
+        <cd:constant prefix="a" type="cd:name" method="range"/>
     </cd:define>
 
 </cd:interface>

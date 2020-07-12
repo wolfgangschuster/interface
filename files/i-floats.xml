@@ -4,7 +4,7 @@
 
 <cd:interface xmlns:cd="http://www.pragma-ade.com/commands">
 
-    <cd:command name="definefloat" file="strc-flt.mkvi">
+    <cd:command name="definefloat" level="style" file="strc-flt.mkvi">
         <cd:arguments>
             <cd:resolve name="keyword-singular"/>
             <cd:keywords optional="yes">
@@ -20,7 +20,7 @@
         </cd:instances>
     </cd:command>
 
-    <cd:command name="definefloat" variant="name" file="strc-flt.mkvi">
+    <cd:command name="definefloat" variant="name" level="style" file="strc-flt.mkvi">
         <cd:arguments>
             <cd:resolve name="keyword-singular"/>
             <cd:resolve name="keyword-plural-optional"/>
@@ -31,7 +31,7 @@
         </cd:instances>
     </cd:command>
 
-    <cd:command name="setupfloat" file="strc-flt.mkvi">
+    <cd:command name="setupfloat" level="style" file="strc-flt.mkvi">
         <cd:arguments>
             <cd:resolve name="keyword-singular-list-optional"/>
             <cd:assignments list="yes">
@@ -66,6 +66,9 @@
                     <cd:constant type="halfline"/>
                     <cd:constant type="grid"/>
                     <cd:constant type="normal" default="yes"/>
+                </cd:parameter>
+                <cd:parameter name="grid">
+                    <cd:constant type="cd:string"/>
                 </cd:parameter>
                 <!--
                     <cd:parameter name="topoffset">
@@ -135,6 +138,10 @@
                 <cd:parameter name="catcodes">
                     <cd:constant type="cd:name"/>
                 </cd:parameter>
+                <cd:parameter name="freeregion">
+                    <cd:constant type="yes" default="yes"/>
+                    <cd:constant type="no"/>
+                </cd:parameter>
                 <!-- begin root only -->
                 <cd:parameter name="spacebefore">
                     <cd:constant type="none"/>
@@ -191,7 +198,7 @@
         </cd:arguments>
     </cd:command>
 
-    <cd:command name="setupfloats" file="strc-flt.mkvi">
+    <cd:command name="setupfloats" level="style" file="strc-flt.mkvi">
         <cd:arguments>
             <cd:resolve name="keyword-singular-list-optional"/>
             <cd:assignments list="yes">
@@ -214,7 +221,7 @@
 
     -->
 
-    <cd:command name="setupfloatcaption" file="strc-flt.mkvi">
+    <cd:command name="setupfloatcaption" level="style" file="strc-flt.mkvi">
         <cd:arguments>
             <cd:resolve name="keyword-name-list-optional"/>
             <cd:assignments list="yes">
@@ -326,7 +333,7 @@
         </cd:arguments>
     </cd:command>
 
-    <cd:command name="setupcaption" file="strc-flt.mkvi">
+    <cd:command name="setupcaption" level="style" file="strc-flt.mkvi">
         <cd:arguments>
             <cd:resolve name="keyword-name-list-optional"/>
             <cd:assignments list="yes">
@@ -335,7 +342,7 @@
         </cd:arguments>
     </cd:command>
 
-    <cd:command name="setupcaptions" file="strc-flt.mkvi">
+    <cd:command name="setupcaptions" level="style" file="strc-flt.mkvi">
         <cd:arguments>
             <cd:resolve name="keyword-name-list-optional"/>
             <cd:assignments list="yes">
@@ -344,7 +351,7 @@
         </cd:arguments>
     </cd:command>
 
-    <cd:command name="placefloat" generated="yes" variant="instance" file="strc-flt.mkvi">
+    <cd:command name="placefloat" generated="yes" variant="instance" level="document" file="strc-flt.mkvi">
         <cd:sequence>
             <cd:string value="place"/>
             <cd:instance value="float"/>
@@ -360,7 +367,7 @@
         </cd:instances>
     </cd:command>
 
-    <cd:command name="placefloat" file="strc-flt.mkvi">
+    <cd:command name="placefloat" level="document" file="strc-flt.mkvi">
         <cd:arguments>
             <cd:resolve name="keyword-singular"/>
             <cd:resolve name="keyword-floatlocation-list-optional"/>
@@ -370,7 +377,7 @@
         </cd:arguments>
     </cd:command>
 
-    <cd:command name="placefloat" type="environment" generated="yes" variant="instance" file="strc-flt.mkvi">
+    <cd:command name="placefloat" type="environment" generated="yes" variant="instance" level="document" file="strc-flt.mkvi">
         <cd:sequence>
             <cd:string value="place"/>
             <cd:instance value="float"/>
@@ -384,7 +391,7 @@
         </cd:instances>
     </cd:command>
 
-    <cd:command name="placefloat" type="environment" file="strc-flt.mkvi">
+    <cd:command name="placefloat" type="environment" level="document" file="strc-flt.mkvi">
         <cd:arguments>
             <cd:resolve name="keyword-singular"/>
             <cd:resolve name="assignment-floatdata-list-optional"/>
@@ -392,7 +399,7 @@
         </cd:arguments>
     </cd:command>
 
-    <cd:command name="floattext" type="environment" generated="yes" variant="instance" file="strc-flt.mkvi">
+    <cd:command name="floattext" type="environment" generated="yes" variant="instance" level="document" file="strc-flt.mkvi">
         <cd:sequence>
             <cd:instance value="float"/>
             <cd:string value="text"/>
@@ -407,7 +414,7 @@
         </cd:instances>
     </cd:command>
 
-    <cd:command name="placelistoffloats" generated="yes" variant="instance" file="strc-flt.mkvi">
+    <cd:command name="placelistoffloats" generated="yes" variant="instance" level="document" file="strc-flt.mkvi">
         <cd:sequence>
             <cd:string value="placelistof"/>
             <cd:instance value="floats"/>
@@ -422,7 +429,7 @@
         </cd:instances>
     </cd:command>
 
-    <cd:command name="completelistoffloats" generated="yes" variant="instance" file="strc-flt.mkvi">
+    <cd:command name="completelistoffloats" generated="yes" variant="instance" level="document" file="strc-flt.mkvi">
         <cd:sequence>
             <cd:string value="completelistof"/>
             <cd:instance value="floats"/>
@@ -437,48 +444,48 @@
         </cd:instances>
     </cd:command>
 
-    <cd:command name="floatuserdataparameter" file="strc-flt.mkvi">
+    <cd:command name="floatuserdataparameter" level="system" file="strc-flt.mkvi">
         <cd:arguments>
             <cd:resolve name="argument-key"/>
         </cd:arguments>
     </cd:command>
 
-    <cd:command name="doifelserightpagefloat" file="strc-flt.mkvi">
+    <cd:command name="doifelserightpagefloat" level="system" file="strc-flt.mkvi">
         <cd:arguments>
             <cd:resolve name="argument-true"/>
             <cd:resolve name="argument-false"/>
         </cd:arguments>
     </cd:command>
 
-    <cd:command name="doifrightpagefloatelse" file="strc-flt.mkvi">
+    <cd:command name="doifrightpagefloatelse" level="system" file="strc-flt.mkvi">
         <cd:arguments>
             <cd:resolve name="argument-true"/>
             <cd:resolve name="argument-false"/>
         </cd:arguments>
     </cd:command>
 
-    <cd:command name="doifelseoddpagefloat" file="strc-flt.mkvi">
+    <cd:command name="doifelseoddpagefloat" level="system" file="strc-flt.mkvi">
         <cd:arguments>
             <cd:resolve name="argument-true"/>
             <cd:resolve name="argument-false"/>
         </cd:arguments>
     </cd:command>
 
-    <cd:command name="doifoddpagefloatelse" file="strc-flt.mkvi">
+    <cd:command name="doifoddpagefloatelse" level="system" file="strc-flt.mkvi">
         <cd:arguments>
             <cd:resolve name="argument-true"/>
             <cd:resolve name="argument-false"/>
         </cd:arguments>
     </cd:command>
 
-    <cd:command name="doifelsemainfloatbody" file="strc-flt.mkvi">
+    <cd:command name="doifelsemainfloatbody" level="system" file="strc-flt.mkvi">
         <cd:arguments>
             <cd:resolve name="argument-true"/>
             <cd:resolve name="argument-false"/>
         </cd:arguments>
     </cd:command>
 
-    <cd:command name="doifmainfloatbodyelse" file="strc-flt.mkvi">
+    <cd:command name="doifmainfloatbodyelse" level="system" file="strc-flt.mkvi">
         <cd:arguments>
             <cd:resolve name="argument-true"/>
             <cd:resolve name="argument-false"/>
@@ -681,7 +688,7 @@
 
     -->
 
-    <cd:command name="setuplocalfloats" file="strc-flt.mkvi">
+    <cd:command name="setuplocalfloats" level="style" file="strc-flt.mkvi">
         <cd:arguments>
             <cd:assignments list="yes">
                 <cd:parameter name="before">
@@ -715,7 +722,7 @@
 
     <cd:command name="forcelocalfloats" file="strc-flt.mkvi"/>
 
-    <cd:command name="setupfloatsplitting" file="tabl-tsp.mkiv">
+    <cd:command name="setupfloatsplitting" level="style" file="tabl-tsp.mkiv">
         <cd:arguments>
             <cd:assignments list="yes">
                 <cd:parameter name="before">
@@ -738,7 +745,7 @@
         </cd:arguments>
     </cd:command>
 
-    <cd:command name="splitfloat" file="tabl-tsp.mkiv">
+    <cd:command name="splitfloat" level="system" file="tabl-tsp.mkiv">
         <cd:arguments>
             <cd:assignments list="yes" optional="yes">
                 <cd:inherit name="setupfloatsplitting"/>
@@ -748,13 +755,13 @@
         </cd:arguments>
     </cd:command>
 
-    <cd:command name="doifnotinsidesplitfloat" file="tabl-tsp.mkiv">
+    <cd:command name="doifnotinsidesplitfloat" level="system" file="tabl-tsp.mkiv">
         <cd:arguments>
             <cd:resolve name="argument-true"/>
         </cd:arguments>
     </cd:command>
 
-    <cd:command name="placenamedfloat" file="page-flt.mkiv">
+    <cd:command name="placenamedfloat" level="document" file="page-flt.mkiv">
         <cd:arguments>
             <cd:resolve name="keyword-name"/>
             <cd:resolve name="keyword-reference"/>

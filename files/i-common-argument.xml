@@ -521,4 +521,15 @@
         </cd:keywords>
     </cd:define>
 
+    <!--        *    -->
+    <!-- \... {...}  -->
+    <!--             -->
+    <!-- * TOCHAR -->
+
+    <cd:define name="argument-tochar">
+        <cd:keywords delimiters="braces">
+            <cd:resolve name="value-tochar"/>
+        </cd:keywords>
+    </cd:define>
+
 </cd:interface>

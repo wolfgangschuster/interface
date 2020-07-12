@@ -107,7 +107,7 @@
 
     -->
 
-    <cd:command name="setupFLOWcharts" file="m-chart.mkvi">
+    <cd:command name="setupFLOWcharts" level="style" file="m-chart.mkvi">
         <cd:arguments>
             <cd:assignments list="yes">
                 <cd:parameter name="width">
@@ -242,7 +242,7 @@
 
     -->
 
-   <cd:command name="setupFLOWlines" file="m-chart.mkvi">
+   <cd:command name="setupFLOWlines" level="style" file="m-chart.mkvi">
         <cd:arguments>
             <cd:assignments list="yes">
                 <cd:parameter name="corner">
@@ -306,7 +306,7 @@
 
     -->
 
-   <cd:command name="setupFLOWshapes" file="m-chart.mkvi">
+   <cd:command name="setupFLOWshapes" level="style" file="m-chart.mkvi">
         <cd:arguments>
             <cd:assignments list="yes">
                 <cd:parameter name="default">
@@ -325,7 +325,7 @@
         </cd:arguments>
     </cd:command>
 
-   <cd:command name="setupFLOWfocus" file="m-chart.mkvi">
+   <cd:command name="setupFLOWfocus" level="style" file="m-chart.mkvi">
         <cd:arguments>
             <cd:resolve name="keyword-name-list-optional"/>
             <cd:assignments list="yes">
@@ -342,7 +342,7 @@
         </cd:arguments>
     </cd:command>
 
-   <cd:command name="setupFLOWsplit" file="m-chart.mkvi">
+   <cd:command name="setupFLOWsplit" level="style" file="m-chart.mkvi">
         <cd:arguments>
             <cd:resolve name="keyword-name-list-optional"/>
             <cd:assignments list="yes">

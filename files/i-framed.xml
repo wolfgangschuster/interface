@@ -4,7 +4,7 @@
 
 <cd:interface xmlns:cd="http://www.pragma-ade.com/commands">
 
-    <cd:command name="defineframed" file="pack-rul.mkiv">
+    <cd:command name="defineframed" level="style" file="pack-rul.mkiv">
         <cd:arguments>
             <cd:resolve name="keyword-name"/>
             <cd:resolve name="keyword-name-optional"/>
@@ -14,7 +14,7 @@
         </cd:arguments>
     </cd:command>
 
-    <cd:command name="setupframed" file="pack-rul.mkiv">
+    <cd:command name="setupframed" level="style" file="pack-rul.mkiv">
         <cd:arguments>
             <cd:resolve name="keyword-name-list-optional"/>
             <cd:assignments list="yes">
@@ -232,7 +232,7 @@
         </cd:arguments>
     </cd:command>
 
-    <cd:command name="framed" file="pack-rul.mkiv">
+    <cd:command name="framed" level="document" file="pack-rul.mkiv">
         <cd:arguments>
             <cd:assignments list="yes" optional="yes">
                 <cd:inherit name="setupframed"/>
@@ -241,7 +241,7 @@
         </cd:arguments>
     </cd:command>
 
-    <cd:command name="framed" generated="yes" variant="instance" file="pack-rul.mkiv">
+    <cd:command name="framed" generated="yes" variant="instance" level="document" file="pack-rul.mkiv">
         <cd:sequence>
             <cd:instance value="framed"/>
         </cd:sequence>
@@ -265,7 +265,7 @@
         </cd:arguments>
     </cd:command>
 
-    <cd:command name="framed" type="environment" file="pack-rul.mkiv">
+    <cd:command name="framed" type="environment" level="document" file="pack-rul.mkiv">
         <cd:arguments>
             <cd:resolve name="keyword-name-optional"/>
             <cd:assignments list="yes" optional="yes">
@@ -311,7 +311,7 @@
         </cd:arguments>
     </cd:command>
 
-    <cd:command name="placeframed" file="pack-rul.mkiv">
+    <cd:command name="placeframed" level="document" file="pack-rul.mkiv">
         <cd:arguments>
             <cd:resolve name="keyword-name"/>
             <cd:assignments list="yes" optional="yes">
@@ -321,7 +321,7 @@
         </cd:arguments>
     </cd:command>
 
-    <cd:command name="inframed" file="pack-rul.mkiv">
+    <cd:command name="inframed" level="document" file="pack-rul.mkiv">
         <cd:arguments>
             <cd:assignments list="yes" optional="yes">
                 <cd:inherit name="setupframed"/>
@@ -343,7 +343,7 @@
 
     -->
 
-    <cd:command name="definemathframed" file="pack-rul.mkiv">
+    <cd:command name="definemathframed" level="style" file="pack-rul.mkiv">
         <cd:arguments>
             <cd:resolve name="keyword-name"/>
             <cd:resolve name="keyword-name-optional"/>
@@ -353,7 +353,7 @@
         </cd:arguments>
     </cd:command>
 
-    <cd:command name="setupmathframed" file="pack-rul.mkiv">
+    <cd:command name="setupmathframed" level="style" file="pack-rul.mkiv">
         <cd:arguments>
             <cd:resolve name="keyword-name-list-optional"/>
             <cd:assignments list="yes">
@@ -362,7 +362,7 @@
         </cd:arguments>
     </cd:command>
 
-    <cd:command name="mathframed" generated="yes" variant="instance" file="pack-rul.mkiv">
+    <cd:command name="mathframed" generated="yes" variant="instance" level="document" file="pack-rul.mkiv">
         <cd:sequence>
             <cd:instance value="mathframed"/>
         </cd:sequence>
@@ -408,7 +408,7 @@
 
     -->
 
-    <cd:command name="defineformulaframed" file="math-for.mkiv">
+    <cd:command name="defineformulaframed" level="style" file="math-for.mkiv">
         <cd:arguments>
             <cd:resolve name="keyword-name"/>
             <cd:resolve name="keyword-name-optional"/>
@@ -418,7 +418,7 @@
         </cd:arguments>
     </cd:command>
 
-    <cd:command name="setupformulaframed" file="math-for.mkiv">
+    <cd:command name="setupformulaframed" level="style" file="math-for.mkiv">
         <cd:arguments>
             <cd:resolve name="keyword-name-list-optional"/>
             <cd:assignments list="yes">
@@ -427,7 +427,7 @@
         </cd:arguments>
     </cd:command>
 
-    <cd:command name="defineframedtext" file="pack-rul.mkiv">
+    <cd:command name="defineframedtext" level="style" file="pack-rul.mkiv">
         <cd:arguments>
             <cd:resolve name="keyword-name"/>
             <cd:resolve name="keyword-name-optional"/>
@@ -437,7 +437,7 @@
         </cd:arguments>
     </cd:command>
 
-    <cd:command name="setupframedtext" file="pack-rul.mkiv">
+    <cd:command name="setupframedtext" level="style" file="pack-rul.mkiv">
         <cd:arguments>
             <cd:resolve name="keyword-name-list-optional"/>
             <cd:assignments list="yes">
@@ -478,7 +478,7 @@
         </cd:arguments>
     </cd:command>
 
-    <cd:command name="setupframedtexts" file="pack-rul.mkiv">
+    <cd:command name="setupframedtexts" level="style" file="pack-rul.mkiv">
         <cd:arguments>
             <cd:resolve name="keyword-name-list-optional"/>
             <cd:assignments list="yes">
@@ -487,7 +487,7 @@
         </cd:arguments>
     </cd:command>
 
-    <cd:command name="framedtext" generated="yes" variant="instance" file="pack-rul.mkiv">
+    <cd:command name="framedtext" generated="yes" variant="instance" level="document" file="pack-rul.mkiv">
         <cd:sequence>
             <cd:instance value="framedtext"/>
         </cd:sequence>
@@ -502,7 +502,7 @@
         </cd:instances>
     </cd:command>
 
-    <cd:command name="framedtext" type="environment" generated="yes" variant="instance" file="pack-rul.mkiv">
+    <cd:command name="framedtext" type="environment" generated="yes" variant="instance" level="document" file="pack-rul.mkiv">
         <cd:sequence>
             <cd:instance value="framedtext"/>
         </cd:sequence>
@@ -549,7 +549,7 @@
 
     -->
 
-    <cd:command name="defineframedcontent" file="pack-rul.mkiv">
+    <cd:command name="defineframedcontent" level="style" file="pack-rul.mkiv">
         <cd:arguments>
             <cd:resolve name="keyword-name"/>
             <cd:resolve name="keyword-name-optional"/>
@@ -559,7 +559,7 @@
         </cd:arguments>
     </cd:command>
 
-    <cd:command name="setupframedcontent" file="pack-rul.mkiv">
+    <cd:command name="setupframedcontent" level="style" file="pack-rul.mkiv">
         <cd:arguments>
             <cd:resolve name="keyword-name-list-optional"/>
             <cd:assignments list="yes">
@@ -599,28 +599,28 @@
         </cd:arguments>
     </cd:command>
 
-    <cd:command name="installleftframerenderer" file="pack-fen.mkiv">
+    <cd:command name="installleftframerenderer" level="system" file="pack-fen.mkiv">
         <cd:arguments>
             <cd:resolve name="argument-name"/>
             <cd:resolve name="argument-command"/>
         </cd:arguments>
     </cd:command>
 
-    <cd:command name="installrightframerenderer" file="pack-fen.mkiv">
+    <cd:command name="installrightframerenderer" level="system" file="pack-fen.mkiv">
         <cd:arguments>
             <cd:resolve name="argument-name"/>
             <cd:resolve name="argument-command"/>
         </cd:arguments>
     </cd:command>
 
-    <cd:command name="installtopframerenderer" file="pack-fen.mkiv">
+    <cd:command name="installtopframerenderer" level="system" file="pack-fen.mkiv">
         <cd:arguments>
             <cd:resolve name="argument-name"/>
             <cd:resolve name="argument-command"/>
         </cd:arguments>
     </cd:command>
 
-    <cd:command name="installbottomframerenderer" file="pack-fen.mkiv">
+    <cd:command name="installbottomframerenderer" level="system" file="pack-fen.mkiv">
         <cd:arguments>
             <cd:resolve name="argument-name"/>
             <cd:resolve name="argument-command"/>

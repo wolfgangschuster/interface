@@ -4,7 +4,7 @@
 
 <cd:interface xmlns:cd="http://www.pragma-ade.com/commands">
 
-    <cd:command name="definecomment" file="scrn-wid.mkvi">
+    <cd:command name="definecomment" level="style" file="scrn-wid.mkvi">
         <cd:arguments>
             <cd:resolve name="keyword-name"/>
             <cd:resolve name="keyword-name-optional"/>
@@ -14,7 +14,7 @@
         </cd:arguments>
     </cd:command>
 
-    <cd:command name="setupcomment" file="scrn-wid.mkvi">
+    <cd:command name="setupcomment" level="style" file="scrn-wid.mkvi">
         <cd:arguments>
             <cd:resolve name="keyword-name-list-optional"/>
             <cd:assignments list="yes">
@@ -87,11 +87,17 @@
                 <cd:parameter name="distance">
                     <cd:constant type="cd:dimension"/>
                 </cd:parameter>
+                <cd:parameter name="space">
+                    <cd:constant type="yes"/>
+                </cd:parameter>
+                <cd:parameter name="buffer">
+                    <cd:constant type="cd:buffer"/>
+                </cd:parameter>
             </cd:assignments>
         </cd:arguments>
     </cd:command>
 
-    <cd:command name="comment" generated="yes" variant="instance" file="scrn-wid.mkvi">
+    <cd:command name="comment" generated="yes" variant="instance" level="document" file="scrn-wid.mkvi">
         <cd:sequence>
             <cd:instance value="comment"/>
         </cd:sequence>
@@ -107,7 +113,7 @@
         </cd:instances>
     </cd:command>
 
-    <cd:command name="comment" type="environment" generated="yes" variant="instance" file="scrn-wid.mkvi">
+    <cd:command name="comment" type="environment" generated="yes" variant="instance" level="document" file="scrn-wid.mkvi">
         <cd:sequence>
             <cd:instance value="comment"/>
         </cd:sequence>
@@ -122,7 +128,7 @@
         </cd:instances>
     </cd:command>
 
-    <cd:command name="placecomments" file="scrn-wid.mkvi"/>
+    <cd:command name="placecomments" level="document" file="scrn-wid.mkvi"/>
 
     <!--
 
