@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?context-directive job ctxfile x-setups.ctx ?>
+
 <cd:interface xmlns:cd="http://www.pragma-ade.com/commands">
 
     <cd:command name="setuplayeredtext" file="pack-box.mkiv">
@@ -44,7 +46,7 @@
         </cd:arguments>
     </cd:command>
 
-    <cd:command name="setlayerframed" variant="1" file="pack-box.mkiv">
+    <cd:command name="setlayerframed" file="pack-box.mkiv">
         <cd:arguments>
             <cd:resolve name="keyword-name"/>
             <cd:assignments list="yes" optional="yes">
@@ -57,7 +59,7 @@
         </cd:arguments>
     </cd:command>
 
-    <cd:command name="setlayerframed" variant="2" file="pack-box.mkiv">
+    <cd:command name="setlayerframed" variant="combination" file="pack-box.mkiv">
         <cd:arguments>
             <cd:resolve name="keyword-name"/>
             <cd:assignments list="yes" optional="yes">
@@ -265,7 +267,7 @@
         </cd:arguments>
     </cd:command>
 
-    <cd:command name="definelayerpreset" variant="1" file="pack-lyr.mkiv">
+    <cd:command name="definelayerpreset" file="pack-lyr.mkiv">
         <cd:arguments>
             <cd:resolve name="keyword-name"/>
             <cd:assignments list="yes">
@@ -274,7 +276,7 @@
         </cd:arguments>
     </cd:command>
 
-    <cd:command name="definelayerpreset" variant="2" file="pack-lyr.mkiv">
+    <cd:command name="definelayerpreset" variant="name" file="pack-lyr.mkiv">
         <cd:arguments>
             <cd:resolve name="keyword-name"/>
             <cd:resolve name="keyword-name"/>

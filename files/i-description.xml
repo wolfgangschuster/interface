@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?context-directive job ctxfile x-setups.ctx ?>
+
 <cd:interface xmlns:cd="http://www.pragma-ade.com/commands">
 
     <cd:command name="definedescription" file="strc-des.mkvi">
@@ -136,7 +138,7 @@
 
     -->
 
-    <cd:command name="description" type="environment" generated="yes" variant="generated:1" file="strc-des.mkvi">
+    <cd:command name="description" type="environment" generated="yes" variant="example" file="strc-des.mkvi">
         <cd:sequence>
             <cd:variable value="description"/>
         </cd:sequence>
@@ -145,7 +147,7 @@
         </cd:arguments>
     </cd:command>
 
-    <cd:command name="description" type="environment" generated="yes" variant="generated:2" file="strc-des.mkvi">
+    <cd:command name="description" type="environment" generated="yes" variant="example:title" file="strc-des.mkvi">
         <cd:sequence>
             <cd:variable value="description"/>
         </cd:sequence>
@@ -155,7 +157,7 @@
         </cd:arguments>
     </cd:command>
 
-    <cd:command name="description" generated="yes" variant="generated" file="strc-des.mkvi">
+    <cd:command name="description" generated="yes" variant="example" file="strc-des.mkvi">
         <cd:sequence>
             <cd:variable value="description"/>
         </cd:sequence>

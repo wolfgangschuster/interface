@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?context-directive job ctxfile x-setups.ctx ?>
+
 <cd:interface xmlns:cd="http://www.pragma-ade.com/commands">
 
     <cd:command name="definestartstop" file="core-sys.mkiv">
@@ -49,7 +51,7 @@
         </cd:arguments>
     </cd:command>
 
-    <cd:command name="startstop" type="environment" generated="yes" variant="generated" file="core-sys.mkiv">
+    <cd:command name="startstop" type="environment" generated="yes" variant="example" file="core-sys.mkiv">
         <cd:sequence>
             <cd:variable value="startstop"/>
         </cd:sequence>
@@ -64,7 +66,7 @@
         </cd:arguments>
     </cd:command>
 
-    <cd:command name="startstop" generated="yes" variant="generated" file="core-sys.mkiv">
+    <cd:command name="startstop" generated="yes" variant="example" file="core-sys.mkiv">
         <cd:sequence>
             <cd:variable value="startstop"/>
         </cd:sequence>

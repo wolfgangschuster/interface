@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?context-directive job ctxfile x-setups.ctx ?>
+
 <cd:interface xmlns:cd="http://www.pragma-ade.com/commands">
 
     <cd:command name="definemathstackers" file="math-stc.mkvi">
@@ -118,7 +120,7 @@
         </cd:arguments>
     </cd:command>
 
-    <cd:command name="mathextensible" generated="yes" variant="generated" file="math-stc.mkvi">
+    <cd:command name="mathextensible" generated="yes" variant="example" file="math-stc.mkvi">
         <cd:sequence>
             <cd:variable value="mathextensible"/>
         </cd:sequence>
@@ -145,7 +147,7 @@
         </cd:arguments>
     </cd:command>
 
-    <cd:command name="mathoverextensible" generated="yes" variant="generated" file="math-stc.mkvi">
+    <cd:command name="mathoverextensible" generated="yes" variant="example" file="math-stc.mkvi">
         <cd:sequence>
             <cd:variable value="mathoverextensible"/>
         </cd:sequence>
@@ -165,7 +167,7 @@
         </cd:arguments>
     </cd:command>
 
-    <cd:command name="mathunderextensible" generated="yes" variant="generated" file="math-stc.mkvi">
+    <cd:command name="mathunderextensible" generated="yes" variant="example" file="math-stc.mkvi">
         <cd:sequence>
             <cd:variable value="mathunderextensible"/>
         </cd:sequence>
@@ -186,7 +188,7 @@
         </cd:arguments>
     </cd:command>
 
-    <cd:command name="mathdoubleextensible" generated="yes" variant="generated" file="math-stc.mkvi">
+    <cd:command name="mathdoubleextensible" generated="yes" variant="example" file="math-stc.mkvi">
         <cd:sequence>
             <cd:variable value="mathdoubleextensible"/>
         </cd:sequence>
@@ -205,7 +207,7 @@
         </cd:arguments>
     </cd:command>
 
-    <cd:command name="mathovertextextensible" generated="yes" variant="generated" file="math-stc.mkvi">
+    <cd:command name="mathovertextextensible" generated="yes" variant="example" file="math-stc.mkvi">
         <cd:sequence>
             <cd:variable value="mathovertextextensible"/>
         </cd:sequence>
@@ -225,7 +227,7 @@
         </cd:arguments>
     </cd:command>
 
-    <cd:command name="mathundertextextensible" generated="yes" variant="generated" file="math-stc.mkvi">
+    <cd:command name="mathundertextextensible" generated="yes" variant="example" file="math-stc.mkvi">
         <cd:sequence>
             <cd:variable value="mathundertextextensible"/>
         </cd:sequence>
@@ -243,7 +245,7 @@
         </cd:arguments>
     </cd:command>
 
-    <cd:command name="mathtriplet" generated="yes" variant="generated" file="math-stc.mkvi">
+    <cd:command name="mathtriplet" generated="yes" variant="example" file="math-stc.mkvi">
         <cd:sequence>
             <cd:variable value="mathtriplet"/>
         </cd:sequence>
@@ -1770,7 +1772,7 @@
         </cd:arguments>
     </cd:command>
 
-    <cd:command name="mathunstacked" generated="yes" variant="generated" file="math-stc.mkvi">
+    <cd:command name="mathunstacked" generated="yes" variant="example" file="math-stc.mkvi">
         <cd:sequence>
             <cd:variable value="mathunstacked"/>
         </cd:sequence>

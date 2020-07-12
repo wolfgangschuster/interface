@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?context-directive job ctxfile x-setups.ctx ?>
+
 <cd:interface xmlns:cd="http://www.pragma-ade.com/commands">
 
     <cd:command name="setupblackrules" file="pack-mrl.mkiv">
@@ -32,6 +34,14 @@
                 </cd:parameter>
                 <cd:parameter name="color">
                     <cd:constant type="cd:color"/>
+                </cd:parameter>
+                <cd:parameter name="type">
+                    <cd:constant type="mp"/>
+                    <cd:constant type="yes"/>
+                    <cd:constant type="no"/>
+                </cd:parameter>
+                <cd:parameter name="mp">
+                    <cd:constant type="cd:name"/>
                 </cd:parameter>
             </cd:assignments>
         </cd:arguments>

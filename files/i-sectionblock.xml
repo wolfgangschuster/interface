@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?context-directive job ctxfile x-setups.ctx ?>
+
 <cd:interface xmlns:cd="http://www.pragma-ade.com/commands">
 
     <cd:command name="definesectionblock" file="strc-sbe.mkiv">
@@ -56,7 +58,7 @@
         </cd:arguments>
     </cd:command>
 
-    <cd:command name="sectionblock" type="environment" generated="yes" variant="generated" file="strc-sbe.mkiv">
+    <cd:command name="sectionblock" type="environment" generated="yes" variant="example" file="strc-sbe.mkiv">
         <cd:sequence>
             <cd:variable value="sectionblock"/>
         </cd:sequence>
@@ -68,6 +70,12 @@
                 <cd:inherit name="setupsectionblock"/>
             </cd:assignments>
         </cd:arguments>
+        <cd:instances>
+            <cd:constant value="frontmatter"/>
+            <cd:constant value="bodymatter"/>
+            <cd:constant value="appendices"/>
+            <cd:constant value="backmatter"/>
+        </cd:instances>
     </cd:command>
 
     <cd:command name="sectionblockenvironment" type="environment" file="strc-sbe.mkiv">

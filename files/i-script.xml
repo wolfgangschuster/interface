@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?context-directive job ctxfile x-setups.ctx ?>
+
 <cd:interface xmlns:cd="http://www.pragma-ade.com/commands">
 
     <cd:command name="definescript" file="scrp-ini.mkvi">
@@ -81,6 +83,15 @@
         <cd:sequence>
             <cd:variable value="script"/>
         </cd:sequence>
+        <cd:instances>
+            <cd:constant value="hangul"/>
+            <cd:constant value="hanzi"/>
+            <cd:constant value="nihongo"/>
+            <cd:constant value="ethiopic"/>
+            <cd:constant value="thai"/>
+            <cd:constant value="latin"/>
+            <cd:constant value="test"/>
+        </cd:instances>
     </cd:command>
 
     <cd:command name="hangul" file="scrp-ini.mkvi"/>

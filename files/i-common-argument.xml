@@ -118,6 +118,35 @@
         </cd:keywords>
     </cd:define>
 
+    <!--        *   -->
+    <!-- \... {...} -->
+    <!--            -->
+    <!-- * PATH     -->
+
+    <cd:define name="argument-path">
+        <cd:keywords delimiters="braces">
+            <cd:constant type="cd:path"/>
+        </cd:keywords>
+    </cd:define>
+
+    <cd:define name="argument-path-optional">
+        <cd:keywords delimiters="braces" optional="yes">
+            <cd:constant type="cd:path"/>
+        </cd:keywords>
+    </cd:define>
+
+    <cd:define name="argument-path-list">
+        <cd:keywords delimiters="braces" list="yes">
+            <cd:constant type="cd:path"/>
+        </cd:keywords>
+    </cd:define>
+
+    <cd:define name="argument-path-list-optional">
+        <cd:keywords delimiters="braces" list="yes" optional="yes">
+            <cd:constant type="cd:path"/>
+        </cd:keywords>
+    </cd:define>
+
     <!--        *    -->
     <!-- \... {...}  -->
     <!--             -->

@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?context-directive job ctxfile x-setups.ctx ?>
+
 <cd:interface xmlns:cd="http://www.pragma-ade.com/commands">
 
-    <cd:command name="definefontfamily" variant="1" file="font-sel.mkvi">
+    <cd:command name="definefontfamily" file="font-sel.mkvi">
         <cd:arguments>
             <cd:resolve name="keyword-name"/>
             <cd:keywords>
@@ -66,7 +68,7 @@
         </cd:arguments>
     </cd:command>
 
-    <cd:command name="definefontfamily" variant="2" file="font-sel.mkvi">
+    <cd:command name="definefontfamily" variant="preset" file="font-sel.mkvi">
         <cd:arguments>
             <cd:resolve name="keyword-name"/>
             <cd:keywords>
@@ -95,7 +97,7 @@
         </cd:arguments>
     </cd:command>
 
-    <cd:command name="definefallbackfamily" variant="1" file="font-sel.mkvi">
+    <cd:command name="definefallbackfamily" file="font-sel.mkvi">
         <cd:arguments>
             <cd:resolve name="keyword-name"/>
             <cd:keywords>
@@ -144,8 +146,8 @@
                     <cd:constant type="no" default="yes"/>
                 </cd:parameter>
                 <cd:parameter name="force">
-                    <cd:constant type="yes" default="yes"/>
-                    <cd:constant type="no"/>
+                    <cd:constant type="yes"/>
+                    <cd:constant type="no" default="yes"/>
                 </cd:parameter>
                 <cd:parameter name="features">
                     <cd:constant type="cd:name"/>
@@ -175,7 +177,7 @@
         </cd:arguments>
     </cd:command>
 
-    <cd:command name="definefallbackfamily" variant="2" file="font-sel.mkvi">
+    <cd:command name="definefallbackfamily" variant="preset" file="font-sel.mkvi">
         <cd:arguments>
             <cd:resolve name="keyword-name"/>
             <cd:keywords>
@@ -204,16 +206,16 @@
         </cd:arguments>
     </cd:command>
 
-    <cd:command name="definefontfamilypreset" variant="1" file="font-sel.mkvi">
+    <cd:command name="definefontfamilypreset" file="font-sel.mkvi">
         <cd:arguments>
             <cd:resolve name="keyword-name"/>
-            <cd:assignment list="yes">
+            <cd:assignments list="yes">
                 <cd:inherit name="definefontfamily"/>
-            </cd:assignment>
+            </cd:assignments>
         </cd:arguments>
     </cd:command>
 
-    <cd:command name="definefontfamilypreset" variant="2" file="font-sel.mkvi">
+    <cd:command name="definefontfamilypreset" variant="name" file="font-sel.mkvi">
         <cd:arguments>
             <cd:resolve name="keyword-name"/>
             <cd:resolve name="keyword-name"/>

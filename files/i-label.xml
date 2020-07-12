@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?context-directive job ctxfile x-setups.ctx ?>
+
 <cd:interface xmlns:cd="http://www.pragma-ade.com/commands">
 
     <cd:command name="definelabel" file="strc-lab.mkiv">
@@ -184,7 +186,7 @@
 
     -->
 
-    <cd:command name="label" generated="yes" variant="generated" file="strc-lab.mkiv">
+    <cd:command name="label" generated="yes" variant="example" file="strc-lab.mkiv">
         <cd:sequence>
             <cd:variable value="label"/>
         </cd:sequence>
@@ -194,7 +196,7 @@
         </cd:arguments>
     </cd:command>
 
-    <cd:command name="currentlabel" generated="yes" variant="generated" file="strc-lab.mkiv">
+    <cd:command name="currentlabel" generated="yes" variant="example" file="strc-lab.mkiv">
         <cd:sequence>
             <cd:string value="current"/>
             <cd:variable value="label"/>

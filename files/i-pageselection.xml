@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?context-directive job ctxfile x-setups.ctx ?>
+
 <cd:interface xmlns:cd="http://www.pragma-ade.com/commands">
 
     <cd:command name="insertpages" file="page-sel.mkvi">
@@ -12,6 +14,9 @@
                 </cd:parameter>
                 <cd:parameter name="n">
                     <cd:constant type="cd:number"/>
+                </cd:parameter>
+                <cd:parameter name="category">
+                    <cd:constant type="cd:name"/>
                 </cd:parameter>
             </cd:assignments>
         </cd:arguments>
@@ -32,6 +37,9 @@
                 </cd:parameter>
                 <cd:parameter name="n">
                     <cd:constant type="cd:number"/>
+                </cd:parameter>
+                <cd:parameter name="category">
+                    <cd:constant type="cd:name"/>
                 </cd:parameter>
             </cd:assignments>
         </cd:arguments>

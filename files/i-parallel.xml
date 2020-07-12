@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?context-directive job ctxfile x-setups.ctx ?>
+
 <cd:interface xmlns:cd="http://www.pragma-ade.com/commands">
 
     <cd:command name="defineparallel" file="buff-par.mkvi">
@@ -74,7 +76,7 @@
         </cd:arguments>
     </cd:command>
 
-    <cd:command name="parallel" type="environment" generated="yes" variant="generated" file="buff-par.mkvi">
+    <cd:command name="parallel" type="environment" generated="yes" variant="example" file="buff-par.mkvi">
         <cd:sequence>
             <cd:variable value="parallel"/>
         </cd:sequence>

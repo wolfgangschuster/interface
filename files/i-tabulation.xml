@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?context-directive job ctxfile x-setups.ctx ?>
+
 <cd:interface xmlns:cd="http://www.pragma-ade.com/commands">
 
     <cd:command name="definetabulation" file="tabl-tbl.mkiv">
@@ -89,11 +91,15 @@
                 <cd:parameter name="title">
                     <cd:constant type="cd:text"/>
                 </cd:parameter>
+                <cd:parameter name="keeptogether">
+                    <cd:constant type="yes" default="yes"/>
+                    <cd:constant type="no"/>
+                </cd:parameter>
             </cd:assignments>
         </cd:arguments>
     </cd:command>
 
-    <cd:command name="tabulation" type="environment" generated="yes" variant="generated" file="tabl-tbl.mkiv">
+    <cd:command name="tabulation" type="environment" generated="yes" variant="example" file="tabl-tbl.mkiv">
         <cd:sequence>
             <cd:variable value="tabulation"/>
         </cd:sequence>
@@ -132,7 +138,7 @@
         </cd:arguments>
     </cd:command>
 
-    <cd:command name="tabulate" type="environment" generated="yes" variant="generated" file="tabl-tbl.mkiv">
+    <cd:command name="tabulate" type="environment" generated="yes" variant="example" file="tabl-tbl.mkiv">
         <cd:sequence>
             <cd:variable value="tabulate"/>
         </cd:sequence>
@@ -142,6 +148,10 @@
                 <cd:inherit name="setuptabulate"/>
             </cd:assignments>
         </cd:arguments>
+        <cd:instances>
+            <cd:constant value="legend"/>
+            <cd:constant value="fact"/>
+        </cd:instances>
     </cd:command>
 
     <cd:command name="tabulatehead" type="environment" file="tabl-tbl.mkiv">
@@ -164,7 +174,7 @@
 
     <cd:command name="tabulateautoline" file="tabl-tbl.mkiv"/>
 
-    <cd:command name="legend" type="environment" ="tabl-tbl.mkiv">
+    <cd:command name="legend" type="environment" file="tabl-tbl.mkiv">
         <cd:arguments>
             <cd:resolve name="keyword-name-optional"/>
             <cd:assignments list="yes" optional="yes">
@@ -173,7 +183,7 @@
         </cd:arguments>
     </cd:command>
 
-    <cd:command name="fact" type="environment" ="tabl-tbl.mkiv">
+    <cd:command name="fact" type="environment" file="tabl-tbl.mkiv">
         <cd:arguments>
             <cd:resolve name="keyword-name-optional"/>
             <cd:assignments list="yes" optional="yes">

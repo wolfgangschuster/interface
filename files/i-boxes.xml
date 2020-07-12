@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?context-directive job ctxfile x-setups.ctx ?>
+
 <cd:interface xmlns:cd="http://www.pragma-ade.com/commands">
 
     <cd:command name="doiftext" file="supp-box.mkiv">
@@ -140,7 +142,7 @@
         </cd:arguments>
     </cd:command>
 
-    <cd:command name="limitatetext" variant="1" file="supp-box.mkiv">
+    <cd:command name="limitatetext" file="supp-box.mkiv">
         <cd:arguments>
             <cd:resolve name="argument-text"/>
             <cd:keywords delimiters="braces">
@@ -150,7 +152,7 @@
         </cd:arguments>
     </cd:command>
 
-    <cd:command name="limitatetext" variant="2" file="supp-box.mkiv">
+    <cd:command name="limitatetext" variant="list" file="supp-box.mkiv">
         <cd:arguments>
             <cd:resolve name="argument-text"/>
             <cd:keywords delimiters="braces" list="yes">
@@ -864,6 +866,63 @@
         </cd:arguments>
     </cd:command>
 
+    <cd:command name="runninghbox" file="supp-box.mkiv">
+        <cd:arguments>
+            <cd:content/>
+        </cd:arguments>
+    </cd:command>
+
+    <cd:command name="vbox" type="environment" begin="begin" end="end" file="supp-box.mkiv"/>
+
+    <cd:command name="hbox" type="environment" begin="begin" end="end" file="supp-box.mkiv"/>
+
+    <cd:command name="vtop" type="environment" begin="begin" end="end" file="supp-box.mkiv"/>
+
+    <cd:command name="setvboxregister" file="supp-box.mkiv">
+        <cd:arguments>
+            <cd:resolve name="string-box"/>
+            <cd:content/>
+        </cd:arguments>
+    </cd:command>
+
+    <cd:command name="sethboxregister" file="supp-box.mkiv">
+        <cd:arguments>
+            <cd:resolve name="string-box"/>
+            <cd:content/>
+        </cd:arguments>
+    </cd:command>
+
+    <cd:command name="setvtopregister" file="supp-box.mkiv">
+        <cd:arguments>
+            <cd:resolve name="string-box"/>
+            <cd:content/>
+        </cd:arguments>
+    </cd:command>
+
+    <cd:command name="flushboxregister" file="supp-box.mkiv">
+        <cd:arguments>
+            <cd:resolve name="string-box"/>
+        </cd:arguments>
+    </cd:command>
+
+    <cd:command name="vboxregister" type="environment" file="supp-box.mkiv">
+        <cd:arguments>
+            <cd:resolve name="string-box"/>
+        </cd:arguments>
+    </cd:command>
+
+    <cd:command name="hboxregister" type="environment" file="supp-box.mkiv">
+        <cd:arguments>
+            <cd:resolve name="string-box"/>
+        </cd:arguments>
+    </cd:command>
+
+    <cd:command name="vtopregister" type="environment" file="supp-box.mkiv">
+        <cd:arguments>
+            <cd:resolve name="string-box"/>
+        </cd:arguments>
+    </cd:command>
+
     <cd:command name="righttolefthbox" file="spac-ali.mkiv">
         <cd:arguments>
             <cd:resolve name="string-boxoptions"/>
@@ -967,7 +1026,7 @@
         </cd:arguments>
     </cd:command>
 
-    <cd:command name="hbox" generated="yes" variant="generated" file="spac-ali.mkiv">
+    <cd:command name="hbox" generated="yes" variant="example" file="spac-ali.mkiv">
         <cd:sequence>
             <cd:string value="hbox"/>
             <cd:variable value="box"/>

@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?context-directive job ctxfile x-setups.ctx ?>
+
 <cd:interface xmlns:cd="http://www.pragma-ade.com/commands">
 
     <cd:command name="setuphyphenation" file="lang-hyp.mkiv">
@@ -170,6 +172,10 @@
                 </cd:parameter>
                 <cd:parameter name="right">
                     <cd:constant type="cd:command"/>
+                </cd:parameter>
+                <cd:parameter name="range">
+                    <cd:constant type="yes"/>
+                    <cd:constant type="no" default="yes"/>
                 </cd:parameter>
                 <cd:parameter name="language">
                     <cd:constant type="cd:language"/>

@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?context-directive job ctxfile x-setups.ctx ?>
+
 <cd:interface xmlns:cd="http://www.pragma-ade.com/commands">
 
     <cd:command name="taggedctxcommand" file="back-exp.mkiv">
@@ -164,7 +166,7 @@
         </cd:arguments>
     </cd:command>
 
-    <cd:command name="ctxfunctiondefinition" generated="yes" variant="generated" file="luat-ini.mkiv">
+    <cd:command name="ctxfunctiondefinition" generated="yes" variant="example" file="luat-ini.mkiv">
         <cd:sequence>
             <cd:variable value="ctxfunctiondefinition"/>
         </cd:sequence>
@@ -182,7 +184,7 @@
         </cd:arguments>
     </cd:command>
 
-    <cd:command name="ctxfunction" generated="yes" variant="generated" file="luat-ini.mkiv">
+    <cd:command name="ctxfunction" generated="yes" variant="example" file="luat-ini.mkiv">
         <cd:sequence>
             <cd:variable value="ctxfunction"/>
         </cd:sequence>

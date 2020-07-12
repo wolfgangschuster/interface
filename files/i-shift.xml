@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?context-directive job ctxfile x-setups.ctx ?>
+
 <cd:interface xmlns:cd="http://www.pragma-ade.com/commands">
 
     <cd:command name="defineshift" file="node.rul.mkiv">
@@ -53,13 +55,17 @@
         </cd:arguments>
     </cd:command>
 
-    <cd:command name="shift" generated="yes" variant="generated" file="node-rul.mkiv">
+    <cd:command name="shift" generated="yes" variant="example" file="node-rul.mkiv">
         <cd:sequence>
             <cd:variable value="shift"/>
         </cd:sequence>
         <cd:arguments>
             <cd:content/>
         </cd:arguments>
+        <cd:instances>
+            <cd:constant value="shiftup"/>
+            <cd:constant value="shiftdown"/>
+        </cd:instances>
     </cd:command>
 
     <cd:command name="shift" type="environment" file="node-rul.mkiv">

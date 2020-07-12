@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?context-directive job ctxfile x-setups.ctx ?>
+
 <cd:interface xmlns:cd="http://www.pragma-ade.com/commands">
 
     <cd:command name="text" type="environment" file="file-job.mkvi"/>
@@ -8,7 +10,7 @@
 
     <cd:command name="notext" type="environment" file="file-job.mkvi"/>
 
-    <cd:command name="environment" type="environment" variant="1" file="file-job.mkvi">
+    <cd:command name="environment" type="environment" file="file-job.mkvi">
         <cd:arguments>
             <cd:keywords>
                 <cd:constant type="cd:file"/>
@@ -17,7 +19,7 @@
         </cd:arguments>
     </cd:command>
 
-    <cd:command name="environment" type="environment" variant="2" file="file-job.mkvi">
+    <cd:command name="environment" type="environment" variant="string" file="file-job.mkvi">
         <cd:arguments>
             <cd:keywords delimiters="none">
                 <cd:constant type="cd:file"/>
@@ -26,13 +28,13 @@
         </cd:arguments>
     </cd:command>
 
-    <cd:command name="environment" variant="1" file="file-job.mkvi">
+    <cd:command name="environment" file="file-job.mkvi">
         <cd:arguments>
             <cd:resolve name="keyword-file"/>
         </cd:arguments>
     </cd:command>
 
-    <cd:command name="environment" variant="2" file="file-job.mkvi">
+    <cd:command name="environment" variant="string" file="file-job.mkvi">
         <cd:arguments>
             <cd:resolve name="string-file"/>
         </cd:arguments>
@@ -46,7 +48,7 @@
 
     <cd:command name="currentenvironment" file="file-job.mkvi"/>
 
-    <cd:command name="project" type="environment" variant="1" file="file-job.mkvi">
+    <cd:command name="project" type="environment" file="file-job.mkvi">
         <cd:arguments>
             <cd:keywords>
                 <cd:constant type="cd:file"/>
@@ -55,7 +57,7 @@
         </cd:arguments>
     </cd:command>
 
-    <cd:command name="project" type="environment" variant="2" file="file-job.mkvi">
+    <cd:command name="project" type="environment" variant="string" file="file-job.mkvi">
         <cd:arguments>
             <cd:keywords delimiters="none">
                 <cd:constant type="cd:file"/>
@@ -64,13 +66,13 @@
         </cd:arguments>
     </cd:command>
 
-    <cd:command name="project" variant="1" file="file-job.mkvi">
+    <cd:command name="project" file="file-job.mkvi">
         <cd:arguments>
             <cd:resolve name="keyword-file"/>
         </cd:arguments>
     </cd:command>
 
-    <cd:command name="project" variant="2" file="file-job.mkvi">
+    <cd:command name="project" variant="string" file="file-job.mkvi">
         <cd:arguments>
             <cd:resolve name="string-file"/>
         </cd:arguments>
@@ -84,7 +86,7 @@
 
     <cd:command name="currentproject" file="file-job.mkvi"/>
 
-    <cd:command name="product" type="environment" variant="1" file="file-job.mkvi">
+    <cd:command name="product" type="environment" file="file-job.mkvi">
         <cd:arguments>
             <cd:keywords>
                 <cd:constant type="cd:file"/>
@@ -93,7 +95,7 @@
         </cd:arguments>
     </cd:command>
 
-    <cd:command name="product" type="environment" variant="2" file="file-job.mkvi">
+    <cd:command name="product" type="environment" variant="string" file="file-job.mkvi">
         <cd:arguments>
             <cd:keywords delimiters="none">
                 <cd:constant type="cd:file"/>
@@ -102,13 +104,13 @@
         </cd:arguments>
     </cd:command>
 
-    <cd:command name="product" variant="1" file="file-job.mkvi">
+    <cd:command name="product" file="file-job.mkvi">
         <cd:arguments>
             <cd:resolve name="keyword-file"/>
         </cd:arguments>
     </cd:command>
 
-    <cd:command name="product" variant="2" file="file-job.mkvi">
+    <cd:command name="product" variant="string" file="file-job.mkvi">
         <cd:arguments>
             <cd:resolve name="string-file"/>
         </cd:arguments>
@@ -122,7 +124,7 @@
 
     <cd:command name="currentproduct" file="file-job.mkvi"/>
 
-    <cd:command name="component" type="environment" variant="1" file="file-job.mkvi">
+    <cd:command name="component" type="environment" file="file-job.mkvi">
         <cd:arguments>
             <cd:keywords>
                 <cd:constant type="cd:file"/>
@@ -131,7 +133,7 @@
         </cd:arguments>
     </cd:command>
 
-    <cd:command name="component" type="environment" variant="2" file="file-job.mkvi">
+    <cd:command name="component" type="environment" variant="string" file="file-job.mkvi">
         <cd:arguments>
             <cd:keywords delimiters="none">
                 <cd:constant type="cd:file"/>
@@ -140,13 +142,13 @@
         </cd:arguments>
     </cd:command>
 
-    <cd:command name="component" variant="1" file="file-job.mkvi">
+    <cd:command name="component" file="file-job.mkvi">
         <cd:arguments>
             <cd:resolve name="keyword-file"/>
         </cd:arguments>
     </cd:command>
 
-    <cd:command name="component" variant="2" file="file-job.mkvi">
+    <cd:command name="component" variant="string" file="file-job.mkvi">
         <cd:arguments>
             <cd:resolve name="string-file"/>
         </cd:arguments>
@@ -192,6 +194,14 @@
                 <cd:parameter name="cd:key">
                     <cd:constant type="cd:value"/>
                 </cd:parameter>
+            </cd:assignments>
+        </cd:arguments>
+    </cd:command>
+
+    <cd:command name="presetdocument" file="file-job.mkvi">
+        <cd:arguments>
+            <cd:assignments list="yes">
+                <cd:inherit name="setupdocument"/>
             </cd:assignments>
         </cd:arguments>
     </cd:command>

@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?context-directive job ctxfile x-setups.ctx ?>
+
 <cd:interface xmlns:cd="http://www.pragma-ade.com/commands">
 
     <cd:command name="defineblock" file="strc-blk.mkiv">
@@ -35,7 +37,7 @@
         </cd:arguments>
     </cd:command>
 
-    <cd:command name="block" type="environment" generated="yes" variant="generated" begin="begin" end="end" file="strc-blk.mkiv">
+    <cd:command name="block" type="environment" generated="yes" variant="example" begin="begin" end="end" file="strc-blk.mkiv">
         <cd:sequence>
             <cd:variable value="block"/>
         </cd:sequence>

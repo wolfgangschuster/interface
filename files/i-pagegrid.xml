@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?context-directive job ctxfile x-setups.ctx ?>
+
 <cd:interface xmlns:cd="http://www.pragma-ade.com/commands">
 
     <cd:command name="definepagegrid" file="page-cst.mkiv">
@@ -53,7 +55,7 @@
         </cd:arguments>
     </cd:command>
 
-    <cd:command name="pagegrid" type="environment" generated="yes" variant="generated" file="page-cst.mkiv">
+    <cd:command name="pagegrid" type="environment" generated="yes" variant="example" file="page-cst.mkiv">
         <cd:sequence>
             <cd:variable value="pagegrid"/>
         </cd:sequence>

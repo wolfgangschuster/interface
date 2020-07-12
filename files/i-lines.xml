@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?context-directive job ctxfile x-setups.ctx ?>
+
 <cd:interface xmlns:cd="http://www.pragma-ade.com/commands">
 
     <cd:command name="noflines" file="supp-box.mkiv"/>
@@ -76,11 +78,17 @@
                 <cd:parameter name="color">
                     <cd:constant type="cd:color"/>
                 </cd:parameter>
+                <cd:parameter name="left">
+                    <cd:constant type="cd:command"/>
+                </cd:parameter>
+                <cd:parameter name="right">
+                    <cd:constant type="cd:command"/>
+                </cd:parameter>
             </cd:assignments>
         </cd:arguments>
     </cd:command>
 
-    <cd:command name="lines" type="environment" generated="yes" variant="generated" file="spac-lin.mkiv">
+    <cd:command name="lines" type="environment" generated="yes" variant="example" file="spac-lin.mkiv">
         <cd:sequence>
             <cd:variable value="lines"/>
         </cd:sequence>
@@ -89,6 +97,9 @@
                 <cd:inherit name="setuplines"/>
             </cd:assignments>
         </cd:arguments>
+        <cd:instances>
+            <cd:constant value="lines"/>
+        </cd:instances>
     </cd:command>
 
     <cd:command name="lines" type="environment" file="spac-lin.mkiv">

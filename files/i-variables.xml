@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?context-directive job ctxfile x-setups.ctx ?>
+
 <cd:interface xmlns:cd="http://www.pragma-ade.com/commands">
 
     <cd:command name="setvariables" file="core-env.mkiv">
@@ -54,6 +56,23 @@
     </cd:command>
 
     <cd:command name="setxvariables" file="core-env.mkiv">
+        <cd:arguments>
+            <cd:resolve name="keyword-name"/>
+            <cd:assignments list="yes">
+                <cd:parameter name="set">
+                    <cd:constant type="cd:command"/>
+                </cd:parameter>
+                <cd:parameter name="reset">
+                    <cd:constant type="cd:command"/>
+                </cd:parameter>
+                <cd:parameter name="cd:key">
+                    <cd:constant type="cd:value"/>
+                </cd:parameter>
+            </cd:assignments>
+        </cd:arguments>
+    </cd:command>
+
+    <cd:command name="checkvariables" file="core-env.mkiv">
         <cd:arguments>
             <cd:resolve name="keyword-name"/>
             <cd:assignments list="yes">

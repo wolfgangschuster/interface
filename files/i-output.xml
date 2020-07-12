@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?context-directive job ctxfile x-setups.ctx ?>
+
 <cd:interface xmlns:cd="http://www.pragma-ade.com/commands">
 
     <cd:command name="defineoutputroutine" file="page-otr.mkvi">
@@ -12,7 +14,7 @@
         </cd:arguments>
     </cd:command>
 
-    <cd:command name="setupoutputroutine" variant="1" file="page-otr.mkvi">
+    <cd:command name="setupoutputroutine" file="page-otr.mkvi">
         <cd:arguments>
             <cd:resolve name="keyword-name-optional"/>
             <cd:assignments list="yes">
@@ -23,7 +25,7 @@
         </cd:arguments>
     </cd:command>
 
-    <cd:command name="setupoutputroutine" variant="2" file="page-otr.mkvi">
+    <cd:command name="setupoutputroutine" variant="name" file="page-otr.mkvi">
         <cd:arguments>
             <cd:resolve name="keyword-name"/>
         </cd:arguments>
