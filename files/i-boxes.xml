@@ -1114,7 +1114,7 @@
         </cd:arguments>
     </cd:command>
 
-    <cd:command name="autodirvtop" level="system" category="boxes" keywords="alidirectiongnment" file="spac-ali.mkiv">
+    <cd:command name="autodirvtop" level="system" category="boxes" keywords="direction" file="spac-ali.mkiv">
         <cd:arguments>
             <cd:resolve name="string-boxoptions"/>
             <cd:content/>
