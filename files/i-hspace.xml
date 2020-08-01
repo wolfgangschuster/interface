@@ -87,8 +87,6 @@
 
     <cd:command name="removeunwantedspaces" level="system" category="whitespace" file="spac-hor.mkiv"/>
 
-    <cd:command name="thinspace" level="style" category="whitespace" file="spac-hor.mkiv"/>
-
     <cd:command name="negthinspace" level="style" category="whitespace" file="spac-hor.mkiv"/>
 
     <cd:command name="enspace" level="style" category="whitespace" file="spac-hor.mkiv"/>
