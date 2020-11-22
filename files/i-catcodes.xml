@@ -4,6 +4,8 @@
 
 <cd:interface xmlns:cd="http://www.pragma-ade.com/commands">
 
+    <cd:command name="texcode" type="environment" level="system" category="catcode" file="catc-ctx.mkxl"/>
+
     <cd:command name="contextcode" type="environment" level="system" category="catcode" file="catc-ctx.mkiv"/>
 
     <cd:command name="contextdefinitioncode" type="environment" level="system" category="catcode" file="catc-ctx.mkiv"/>
