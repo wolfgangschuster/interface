@@ -11,6 +11,7 @@
                 <cd:constant type="wide"/>
                 <cd:constant type="bottom" default="yes"/>
                 <cd:constant type="height"/>
+                <cd:constant type="depth"/>
                 <cd:constant type="line"/>
                 <cd:constant type="high"/>
                 <cd:constant type="low"/>
@@ -49,6 +50,9 @@
                 <cd:constant type="nohz"/>
                 <cd:constant type="hyphenated"/>
                 <cd:constant type="nothyphenated"/>
+                <cd:constant type="collapsed"/>
+                <cd:constant type="notcollapsed"/>
+                <cd:constant type="explicit"/>
                 <cd:constant type="tolerant"/>
                 <cd:constant type="verytolerant"/>
                 <cd:constant type="stretch"/>
@@ -61,7 +65,14 @@
                 <cd:constant type="more"/>
                 <cd:constant type="1*more"/>
                 <cd:constant type="2*more"/>
+                <cd:constant type="hangleft"/>
+                <cd:constant type="hangright"/>
+                <cd:constant type="flushforward"/>
+                <cd:constant type="flushbackward"/>
                 <cd:constant type="always"/>
+                <cd:constant type="profile"/>
+                <cd:constant type="fit"/>
+                <cd:constant type="granular"/>
                 <!--
                     <cd:constant type="cd:name"/>
                 -->

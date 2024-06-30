@@ -36,7 +36,7 @@
         </cd:arguments>
     </cd:command>
 
-    <cd:command name="definelines" level="style" category="structure" file="spac-lin.mkiv">
+    <cd:command name="definelines" level="style" category="structure" file="spac-lin.mkxl">
         <cd:arguments>
             <cd:resolve name="keyword-name"/>
             <cd:resolve name="keyword-name-optional"/>
@@ -46,7 +46,7 @@
         </cd:arguments>
     </cd:command>
 
-    <cd:command name="setuplines" level="style" category="structure" file="spac-lin.mkiv">
+    <cd:command name="setuplines" level="style" category="structure" file="spac-lin.mkxl">
         <cd:arguments>
             <cd:resolve name="keyword-name-list-optional"/>
             <cd:assignments list="yes">
@@ -94,11 +94,14 @@
                     <cd:constant type="cd:dimension"/>
                     <cd:constant type="*"/>
                 </cd:parameter>
+                <cd:parameter name="keeptogether">
+                    <cd:constant type="paragraph"/>
+                </cd:parameter>
             </cd:assignments>
         </cd:arguments>
     </cd:command>
 
-    <cd:command name="lines" type="environment" generated="yes" variant="instance" level="document" category="structure" file="spac-lin.mkiv">
+    <cd:command name="lines" type="environment" generated="yes" variant="instance" level="document" category="structure" file="spac-lin.mkxl">
         <cd:sequence>
             <cd:instance value="lines"/>
         </cd:sequence>
@@ -112,7 +115,7 @@
         </cd:instances>
     </cd:command>
 
-    <cd:command name="emptylines" level="document" category="whitespace" file="spac-lin.mkiv">
+    <cd:command name="emptylines" level="document" category="whitespace" file="spac-lin.mkxl">
         <cd:arguments>
             <cd:resolve name="keyword-number-optional"/>
         </cd:arguments>

@@ -248,6 +248,7 @@
 
     <cd:define name="value-floatlocation">
         <cd:constant type="split"/>
+        <cd:constant type="keeptogether"/>
         <cd:constant type="always"/>
         <cd:constant type="left"/>
         <cd:constant type="right"/>
@@ -277,6 +278,8 @@
         <cd:constant type="high"/>
         <cd:constant type="low"/>
         <cd:constant type="fit"/>
+        <cd:constant type="tolerant"/>
+        <cd:constant type="verytolerant"/>
         <cd:constant type="90"/>
         <cd:constant type="180"/>
         <cd:constant type="270"/>
@@ -298,6 +301,7 @@
         <cd:constant type="page"/>
         <cd:constant type="leftpage"/>
         <cd:constant type="rightpage"/>
+        <cd:constant type="paragraph"/>
         <cd:constant type="somewhere"/>
         <cd:constant type="effective"/>
         <cd:constant type="header"/>

@@ -4,7 +4,7 @@
 
 <cd:interface xmlns:cd="http://www.pragma-ade.com/commands">
 
-    <cd:command name="defineformula" level="style" category="mathematics" file="math-for.mkiv">
+    <cd:command name="defineformula" level="style" category="mathematics" file="math-for.mkxl">
         <cd:arguments>
             <cd:resolve name="keyword-name"/>
             <cd:resolve name="keyword-name-optional"/>
@@ -14,7 +14,7 @@
         </cd:arguments>
     </cd:command>
 
-    <cd:command name="setupformula" level="style" category="mathematics" file="math-for.mkiv">
+    <cd:command name="setupformula" level="style" category="mathematics" file="math-for.mkxl">
         <cd:arguments>
             <cd:resolve name="keyword-name-list-optional"/>
             <cd:assignments list="yes">
@@ -34,7 +34,8 @@
                 <cd:parameter name="split">
                     <cd:constant type="yes"/>
                     <cd:constant type="no" default="yes"/>
-                    <cd:constant type="page"/>
+                    <cd:constant type="line"/>
+                    <cd:constant type="cd:name"/>
                 </cd:parameter>
                 <cd:parameter name="strut">
                     <cd:constant type="yes"/>
@@ -114,7 +115,7 @@
         </cd:arguments>
     </cd:command>
 
-    <cd:command name="setupformulas" level="style" category="mathematics" file="math-for.mkiv">
+    <cd:command name="setupformulas" level="style" category="mathematics" file="math-for.mkxl">
         <cd:arguments>
             <cd:resolve name="keyword-name-list-optional"/>
             <cd:assignments list="yes">
@@ -123,7 +124,7 @@
         </cd:arguments>
     </cd:command>
 
-    <cd:command name="definesubformula" level="style" category="mathematics" file="math-for.mkiv">
+    <cd:command name="definesubformula" level="style" category="mathematics" file="math-for.mkxl">
         <cd:arguments>
             <cd:resolve name="keyword-name"/>
             <cd:resolve name="keyword-name-optional"/>
@@ -133,7 +134,7 @@
         </cd:arguments>
     </cd:command>
 
-    <cd:command name="setupsubformula" level="style" category="mathematics" file="math-for.mkiv">
+    <cd:command name="setupsubformula" level="style" category="mathematics" file="math-for.mkxl">
         <cd:arguments>
             <cd:resolve name="keyword-name-list-optional"/>
             <cd:assignments list="yes">
@@ -144,7 +145,7 @@
         </cd:arguments>
     </cd:command>
 
-    <cd:command name="setupsubformulas" level="style" category="mathematics" file="math-for.mkiv">
+    <cd:command name="setupsubformulas" level="style" category="mathematics" file="math-for.mkxl">
         <cd:arguments>
             <cd:resolve name="keyword-name-list-optional"/>
             <cd:assignments list="yes">
