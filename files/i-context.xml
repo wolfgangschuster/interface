@@ -212,6 +212,7 @@
     <cd:interfacefile filename="i-sort.xml"/>
     <cd:interfacefile filename="i-soundtrack.xml"/>
     <cd:interfacefile filename="i-spellchecking.xml"/>
+    <cd:interfacefile filename="i-stacking.xml"/>
     <cd:interfacefile filename="i-startstop.xml"/>
     <cd:interfacefile filename="i-stream.xml"/>
     <cd:interfacefile filename="i-string.xml"/>
