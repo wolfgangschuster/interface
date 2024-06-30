@@ -155,7 +155,6 @@
         <cd:arguments>
             <cd:resolve name="argument-name-list"/>
             <cd:resolve name="argument-true"/>
-            <cd:resolve name="argument-false"/>
         </cd:arguments>
     </cd:command>
 

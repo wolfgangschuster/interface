@@ -479,7 +479,7 @@
 
     <cd:command name="flushnotes" level="style" category="structure" keywords="notes" file="strc-not.mkvi"/>
 
-    <cd:command name="postponingnotes" type="environment" category="structure" keywords="notes" file="strc-not.mkvi" file="strc-not.mkvi"/>
+    <cd:command name="postponingnotes" type="environment" category="structure" keywords="notes" file="strc-not.mkvi"/>
 
     <cd:command name="doifelsenoteonsamepage" level="system" category="structure" keywords="notes conditional" file="strc-not.mkvi">
         <cd:arguments>

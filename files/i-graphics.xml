@@ -251,6 +251,9 @@
                 <cd:parameter name="ownerpassword">
                     <cd:constant type="cd:text"/>
                 </cd:parameter>
+                <cd:parameter name="orientation">
+                    <cd:constant type="cd:number"/>
+                </cd:parameter>
             </cd:assignments>
         </cd:arguments>
     </cd:command>

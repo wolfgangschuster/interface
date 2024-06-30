@@ -128,6 +128,13 @@
                 <cd:parameter name="state">
                     <cd:constant type="start" default="yes"/>
                     <cd:constant type="stop"/>
+                    <cd:constant type="repeat"/>
+                </cd:parameter>
+                <cd:parameter name="offset">
+                    <cd:constant type="cd:dimension"/>
+                </cd:parameter>
+                <cd:parameter name="depth">
+                    <cd:constant type="cd:dimension"/>
                 </cd:parameter>
                 <cd:inherit name="setupframed"/>
             </cd:assignments>

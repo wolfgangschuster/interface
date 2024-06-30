@@ -231,6 +231,9 @@
                 <cd:parameter name="blank">
                     <cd:inherit name="blank"/>
                 </cd:parameter>
+                <cd:parameter name="bodyfont">
+                    <cd:inherit name="setupbodyfont"/>
+                </cd:parameter>
             </cd:assignments>
         </cd:arguments>
     </cd:command>

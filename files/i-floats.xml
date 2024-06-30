@@ -540,6 +540,9 @@
                 <cd:parameter name="reference">
                     <cd:constant type="cd:reference"/>
                 </cd:parameter>
+                <cd:parameter name="referencetext">
+                    <cd:constant type="cd:text"/>
+                </cd:parameter>
             </cd:assignments>
             <cd:resolve name="assignment-userdata-list-optional"/>
         </cd:arguments>

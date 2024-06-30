@@ -104,7 +104,7 @@
                     <cd:constant type="cd:dimension"/>
                 </cd:parameter>
                 <cd:parameter name="backgroundcolor">
-                    <cd:resolve name="cd:color"/>
+                    <cd:constant type="cd:color"/>
                 </cd:parameter>
                 <cd:parameter name="component">
                     <cd:constant type="cd:name"/>

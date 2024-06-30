@@ -24,6 +24,9 @@
             <cd:parameter name="reference">
                 <cd:constant type="cd:reference"/>
             </cd:parameter>
+            <cd:parameter name="referencetext">
+                <cd:constant type="cd:text"/>
+            </cd:parameter>
             <cd:parameter name="ownnumber">
                 <cd:constant type="cd:text"/>
             </cd:parameter>
@@ -49,6 +52,9 @@
             </cd:parameter>
             <cd:parameter name="reference">
                 <cd:constant type="cd:reference"/>
+            </cd:parameter>
+            <cd:parameter name="referencetext">
+                <cd:constant type="cd:text"/>
             </cd:parameter>
             <cd:parameter name="ownnumber">
                 <cd:constant type="cd:text"/>
@@ -84,6 +90,9 @@
             <cd:parameter name="reference">
                 <cd:constant type="cd:reference"/>
             </cd:parameter>
+            <cd:parameter name="referencetext">
+                <cd:constant type="cd:text"/>
+            </cd:parameter>
         </cd:assignments>
     </cd:define>
 
@@ -106,6 +115,9 @@
             </cd:parameter>
             <cd:parameter name="reference">
                 <cd:constant type="cd:reference"/>
+            </cd:parameter>
+            <cd:parameter name="referencetext">
+                <cd:constant type="cd:text"/>
             </cd:parameter>
         </cd:assignments>
     </cd:define>
@@ -208,6 +220,9 @@
             <cd:parameter name="reference">
                 <cd:constant type="cd:reference"/>
             </cd:parameter>
+            <cd:parameter name="referencetext">
+                <cd:constant type="cd:text"/>
+            </cd:parameter>
         </cd:assignments>
     </cd:define>
 
@@ -224,6 +239,9 @@
             </cd:parameter>
             <cd:parameter name="reference">
                 <cd:constant type="cd:reference"/>
+            </cd:parameter>
+            <cd:parameter name="referencetext">
+                <cd:constant type="cd:text"/>
             </cd:parameter>
         </cd:assignments>
     </cd:define>

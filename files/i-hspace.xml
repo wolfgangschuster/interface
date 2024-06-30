@@ -187,4 +187,6 @@
         </cd:arguments>
     </cd:command>
 
+    <cd:command name="spaceorpar" level="style" category="whitespace" file="spac-ali.mkxl"/>
+
 </cd:interface>
