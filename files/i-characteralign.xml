@@ -93,4 +93,18 @@
 
     <cd:command name="setsecondpasscharacteralign" level="system" category="alignment" file="typo-tal.mkiv"/>
 
+    <cd:command name="setalignmentcharacter" level="system" category="alignment" file="tabl-com.mkxl">
+        <cd:arguments>
+            <cd:resolve name="argument-characters"/>
+        </cd:arguments>
+    </cd:command>
+
+    <cd:command name="resetalignmentcharacter" level="system" category="alignment" file="tabl-com.mkxl"/>
+
+    <cd:command name="aligncontentleft" level="system" category="alignment" file="tabl-com.mkxl"/>
+
+    <cd:command name="aligncontentmiddle" level="system" category="alignment" file="tabl-com.mkxl"/>
+
+    <cd:command name="aligncontentright" level="system" category="alignment" file="tabl-com.mkxl"/>
+
 </cd:interface>

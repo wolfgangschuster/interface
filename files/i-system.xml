@@ -460,6 +460,22 @@
         </cd:arguments>
     </cd:command>
 
+    <cd:command name="doifelseallundefined" level="system" category="strings" keywords="conditional" file="syst-aux.mkxl">
+        <cd:arguments>
+            <cd:resolve name="argument-name-list"/>
+            <cd:resolve name="argument-true"/>
+            <cd:resolve name="argument-false"/>
+        </cd:arguments>
+    </cd:command>
+
+    <cd:command name="doifallundefinedelse" level="system" category="strings" keywords="conditional" file="syst-aux.mkxl">
+        <cd:arguments>
+            <cd:resolve name="argument-name-list"/>
+            <cd:resolve name="argument-true"/>
+            <cd:resolve name="argument-false"/>
+        </cd:arguments>
+    </cd:command>
+
     <cd:command name="doif" level="system" category="strings" keywords="conditional" file="syst-aux.mkxl">
         <cd:arguments>
             <cd:content/>
@@ -1585,6 +1601,24 @@
                 <cd:constant type="global"/>
             </cd:keywords>
             <cd:keywords delimiters="none" optional="yes">
+                <cd:constant type="tolerant"/>
+            </cd:keywords>
+            <cd:keywords delimiters="none" optional="yes">
+                <cd:constant type="frozen"/>
+            </cd:keywords>
+            <cd:keywords delimiters="none" optional="yes">
+                <cd:constant type="permanent"/>
+            </cd:keywords>
+            <cd:keywords delimiters="none" optional="yes">
+                <cd:constant type="instance"/>
+            </cd:keywords>
+            <cd:keywords delimiters="none" optional="yes">
+                <cd:constant type="mutable"/>
+                <cd:constant type="immutable"/>
+            </cd:keywords>
+            <cd:keywords delimiters="none" optional="yes">
+                <cd:constant type="protected"/>
+                <cd:constant type="semiprotected"/>
                 <cd:constant type="unexpanded"/>
             </cd:keywords>
             <cd:keywords delimiters="none" optional="yes">
@@ -1722,6 +1756,13 @@
     </cd:command>
 
     <cd:command name="doexpandedrecurse" level="system" category="system" file="syst-aux.mkxl">
+        <cd:arguments>
+            <cd:resolve name="argument-number"/>
+            <cd:resolve name="argument-command"/>
+        </cd:arguments>
+    </cd:command>
+
+    <cd:command name="doexpandedrecursed" level="system" category="system" file="syst-aux.mkxl">
         <cd:arguments>
             <cd:resolve name="argument-number"/>
             <cd:resolve name="argument-command"/>
@@ -2027,6 +2068,12 @@
         </cd:arguments>
     </cd:command>
 
+    <cd:command name="gobbleuntilandfinalize" level="system" category="system" file="syst-aux.mkxl">
+        <cd:arguments>
+            <cd:csname/>
+        </cd:arguments>
+    </cd:command>
+
     <cd:command name="gobbleuntilrelax" level="system" category="system" file="syst-aux.mkxl">
         <cd:arguments>
             <cd:resolve name="string-content"/>
@@ -2047,10 +2094,24 @@
         </cd:arguments>
     </cd:command>
 
+    <cd:command name="groupedcommandcs" level="system" category="system" file="syst-aux.mkxl">
+        <cd:arguments>
+            <cd:csname/>
+            <cd:csname/>
+        </cd:arguments>
+    </cd:command>
+
     <cd:command name="simplegroupedcommand" level="system" category="system" file="syst-aux.mkxl">
         <cd:arguments>
             <cd:resolve name="argument-command"/>
             <cd:resolve name="argument-command"/>
+        </cd:arguments>
+    </cd:command>
+
+    <cd:command name="simplegroupedcommandcs" level="system" category="system" file="syst-aux.mkxl">
+        <cd:arguments>
+            <cd:csname/>
+            <cd:csname/>
         </cd:arguments>
     </cd:command>
 
@@ -2059,6 +2120,32 @@
             <cd:resolve name="argument-command"/>
             <cd:resolve name="argument-command"/>
             <cd:resolve name="argument-command"/>
+        </cd:arguments>
+    </cd:command>
+
+    <cd:command name="pickupgroupedcommandcs" level="system" category="system" file="syst-aux.mkxl">
+        <cd:arguments>
+            <cd:csname/>
+            <cd:csname/>
+            <cd:csname/>
+        </cd:arguments>
+    </cd:command>
+
+    <cd:command name="triggergroupedcommand" level="system" category="system" file="syst-aux.mkxl">
+        <cd:arguments>
+            <cd:resolve name="argument-command"/>
+        </cd:arguments>
+    </cd:command>
+
+    <cd:command name="triggergroupedcommandcs" level="system" category="system" file="syst-aux.mkxl">
+        <cd:arguments>
+            <cd:csname/>
+        </cd:arguments>
+    </cd:command>
+
+    <cd:command name="mathgroupedcommandcs" level="system" category="system" file="syst-aux.mkxl">
+        <cd:arguments>
+            <cd:csname/>
         </cd:arguments>
     </cd:command>
 
@@ -3702,7 +3789,20 @@
 
     <cd:command name="luaexpr" level="system" category="strings" file="syst-lua.mkiv">
         <cd:arguments>
+            <cd:keywords optional="yes">
+                <cd:constant type="cd:text"/>
+            </cd:keywords>
             <cd:content/>
+        </cd:arguments>
+    </cd:command>
+
+    <cd:command name="iflua" level="system" category="system" keywords="conditional" file="syst-lua.lmt">
+        <cd:arguments>
+            <cd:resolve name="argument-text"/>
+            <cd:resolve name="string-true"/>
+            <cd:delimiter name="else"/>
+            <cd:resolve name="string-false"/>
+            <cd:delimiter name="fi"/>
         </cd:arguments>
     </cd:command>
 
@@ -3713,6 +3813,15 @@
                     <cd:constant type="cd:number"/>
                 </cd:parameter>
             </cd:assignments>
+        </cd:arguments>
+    </cd:command>
+
+    <cd:command name="resetmacros" level="system" file="syst-aux.mkxl">
+        <cd:arguments>
+            <cd:keywords list="yes">
+                <cd:constant type="cd:name"/>
+                <cd:constant type="cd:csname"/>
+            </cd:keywords>
         </cd:arguments>
     </cd:command>
 

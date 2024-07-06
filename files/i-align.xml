@@ -330,4 +330,10 @@
         </cd:arguments>
     </cd:command>
 
+    <cd:command name="ap" level="document" category="alignment" file="tabl-ali.mkxl">
+        <cd:arguments>
+            <cd:resolve name="keyword-number"/>
+        </cd:arguments>
+    </cd:command>
+
 </cd:interface>

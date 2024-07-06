@@ -152,10 +152,30 @@
         </cd:arguments>
     </cd:command>
 
-    <cd:command name="crlf" level="document" category="whitespace" file="typo-wrp.mkiv"/>
+    <cd:command name="crlf" level="document" category="whitespace" file="typo-wrp.mkxl"/>
 
-    <cd:command name="settestcrlf" level="document" category="whitespace" file="typo-wrp.mkiv"/>
+    <cd:command name="settestcrlf" level="document" category="whitespace" file="typo-wrp.mkxl"/>
 
-    <cd:command name="crlfplaceholder" level="document" category="whitespace" file="typo-wrp.mkiv"/>
+    <cd:command name="crlfplaceholder" level="document" category="whitespace" file="typo-wrp.mkxl"/>
+
+    <cd:command name="tightfitboundary" level="document" category="whitespace" file="typo-wrp.mkxl"/>
+
+    <cd:command name="tightfitcompensation" level="document" category="whitespace" file="typo-wrp.lmt"/>
+
+    <cd:command name="insertblankbefore" level="document" file="typo-adj.mkxl">
+        <cd:arguments>
+            <cd:keywords list="yes">
+                <cd:inherit name="blank"/>
+            </cd:keywords>
+        </cd:arguments>
+    </cd:command>
+
+    <cd:command name="insertblankafter" level="document" file="typo-adj.mkxl">
+        <cd:arguments>
+            <cd:keywords list="yes">
+                <cd:inherit name="blank"/>
+            </cd:keywords>
+        </cd:arguments>
+    </cd:command>
 
 </cd:interface>

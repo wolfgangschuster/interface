@@ -1793,4 +1793,38 @@
         </cd:arguments>
     </cd:command>
 
+    <cd:command name="setextrafontkerns" level="style" category="fonts" file="typo-fkr.mkxl">
+        <cd:arguments>
+            <cd:keywords optional="yes">
+                <cd:constant type="none"/>
+                <cd:constant type="min"/>
+                <cd:constant type="max"/>
+                <cd:constant type="mixed"/>
+                <cd:constant type="reset" default="yes"/>
+            </cd:keywords>
+        </cd:arguments>
+    </cd:command>
+
+    <cd:command name="resetextrafontkerns" level="style" category="fonts" file="typo-fkr.mkxl"/>
+
+    <cd:command name="unicodenumber" level="document" category="fonts" file="unic-ini.mkxl">
+        <cd:arguments>
+            <cd:resolve name="argument-number"/>
+        </cd:arguments>
+    </cd:command>
+
+    <cd:command name="unicodehexnumber" level="document" category="fonts" file="unic-ini.mkxl">
+        <cd:arguments>
+            <cd:resolve name="argument-number"/>
+        </cd:arguments>
+    </cd:command>
+
+    <cd:command name="unicodechar" level="document" category="fonts" file="unic-ini.lmt">
+        <cd:arguments>
+            <cd:resolve name="argument-text"/>
+        </cd:arguments>
+    </cd:command>
+
+    <cd:command name="unknownchar" level="document" category="fonts" file="unic-ini.mkxl"/>
+
 </cd:interface>

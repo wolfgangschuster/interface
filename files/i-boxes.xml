@@ -1262,4 +1262,11 @@
         </cd:arguments>
     </cd:command>
 
+    <cd:command name="boxfixstretch" level="system" category="boxes" file="supp-box.mkxl">
+        <cd:arguments>
+            <cd:resolve name="string-boxoptions"/>
+            <cd:resolve name="string-box"/>
+        </cd:arguments>
+    </cd:command>
+
 </cd:interface>

@@ -436,4 +436,8 @@
         <cd:constant value="underbrackettext"/>
     </cd:define>
 
+    <cd:define name="instance-synchronize">
+        <cd:constant value="paralleltext"/>
+    </cd:define>
+
 </cd:interface>
