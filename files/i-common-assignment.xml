@@ -140,6 +140,9 @@
                 <cd:constant type="cd:text"/>
                 <cd:constant type="cd:text" prefix="cd:processor" method="apply"/>
             </cd:parameter>
+            <cd:parameter name="processors">
+                <cd:constant type="cd:processor"/>
+            </cd:parameter>
             <cd:parameter name="keys:1">
                 <cd:constant type="cd:text"/>
             </cd:parameter>
@@ -160,6 +163,15 @@
             </cd:parameter>
             <cd:parameter name="alternative">
                 <cd:constant type="cd:text"/>
+            </cd:parameter>
+            <cd:parameter name="processors:1">
+                <cd:constant type="cd:processor"/>
+            </cd:parameter>
+            <cd:parameter name="processors:2">
+                <cd:constant type="cd:processor"/>
+            </cd:parameter>
+            <cd:parameter name="processors:3">
+                <cd:constant type="cd:processor"/>
             </cd:parameter>
         </cd:assignments>
     </cd:define>
