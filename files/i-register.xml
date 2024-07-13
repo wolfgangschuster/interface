@@ -496,7 +496,7 @@
             <cd:resolve name="keyword-name"/>
             <cd:resolve name="keyword-file"/>
             <cd:resolve name="keyword-name"/>
-            <cd:resolve name="keyword-text"/>
+            <cd:resolve name="keyword-text-optional"/>
         </cd:arguments>
     </cd:command>
 

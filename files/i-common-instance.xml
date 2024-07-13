@@ -440,4 +440,8 @@
         <cd:constant value="paralleltext"/>
     </cd:define>
 
+    <cd:define name="instance-textdisplay">
+        <cd:constant value="textdisplay"/>
+    </cd:define>
+
 </cd:interface>

@@ -92,6 +92,23 @@
     <!--        *   -->
     <!-- \... {...} -->
     <!--            -->
+    <!-- * CONTENT  -->
+
+    <cd:define name="argument-content">
+        <cd:keywords delimiters="braces">
+            <cd:constant type="cd:content"/>
+        </cd:keywords>
+    </cd:define>
+
+    <cd:define name="argument-content-optional">
+        <cd:keywords delimiters="braces" optional="yes">
+            <cd:constant type="cd:content"/>
+        </cd:keywords>
+    </cd:define>
+
+    <!--        *   -->
+    <!-- \... {...} -->
+    <!--            -->
     <!-- * FILE     -->
 
     <cd:define name="argument-file">

@@ -278,6 +278,7 @@
         <cd:constant type="high"/>
         <cd:constant type="low"/>
         <cd:constant type="fit"/>
+        <cd:constant type="tight"/>
         <cd:constant type="tolerant"/>
         <cd:constant type="verytolerant"/>
         <cd:constant type="90"/>

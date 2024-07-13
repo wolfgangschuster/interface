@@ -29,6 +29,7 @@
     <cd:interfacefile filename="i-accent.xml"/>
     <cd:interfacefile filename="i-adaptive.xml"/>
     <cd:interfacefile filename="i-align.xml"/>
+    <cd:interfacefile filename="i-alternate.xml"/>
     <cd:interfacefile filename="i-anchor.xml"/>
     <cd:interfacefile filename="i-attachment.xml"/>
     <cd:interfacefile filename="i-attribute.xml"/>
@@ -157,6 +158,7 @@
     <cd:interfacefile filename="i-object.xml"/>
     <cd:interfacefile filename="i-offset.xml"/>
     <cd:interfacefile filename="i-opposite.xml"/>
+    <cd:interfacefile filename="i-optimize.xml"/>
     <cd:interfacefile filename="i-orientation.xml"/>
     <cd:interfacefile filename="i-ornament.xml"/>
     <cd:interfacefile filename="i-output.xml"/>
@@ -216,7 +218,9 @@
     <cd:interfacefile filename="i-simplecolumns.xml"/>
     <cd:interfacefile filename="i-smash.xml"/>
     <cd:interfacefile filename="i-sort.xml"/>
-    <cd:interfacefile filename="i-soundtrack.xml"/>
+    <!--
+        <cd:interfacefile filename="i-soundtrack.xml"/>
+    -->
     <cd:interfacefile filename="i-spellchecking.xml"/>
     <cd:interfacefile filename="i-stacking.xml"/>
     <cd:interfacefile filename="i-startstop.xml"/>
@@ -236,6 +240,7 @@
         <cd:interfacefile filename="i-tex.xml"/>
     -->
     <cd:interfacefile filename="i-textbackground.xml"/>
+    <cd:interfacefile filename="i-textdisplay.xml"/>
     <cd:interfacefile filename="i-textflow.xml"/>
     <cd:interfacefile filename="i-textrule.xml"/>
     <cd:interfacefile filename="i-texts.xml"/>

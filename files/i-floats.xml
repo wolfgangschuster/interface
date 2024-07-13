@@ -506,6 +506,9 @@
                     <cd:constant type="yes"/>
                     <cd:constant type="no" default="yes"/>
                 </cd:parameter>
+                <cd:parameter name="mode">
+                    <cd:constant type="cd:name"/>
+                </cd:parameter>
                 <cd:inherit name="setupcounter"/>
                 <cd:inherit name="setupframed"/>
             </cd:assignments>
