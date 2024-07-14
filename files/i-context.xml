@@ -138,6 +138,7 @@
     <cd:interfacefile filename="i-marker.xml"/>
     <cd:interfacefile filename="i-marking.xml"/>
     <cd:interfacefile filename="i-math.xml"/>
+    <cd:interfacefile filename="i-mathaccent.xml"/>
     <cd:interfacefile filename="i-mathalignment.xml"/>
     <cd:interfacefile filename="i-mathcases.xml"/>
     <cd:interfacefile filename="i-mathfence.xml"/>

@@ -1642,4 +1642,53 @@
         <cd:constant type="xml.path.keeplastmatch"/>
     </cd:define>
 
+    <!-- mathcode/mathclass -->
+
+    <cd:define name="mathclass">
+        <cd:constant type="all"/>
+        <cd:constant type="begin"/>
+        <cd:constant type="end"/>
+        <cd:constant type="unset"/>
+        <cd:constant type="ordinary"/>
+        <cd:constant type="operator"/>
+        <cd:constant type="binary"/>
+        <cd:constant type="relation"/>
+        <cd:constant type="open"/>
+        <cd:constant type="close"/>
+        <cd:constant type="punctuation"/>
+        <cd:constant type="variable"/>
+        <cd:constant type="active"/>
+        <cd:constant type="inner"/>
+        <cd:constant type="under"/>
+        <cd:constant type="over"/>
+        <cd:constant type="fraction"/>
+        <cd:constant type="radical"/>
+        <cd:constant type="middle"/>
+        <cd:constant type="prime"/>
+        <cd:constant type="accent"/>
+        <cd:constant type="fenced"/>
+        <cd:constant type="ghost"/>
+        <cd:constant type="vcenter"/>
+        <cd:constant type="explicit"/>
+        <cd:constant type="imaginary"/>
+        <cd:constant type="differential"/>
+        <cd:constant type="exponential"/>
+        <cd:constant type="integral"/>
+        <cd:constant type="ellipsis"/>
+        <cd:constant type="function"/>
+        <cd:constant type="digit"/>
+        <cd:constant type="division"/>
+        <cd:constant type="factorial"/>
+        <cd:constant type="wrapped"/>
+        <cd:constant type="construct"/>
+        <cd:constant type="dimension"/>
+        <cd:constant type="unary"/>
+        <cd:constant type="textpunctuation"/>
+        <cd:constant type="unspaced"/>
+        <cd:constant type="experimental"/>
+        <cd:constant type="fake"/>
+        <cd:constant type="numbergroup"/>
+        <cd:constant type="continuation"/>
+    </cd:define>
+
 </cd:interface>

@@ -444,4 +444,57 @@
         <cd:constant value="textdisplay"/>
     </cd:define>
 
+    <cd:define name="instance-mathaccent">
+        <!-- mathtopaccent -->
+        <cd:constant value="grave"/>
+        <cd:constant value="acute"/>
+        <cd:constant value="hat"/>
+        <cd:constant value="tilde"/>
+        <cd:constant value="bar"/>
+        <cd:constant value="breve"/>
+        <cd:constant value="dot"/>
+        <cd:constant value="ddot"/>
+        <cd:constant value="overhook"/>
+        <cd:constant value="ring"/>
+        <!--
+            <cd:constant value="mathring"/>
+        -->
+        <cd:constant value="check"/>
+        <cd:constant value="overleftharpoon"/>
+        <cd:constant value="overrightharpoon"/>
+        <cd:constant value="dddot"/>
+        <cd:constant value="ddddot"/>
+        <cd:constant value="widegrave"/>
+        <cd:constant value="wideacute"/>
+        <cd:constant value="widehat"/>
+        <cd:constant value="widetilde"/>
+        <cd:constant value="widebar"/>
+        <cd:constant value="widebreve"/>
+        <cd:constant value="widedot"/>
+        <cd:constant value="wideddot"/>
+        <cd:constant value="widering"/>
+        <cd:constant value="widecheck"/>
+        <cd:constant value="widedddot"/>
+        <cd:constant value="vec"/>
+        <cd:constant value="wideoverleftharpoon"/>
+        <cd:constant value="wideoverrightharpoon"/>
+        <cd:constant value="wideoverleftarrow"/>
+        <cd:constant value="wideoverrightarrow"/>
+        <cd:constant value="wideoverleftrightarrow"/>
+        <cd:constant value="conjugate"/>
+        <cd:constant value="closure"/>
+        <cd:constant value="conjugate"/>
+        <cd:constant value="conjugate"/>
+        <cd:constant value="closure"/>
+        <cd:constant value="conjugate"/>
+        <!-- mathbottomaccent -->
+        <cd:constant value="wideundertilde"/>
+        <cd:constant value="wideunderbar"/>
+        <cd:constant value="wideunderleftrightarrow"/>
+        <cd:constant value="wideunderrightharpoon"/>
+        <cd:constant value="wideunderleftharpoon"/>
+        <cd:constant value="wideunderleftarrow"/>
+        <cd:constant value="wideunderrightarrow"/>
+    </cd:define>
+
 </cd:interface>
