@@ -369,4 +369,49 @@
         </cd:assignments>
     </cd:define>
 
+    <!--           *      -->
+    <!-- \... [..,.=.,..] -->
+    <!--                  -->
+    <!-- FORMULADATA      -->
+
+    <cd:define name="assignment-formuladata-list">
+        <cd:assignments list="yes">
+            <cd:parameter name="title">
+                <cd:constant type="cd:text"/>
+            </cd:parameter>
+            <cd:parameter name="reference">
+                <cd:resolve name="value-formulareference"/>
+            </cd:parameter>
+            <cd:parameter name="bookmark">
+                <cd:constant type="cd:text"/>
+            </cd:parameter>
+            <cd:parameter name="list">
+                <cd:resolve name="cd:text"/>
+            </cd:parameter>
+            <cd:parameter name="suffix">
+                <cd:constant type="cd:text"/>
+            </cd:parameter>
+        </cd:assignments>
+    </cd:define>
+
+    <cd:define name="assignment-formuladata-list-optional">
+        <cd:assignments list="yes" optional="yes">
+            <cd:parameter name="title">
+                <cd:constant type="cd:text"/>
+            </cd:parameter>
+            <cd:parameter name="reference">
+                <cd:resolve name="value-formulareference"/>
+            </cd:parameter>
+            <cd:parameter name="bookmark">
+                <cd:constant type="cd:text"/>
+            </cd:parameter>
+            <cd:parameter name="list">
+                <cd:constant type="cd:text"/>
+            </cd:parameter>
+            <cd:parameter name="suffix">
+                <cd:constant type="cd:text"/>
+            </cd:parameter>
+        </cd:assignments>
+    </cd:define>
+
 </cd:interface>

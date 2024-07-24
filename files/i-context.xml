@@ -141,11 +141,16 @@
     <cd:interfacefile filename="i-mathaccent.xml"/>
     <cd:interfacefile filename="i-mathalignment.xml"/>
     <cd:interfacefile filename="i-mathcases.xml"/>
+    <cd:interfacefile filename="i-mathdelimited.xml"/>
+    <cd:interfacefile filename="i-mathdelimiter.xml"/>
     <cd:interfacefile filename="i-mathfence.xml"/>
+    <cd:interfacefile filename="i-mathfunction.xml"/>
     <cd:interfacefile filename="i-mathmatrix.xml"/>
     <!--
         <cd:interfacefile filename="i-mathname.xml"/>
     -->
+    <cd:interfacefile filename="i-mathnesting.xml"/>
+    <cd:interfacefile filename="i-mathoperator.xml"/>
     <cd:interfacefile filename="i-mathornament.xml"/>
     <cd:interfacefile filename="i-mathradical.xml"/>
     <cd:interfacefile filename="i-mathstackers.xml"/>

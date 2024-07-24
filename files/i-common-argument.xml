@@ -560,6 +560,17 @@
         </cd:keywords>
     </cd:define>
 
+    <!--        *      -->
+    <!-- \... {...}    -->
+    <!--               -->
+    <!-- * MIDDLEFENCE -->
+
+    <cd:define name="argument-middlefence">
+        <cd:keywords delimiters="braces">
+            <cd:resolve name="value-middlefence"/>
+        </cd:keywords>
+    </cd:define>
+
     <!--        *     -->
     <!-- \... {...}   -->
     <!--              -->
