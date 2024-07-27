@@ -16,7 +16,7 @@
 
     <cd:command name="setupmathoperator" level="style" category="mathematics" file="math-lop.mkxl"> 
         <cd:arguments>
-            <cd:resolve name="keyword-name-listoptional"/>
+            <cd:resolve name="keyword-name-list-optional"/>
             <cd:assignments list="yes">
                 <cd:inherit name="setupmathoperators"/>
             </cd:assignments>
@@ -25,7 +25,7 @@
 
     <cd:command name="setupmathoperators" level="style" category="mathematics" file="math-lop.mkxl"> 
         <cd:arguments>
-            <cd:resolve name="keyword-name-listoptional"/>
+            <cd:resolve name="keyword-name-list-optional"/>
             <cd:assignments list="yes">
                 <cd:parameter name="mathclass">
                     <cd:resolve name="value-mathclass"/>

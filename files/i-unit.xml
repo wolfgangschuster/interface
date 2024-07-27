@@ -110,7 +110,7 @@
                 <cd:constant type="prefix"/>
                 <cd:constant type="unit" default="yes"/>
                 <cd:constant type="operator"/>
-                <cd:constant type="suffixe"/>
+                <cd:constant type="suffix"/>
                 <cd:constant type="symbol"/>
                 <cd:constant type="packaged"/>
             </cd:keywords>
@@ -124,7 +124,7 @@
                 <cd:constant type="prefix"/>
                 <cd:constant type="unit" default="yes"/>
                 <cd:constant type="operator"/>
-                <cd:constant type="suffixe"/>
+                <cd:constant type="suffix"/>
                 <cd:constant type="symbol"/>
                 <cd:constant type="packaged"/>
             </cd:keywords>

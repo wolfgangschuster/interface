@@ -531,7 +531,7 @@
                 <cd:parameter name="right">
                     <cd:constant type="cd:command"/>
                 </cd:parameter>
-                <cd:parameter name="leftoffser">
+                <cd:parameter name="leftoffset">
                     <cd:constant type="cd:dimension"/>
                 </cd:parameter>
                 <cd:parameter name="rightoffset">

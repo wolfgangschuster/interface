@@ -76,9 +76,6 @@
                 <cd:parameter name="numbercommand">
                     <cd:constant type="cd:oneargument"/>
                 </cd:parameter>
-                <cd:parameter name="color">
-                    <cd:constant type="cd:color"/>
-                </cd:parameter>
                 <cd:parameter name="numberstyle">
                     <cd:resolve name="value-style"/>
                 </cd:parameter>
@@ -168,7 +165,7 @@
                     <cd:constant type="line"/>
                 </cd:parameter>
                 <cd:parameter name="bodyfont">
-                    <cd:inherit name="\setupbodyfont"/>
+                    <cd:inherit name="setupbodyfont"/>
                 </cd:parameter>
                 <cd:parameter name="style">
                     <cd:resolve name="value-style"/>

@@ -788,14 +788,22 @@
         </cd:arguments>
     </cd:command>
 
-    <cd:command name="placenamedfloat" level="document" category="structure" file="page-flt.mkiv">
+    <cd:command name="placenamedfloat" level="document" category="structure" file="page-flt.mkxl">
         <cd:arguments>
             <cd:resolve name="keyword-name"/>
             <cd:resolve name="keyword-reference"/>
         </cd:arguments>
     </cd:command>
 
-    <cd:command name="placefloatwithsetups" level="document" category="structure" file="page-flt.mkiv">
+    <cd:command name="placesavedfloat" level="document" category="structure" file="page-flt.mkxl">
+        <cd:arguments>
+            <cd:resolve name="keyword-name"/>
+            <cd:resolve name="keyword-reference"/>
+            <cd:resolve name="assignment-floatdata-list-optional"/>
+        </cd:arguments>
+    </cd:command>
+
+    <cd:command name="placefloatwithsetups" level="document" category="structure" file="page-flt.mkxl">
         <cd:arguments>
             <cd:resolve name="keyword-name"/>
             <cd:resolve name="keyword-floatlocation-list-optional"/>
@@ -805,7 +813,9 @@
         </cd:arguments>
     </cd:command>
 
-    <cd:command name="definefacingfloat" level="style" category="structure" file="page-ffl.mkiv">
+    <cd:command name="placefloatplaceholder" level="document" category="structure" file="page-flt.mkxl"/>
+
+    <cd:command name="definefacingfloat" level="style" category="structure" file="page-ffl.mkxl">
         <cd:arguments>
             <cd:resolve name="keyword-name"/>
             <cd:resolve name="keyword-name-optional"/>
@@ -815,7 +825,7 @@
         </cd:arguments>
     </cd:command>
 
-    <cd:command name="setupfacingfloat" level="style" category="structure" file="page-ffl.mkiv">
+    <cd:command name="setupfacingfloat" level="style" category="structure" file="page-ffl.mkxl">
         <cd:arguments>
             <cd:resolve name="keyword-name-list-optional"/>
             <cd:assignments list="yes">
@@ -844,9 +854,17 @@
         </cd:arguments>
     </cd:command>
 
-    <cd:command name="facingfloat" type="environment" level="document" category="structure" file="page-ffl.mkiv">
+    <cd:command name="facingfloat" type="environment" level="document" category="structure" file="page-ffl.mkxl">
         <cd:arguments>
             <cd:resolve name="keyword-name"/>
+        </cd:arguments>
+    </cd:command>
+
+    <cd:command name="registertopcontent" level="document" category="structure" file="page-ffl.mkxl">
+        <cd:arguments>
+            <cd:resolve name="keyword-number"/>
+            <cd:csname/>
+            <cd:content/>
         </cd:arguments>
     </cd:command>
 

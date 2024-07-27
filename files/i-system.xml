@@ -791,7 +791,7 @@
             </cd:keywords>
             <cd:keywords delimiters="braces">
                 <cd:constant type="cd:dimension"/>
-                <cd:constant type="%" prefix="cd:number" method="none"/>
+                <cd:constant type="&percnt;" prefix="cd:number" method="none"/>
             </cd:keywords>
         </cd:arguments>
     </cd:command>
@@ -804,7 +804,7 @@
             </cd:keywords>
             <cd:keywords delimiters="braces">
                 <cd:constant type="cd:dimension"/>
-                <cd:constant type="%" prefix="cd:number" method="none"/>
+                <cd:constant type="&percnt;" prefix="cd:number" method="none"/>
             </cd:keywords>
         </cd:arguments>
     </cd:command>
@@ -1572,7 +1572,7 @@
         </cd:arguments>
     </cd:command>
 
-    <cd:command name="letgvalurelax" level="system" category="system" file="syst-aux.mkxl">
+    <cd:command name="letgvaluerelax" level="system" category="system" file="syst-aux.mkxl">
         <cd:arguments>
             <cd:resolve name="argument-name"/>
         </cd:arguments>

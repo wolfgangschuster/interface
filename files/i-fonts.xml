@@ -242,7 +242,7 @@
                 <cd:parameter name="featureset">
                     <cd:constant type="cd:name"/>
                 </cd:parameter>
-                <cd:parameter name="colorsheme">
+                <cd:parameter name="colorscheme">
                     <cd:constant type="cd:name"/>
                 </cd:parameter>
                 <cd:parameter name="postprocessor">
@@ -490,7 +490,7 @@
         </cd:arguments>
     </cd:command>
 
-    <cd:command name="doresetandafffeature" level="system" category="fonts" file="font-fea.mkvi">
+    <cd:command name="doresetandaddfeature" level="system" category="fonts" file="font-fea.mkvi">
         <cd:arguments>
             <cd:resolve name="argument-name-list"/>
         </cd:arguments>
@@ -604,13 +604,13 @@
         </cd:arguments>
     </cd:command>
 
-    <cd:command name="setfontcolorsheme" level="style" category="fonts" file="font-gds.mkvi">
+    <cd:command name="setfontcolorscheme" level="style" category="fonts" file="font-gds.mkvi">
         <cd:arguments>
             <cd:resolve name="keyword-name"/>
         </cd:arguments>
     </cd:command>
 
-    <cd:command name="resetfontcolorsheme" level="style" category="fonts" file="font-gds.mkvi"/>
+    <cd:command name="resetfontcolorscheme" level="style" category="fonts" file="font-gds.mkvi"/>
 
     <cd:command name="definedfont" level="style" category="fonts" file="font-ini.mkvi">
         <cd:arguments>
