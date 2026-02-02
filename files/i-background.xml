@@ -141,6 +141,18 @@
         </cd:arguments>
     </cd:command>
 
+    <cd:command name="prependhiddenbackground" level="system" category="background" file="page-bck.mkxl">
+        <cd:arguments>
+            <cd:resolve name="argument-name-list"/>
+        </cd:arguments>
+    </cd:command>
+
+    <cd:command name="appendhiddenbackground" level="system" category="background" file="page-bck.mkxl">
+        <cd:arguments>
+            <cd:resolve name="argument-name-list"/>
+        </cd:arguments>
+    </cd:command>
+
     <cd:command name="background" type="environment" begin="push" end="pop" level="system" category="background" file="page-bck.mkiv">
         <cd:arguments>
             <cd:resolve name="keyword-name"/>

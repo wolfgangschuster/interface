@@ -28,8 +28,8 @@
                     <cd:constant type="yes" default="yes"/>
                     <cd:constant type="no"/>
                 </cd:parameter>
-                <cd:parameter name="style">
-                    <cd:resolve name="value-style"/>
+                <cd:parameter name="mathstyle">
+                    <cd:resolve name="value-mathstyle"/>
                 </cd:parameter>
                 <cd:parameter name="distance">
                     <cd:constant type="cd:dimension"/>

@@ -43,8 +43,8 @@
                     <cd:constant type="flushleft" prefix="cd:number" method="range"/>
                     <cd:constant type="flushright" prefix="cd:number" method="range"/>
                 </cd:parameter>
-                <cd:parameter name="style">
-                    <cd:resolve name="value-style"/>
+                <cd:parameter name="mathstyle">
+                    <cd:resolve name="value-mathstyle"/>
                 </cd:parameter>
                 <cd:parameter name="distance">
                     <cd:constant type="cd:dimension"/>
@@ -192,5 +192,30 @@
     <cd:command name="bordermatrix" type="environment" level="document" category="mathematics" keywords="tables" file="math-pln.mkiv"/>
 
     <cd:command name="bbordermatrix" type="environment" level="document" category="mathematics" keywords="tables" file="math-pln.mkiv"/>
+
+    <cd:command name="graphicline" file="node-rul.mkxl">
+        <cd:arguments>
+            <cd:resolve name="keyword-name"/>
+            <cd:keywords list="yes" optional="yes">
+                <cd:constant type="s"/>
+                <cd:constant type="m"/>
+                <cd:constant type="a"/>
+                <cd:constant type="x"/>
+                <cd:constant type="h"/>
+                <cd:constant type="d"/>
+                <cd:constant type="o"/>
+                <cd:constant type="e"/>
+                <cd:constant type="c"/>
+                <cd:constant type="r"/>
+                <cd:constant type="t"/>
+                <cd:constant type="b"/>
+                <cd:constant type="T"/>
+                <cd:constant type="B"/>
+                <cd:constant type="cd:dimension"/>
+                <cd:constant type="cd:number"/>
+                <cd:constant type="cd:color"/>
+            </cd:keywords>
+        </cd:arguments>
+    </cd:command>
 
 </cd:interface>

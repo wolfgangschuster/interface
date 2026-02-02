@@ -22,16 +22,100 @@
                     <cd:constant type="rectangular" default="yes"/>
                     <cd:constant type="round"/>
                     <cd:constant type="cd:number"/>
+                    <cd:constant type="l"/>
+                    <cd:constant type="r"/>
+                    <cd:constant type="b"/>
+                    <cd:constant type="t"/>
+                    <cd:constant type="lr"/>
+                    <cd:constant type="rl"/>
+                    <cd:constant type="tb"/>
+                    <cd:constant type="bt"/>
+                    <cd:constant type="rt"/>
+                    <cd:constant type="tr"/>
+                    <cd:constant type="rb"/>
+                    <cd:constant type="br"/>
+                    <cd:constant type="bl"/>
+                    <cd:constant type="lb"/>
+                    <cd:constant type="tl"/>
+                    <cd:constant type="lt"/>
+                    <cd:constant type="trb"/>
+                    <cd:constant type="rtl"/>
+                    <cd:constant type="tlb"/>
+                    <cd:constant type="blt"/>
+                    <cd:constant type="ltr"/>
+                    <cd:constant type="rtl"/>
+                    <cd:constant type="lbr"/>
+                    <cd:constant type="rbl"/>
+                    <cd:constant type="ltrb"/>
+                    <cd:constant type="trbl"/>
+                    <cd:constant type="rblt"/>
+                    <cd:constant type="bltr"/>
                 </cd:parameter>
                 <cd:parameter name="framecorner">
                     <cd:constant type="rectangular" default="yes"/>
                     <cd:constant type="round"/>
                     <cd:constant type="cd:number"/>
+                    <cd:constant type="l"/>
+                    <cd:constant type="r"/>
+                    <cd:constant type="b"/>
+                    <cd:constant type="t"/>
+                    <cd:constant type="lr"/>
+                    <cd:constant type="rl"/>
+                    <cd:constant type="tb"/>
+                    <cd:constant type="bt"/>
+                    <cd:constant type="rt"/>
+                    <cd:constant type="tr"/>
+                    <cd:constant type="rb"/>
+                    <cd:constant type="br"/>
+                    <cd:constant type="bl"/>
+                    <cd:constant type="lb"/>
+                    <cd:constant type="tl"/>
+                    <cd:constant type="lt"/>
+                    <cd:constant type="trb"/>
+                    <cd:constant type="rtl"/>
+                    <cd:constant type="tlb"/>
+                    <cd:constant type="blt"/>
+                    <cd:constant type="ltr"/>
+                    <cd:constant type="rtl"/>
+                    <cd:constant type="lbr"/>
+                    <cd:constant type="rbl"/>
+                    <cd:constant type="ltrb"/>
+                    <cd:constant type="trbl"/>
+                    <cd:constant type="rblt"/>
+                    <cd:constant type="bltr"/>
                 </cd:parameter>
                 <cd:parameter name="backgroundcorner">
                     <cd:constant type="rectangular" default="yes"/>
                     <cd:constant type="round"/>
                     <cd:constant type="cd:number"/>
+                    <cd:constant type="l"/>
+                    <cd:constant type="r"/>
+                    <cd:constant type="b"/>
+                    <cd:constant type="t"/>
+                    <cd:constant type="lr"/>
+                    <cd:constant type="rl"/>
+                    <cd:constant type="tb"/>
+                    <cd:constant type="bt"/>
+                    <cd:constant type="rt"/>
+                    <cd:constant type="tr"/>
+                    <cd:constant type="rb"/>
+                    <cd:constant type="br"/>
+                    <cd:constant type="bl"/>
+                    <cd:constant type="lb"/>
+                    <cd:constant type="tl"/>
+                    <cd:constant type="lt"/>
+                    <cd:constant type="trb"/>
+                    <cd:constant type="rtl"/>
+                    <cd:constant type="tlb"/>
+                    <cd:constant type="blt"/>
+                    <cd:constant type="ltr"/>
+                    <cd:constant type="rtl"/>
+                    <cd:constant type="lbr"/>
+                    <cd:constant type="rbl"/>
+                    <cd:constant type="ltrb"/>
+                    <cd:constant type="trbl"/>
+                    <cd:constant type="rblt"/>
+                    <cd:constant type="bltr"/>
                 </cd:parameter>
                 <cd:parameter name="radius">
                     <cd:constant type="cd:dimension"/>
@@ -178,6 +262,7 @@
                     <cd:constant type="formula"/>
                     <cd:constant type="mathematics"/>
                     <cd:constant type="normal" default="yes"/>
+                    <cd:constant type="inline"/>
                 </cd:parameter>
                 <cd:parameter name="autowidth">
                     <cd:constant type="yes" default="yes"/>
@@ -248,6 +333,20 @@
                 </cd:parameter>
                 <cd:parameter name="dashstep">
                     <cd:constant type="cd:dimension"/>
+                </cd:parameter>
+                <cd:parameter name="synchronize">
+                    <cd:constant type="yes"/>
+                    <cd:constant type="no" default="yes"/>
+                    <cd:constant type="text"/>
+                    <cd:constant type="background"/>
+                </cd:parameter>
+                <cd:parameter name="adaptive">
+                    <cd:constant type="yes"/>
+                    <cd:constant type="delay"/>
+                    <cd:constant type="cd:number"/>
+                </cd:parameter>
+                <cd:parameter name="freezespacing">
+                    <cd:constant type="cd:number"/>
                 </cd:parameter>
             </cd:assignments>
         </cd:arguments>
@@ -361,40 +460,6 @@
             </cd:assignments>
             <cd:content/>
         </cd:arguments>
-    </cd:command>
-
-    <cd:command name="definemathframed" level="style" category="rules" keywords="background mathematics" file="pack-rul.mkxl">
-        <cd:arguments>
-            <cd:resolve name="keyword-name"/>
-            <cd:resolve name="keyword-name-optional"/>
-            <cd:assignments list="yes" optional="yes">
-                <cd:inherit name="setupmathframed"/>
-            </cd:assignments>
-        </cd:arguments>
-    </cd:command>
-
-    <cd:command name="setupmathframed" level="style" category="rules" keywords="background mathematics" file="pack-rul.mkxl">
-        <cd:arguments>
-            <cd:resolve name="keyword-name-list-optional"/>
-            <cd:assignments list="yes">
-                <cd:inherit name="setupframed"/>
-            </cd:assignments>
-        </cd:arguments>
-    </cd:command>
-
-    <cd:command name="mathframed" generated="yes" variant="instance" level="document" category="rules" keywords="background mathematics" file="pack-rul.mkxl">
-        <cd:sequence>
-            <cd:instance value="mathframed"/>
-        </cd:sequence>
-        <cd:arguments>
-            <cd:assignments list="yes" optional="yes">
-                <cd:inherit name="setupmathframed"/>
-            </cd:assignments>
-            <cd:content/>
-        </cd:arguments>
-        <cd:instances>
-            <cd:resolve name="instance-mathframed"/>
-        </cd:instances>
     </cd:command>
 
     <cd:command name="defineformulaframed" level="style" category="rules" keywords="background mathematics" file="math-for.mkiv">
@@ -597,4 +662,12 @@
         </cd:arguments>
     </cd:command>
 
+    <cd:command name="clipframed" type="environment" file="pack-rul.mkxl">
+        <cd:arguments>
+            <cd:assignments list="yes" optional="yes">
+                <cd:inherit name="setupframed"/>
+            </cd:assignments>
+        </cd:arguments>
+    </cd:command>
+    
 </cd:interface>

@@ -318,6 +318,7 @@
         <cd:constant type="rlbt"/>
         <cd:constant type="fxbt"/>
         <cd:constant type="fixd"/>
+        <cd:constant type="append"/>
     </cd:define>
 
     <!-- sortorder = ... -->
@@ -753,6 +754,7 @@
         <cd:constant type="back"/>
         <cd:constant type="overlay"/>
         <cd:constant type="always"/>
+        <cd:constant type="keep"/>
         <cd:constant type="weak"/>
         <cd:constant type="strong"/>
         <cd:constant type="default"/>
@@ -767,6 +769,8 @@
         <cd:constant type="big"/>
         <cd:constant type="line"/>
         <cd:constant type="halfline"/>
+        <cd:constant type="halflinebefore"/>
+        <cd:constant type="halflineafter"/>
         <cd:constant type="quarterline"/>
         <cd:constant type="formula"/>
         <cd:constant type="white"/>
@@ -914,12 +918,15 @@
         <cd:constant type="minifun"/>
         <cd:constant type="extrafun"/>
         <cd:constant type="lessfun"/>
+        <cd:constant type="scaledfun"/>
         <cd:constant type="doublefun"/>
         <cd:constant type="binaryfun"/>
         <cd:constant type="decimalfun"/>
+        <cd:constant type="positfun"/>
         <cd:constant type="mprun"/>
         <cd:constant type="metapost"/>
         <cd:constant type="nofun"/>
+        <cd:constant type="scaledpost"/>
         <cd:constant type="doublepost"/>
         <cd:constant type="binarypost"/>
         <cd:constant type="decimalpost"/>
@@ -1730,6 +1737,31 @@
         <cd:constant type="i:tight"/>
         <cd:constant type="i:fixed"/>
         <cd:constant type="cd:name"/>
+    </cd:define>
+
+    <!-- boxpreset -->
+
+    <cd:define name="value-boxpreset">
+        <cd:constant type="line"/>
+        <cd:constant type="height"/>
+        <cd:constant type="depth"/>
+        <cd:constant type="left"/>
+        <cd:constant type="left,height"/>
+        <cd:constant type="left,top"/>
+        <cd:constant type="left,depth"/>
+        <cd:constant type="left,bottom"/>
+        <cd:constant type="right"/>
+        <cd:constant type="right,height"/>
+        <cd:constant type="right,top"/>
+        <cd:constant type="right,depth"/>
+        <cd:constant type="right,bottom"/>
+        <cd:constant type="middle"/>
+        <cd:constant type="middle,height"/>
+        <cd:constant type="middle,top"/>
+        <cd:constant type="middle,depth"/>
+        <cd:constant type="middle,bottom"/>
+        <cd:constant type="middle,left"/>
+        <cd:constant type="middle,right"/>
     </cd:define>
 
 </cd:interface>

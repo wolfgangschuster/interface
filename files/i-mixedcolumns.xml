@@ -91,6 +91,19 @@
                     <cd:constant type="normal" default="yes"/>
                     <cd:constant type="reverse"/>
                 </cd:parameter>
+                <cd:parameter name="notes">
+                    <cd:constant type="yes"/>
+                    <cd:constant type="no" default="yes"/>
+                </cd:parameter>
+                <cd:parameter name="blank">
+                    <cd:inherit name="blank"/>
+                </cd:parameter>
+                <cd:parameter name="indenting">
+                    <cd:inherit name="setupindenting"/>
+                </cd:parameter>
+                <cd:parameter name="profile">
+                    <cd:constant type="cd:name"/>
+                </cd:parameter>
                 <cd:parameter name="define">
                     <cd:constant type="yes" default="yes"/>
                     <cd:constant type="no"/>
