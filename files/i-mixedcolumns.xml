@@ -4,7 +4,7 @@
 
 <cd:interface xmlns:cd="http://www.pragma-ade.com/commands">
 
-    <cd:command name="definemixedcolumns" level="style" category="columns" keywords="structure layout" file="page-mix.mkiv">
+    <cd:command name="definemixedcolumns" level="style" category="columns" keywords="structure layout" file="page-mix.mkxl">
         <cd:arguments>
             <cd:resolve name="keyword-name"/>
             <cd:resolve name="keyword-name-optional"/>
@@ -14,7 +14,7 @@
         </cd:arguments>
     </cd:command>
 
-    <cd:command name="setupmixedcolumns" level="style" category="columns" keywords="structure layout" file="page-mix.mkiv">
+    <cd:command name="setupmixedcolumns" level="style" category="columns" keywords="structure layout" file="page-mix.mkxl">
         <cd:arguments>
             <cd:resolve name="keyword-name-list-optional"/>
             <cd:assignments list="yes">
@@ -113,7 +113,7 @@
         </cd:arguments>
     </cd:command>
 
-    <cd:command name="mixedcolumns" type="environment" level="document" category="columns" keywords="structure layout" file="page-mix.mkiv">
+    <cd:command name="mixedcolumns" type="environment" level="document" category="columns" keywords="structure layout" file="page-mix.mkxl">
         <cd:arguments>
             <cd:resolve name="keyword-name-optional"/>
             <cd:assignments list="yes" optional="yes">
@@ -122,7 +122,7 @@
         </cd:arguments>
     </cd:command>
 
-    <cd:command name="mixedcolumns" type="environment" generated="yes" variant="instance" level="document" category="columns" keywords="structure layout" file="page-mix.mkiv">
+    <cd:command name="mixedcolumns" type="environment" generated="yes" variant="instance" level="document" category="columns" keywords="structure layout" file="page-mix.mkxl">
         <cd:sequence>
             <cd:instance value="mixedcolumns"/>
         </cd:sequence>
@@ -136,7 +136,7 @@
         </cd:instances>
     </cd:command>
 
-    <cd:command name="setupcolumns" level="style" category="columns" keywords="structure layout" file="page-smp.mkiv">
+    <cd:command name="setupcolumns" level="style" category="columns" keywords="structure layout" file="page-smp.mkxl">
         <cd:arguments>
             <cd:assignments list="yes">
                 <cd:inherit name="setupmixedcolumns"/>

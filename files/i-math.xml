@@ -197,6 +197,13 @@
                     <cd:constant type="default" default="yes"/>
                     <cd:constant type="chemistry"/>
                 </cd:parameter>
+                <cd:parameter name="snapping">
+                    <cd:constant type="reset"/>
+                    <cd:constant type="line"/>
+                    <cd:constant type="small"/>
+                    <cd:constant type="medium"/>
+                    <cd:constant type="big"/>
+                </cd:parameter>
             </cd:assignments>
         </cd:arguments>
     </cd:command>
@@ -509,7 +516,7 @@
         </cd:arguments>
     </cd:command>
 
-    <cd:command name="setupmathtext" file="math-ini">
+    <cd:command name="setupmathtext" file="math-ini.mkxl">
         <cd:arguments>
             <cd:resolve name="keyword-name-list-optional"/>
             <cd:assignments list="yes">
@@ -622,79 +629,79 @@
 
     <cd:command name="disablemathautofencing" file="math-ini.mkxl"/>
 
-    <cd:command name="displaymath" level="style" category="mathematics" file="supp-mat.mkiv">
+    <cd:command name="displaymath" level="style" category="mathematics" file="supp-mat.mkxl">
         <cd:arguments>
             <cd:content/>
         </cd:arguments>
     </cd:command>
 
-    <cd:command name="inlinemath" level="style" category="mathematics" file="supp-mat.mkiv">
+    <cd:command name="inlinemath" level="style" category="mathematics" file="supp-mat.mkxl">
         <cd:arguments>
             <cd:content/>
         </cd:arguments>
     </cd:command>
 
-    <cd:command name="textmath" level="style" category="mathematics" file="supp-mat.mkiv">
+    <cd:command name="textmath" level="style" category="mathematics" file="supp-mat.mkxl">
         <cd:arguments>
             <cd:content/>
         </cd:arguments>
     </cd:command>
 
-    <cd:command name="imath" type="environment" level="system" category="mathematics" file="supp-mat.mkiv"/>
+    <cd:command name="imath" type="environment" level="system" category="mathematics" file="supp-mat.mkxl"/>
 
-    <cd:command name="dmath" type="environment" level="system" category="mathematics" file="supp-mat.mkiv"/>
+    <cd:command name="dmath" type="environment" level="system" category="mathematics" file="supp-mat.mkxl"/>
 
-    <cd:command name="mathmode" type="environment" level="system" category="mathematics" file="supp-mat.mkiv"/>
+    <cd:command name="mathmode" type="environment" level="system" category="mathematics" file="supp-mat.mkxl"/>
 
-    <cd:command name="nonmathematics" level="system" category="mathematics" file="supp-mat.mkiv">
+    <cd:command name="nonmathematics" level="system" category="mathematics" file="supp-mat.mkxl">
         <cd:arguments>
             <cd:content/>
         </cd:arguments>
     </cd:command>
 
-    <cd:command name="displaymathematics" level="system" category="mathematics" file="supp-mat.mkiv">
+    <cd:command name="displaymathematics" level="system" category="mathematics" file="supp-mat.mkxl">
         <cd:arguments>
             <cd:content/>
         </cd:arguments>
     </cd:command>
 
-    <cd:command name="inlinemathematics" level="system" category="mathematics" file="supp-mat.mkiv">
+    <cd:command name="inlinemathematics" level="system" category="mathematics" file="supp-mat.mkxl">
         <cd:arguments>
             <cd:content/>
         </cd:arguments>
     </cd:command>
 
-    <cd:command name="automathematics" level="system" category="mathematics" file="supp-mat.mkiv">
+    <cd:command name="automathematics" level="system" category="mathematics" file="supp-mat.mkxl">
         <cd:arguments>
             <cd:content/>
         </cd:arguments>
     </cd:command>
 
-    <cd:command name="cramped" level="system" category="mathematics" file="supp-mat.mkiv">
+    <cd:command name="cramped" level="system" category="mathematics" file="supp-mat.mkxl">
         <cd:arguments>
             <cd:content/>
         </cd:arguments>
     </cd:command>
 
-    <cd:command name="crampedllap" level="system" category="mathematics" file="supp-mat.mkiv">
+    <cd:command name="crampedllap" level="system" category="mathematics" file="supp-mat.mkxl">
         <cd:arguments>
             <cd:content/>
         </cd:arguments>
     </cd:command>
 
-    <cd:command name="crampedrlap" level="system" category="mathematics" file="supp-mat.mkiv">
+    <cd:command name="crampedrlap" level="system" category="mathematics" file="supp-mat.mkxl">
         <cd:arguments>
             <cd:content/>
         </cd:arguments>
     </cd:command>
 
-    <cd:command name="crampedclap" level="system" category="mathematics" file="supp-mat.mkiv">
+    <cd:command name="crampedclap" level="system" category="mathematics" file="supp-mat.mkxl">
         <cd:arguments>
             <cd:content/>
         </cd:arguments>
     </cd:command>
 
-    <cd:command name="autointegral" level="system" category="mathematics" file="math-del.mkiv">
+    <cd:command name="autointegral" level="system" category="mathematics" file="math-del.mkxl">
         <cd:arguments>
             <cd:resolve name="argument-text"/>
             <cd:resolve name="argument-text"/>

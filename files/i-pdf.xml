@@ -131,11 +131,11 @@
         </cd:arguments>
     </cd:command>
 
-    <cd:command name="negative" type="environment" level="document" category="pdf" file="attr-neg.mkiv"/>
+    <cd:command name="negative" type="environment" level="document" category="pdf" file="attr-neg.mkxl"/>
 
-    <cd:command name="positive" type="environment" level="document" category="pdf" file="attr-neg.mkiv"/>
+    <cd:command name="positive" type="environment" level="document" category="pdf" file="attr-neg.mkxl"/>
 
-    <cd:command name="setuppagetransitions" level="style" category="pdf" file="scrn-pag.mkvi">
+    <cd:command name="setuppagetransitions" level="style" category="pdf" file="scrn-pag.mklx">
         <cd:arguments>
             <cd:keywords>
                 <cd:constant type="reset" default="yes"/>

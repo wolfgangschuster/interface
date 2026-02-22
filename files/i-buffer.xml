@@ -239,7 +239,7 @@
         </cd:arguments>
     </cd:command>
 
-    <cd:command name="typebuffer" level="document" category="buffer" keywords="verbatim" file="buff-ver.mkiv">
+    <cd:command name="typebuffer" level="document" category="buffer" keywords="verbatim" file="buff-ver.mkxl">
         <cd:arguments>
             <cd:resolve name="keyword-buffer-list-optional"/>
             <cd:assignments list="yes" optional="yes">
@@ -248,7 +248,7 @@
         </cd:arguments>
     </cd:command>
 
-    <cd:command name="typebuffer" generated="yes" variant="instance" level="document" category="buffer" keywords="verbatim" file="buff-ver.mkiv">
+    <cd:command name="typebuffer" generated="yes" variant="instance" level="document" category="buffer" keywords="verbatim" file="buff-ver.mkxl">
         <cd:sequence>
             <cd:string value="type"/>
             <cd:instance value="buffer"/>
@@ -260,7 +260,7 @@
         </cd:arguments>
     </cd:command>
 
-    <cd:command name="typedefinedbuffer" level="system" category="buffer" keywords="verbatim" file="buff-ver.mkiv">
+    <cd:command name="typedefinedbuffer" level="system" category="buffer" keywords="verbatim" file="buff-ver.mkxl">
         <cd:arguments>
             <cd:resolve name="keyword-buffer"/>
             <cd:assignments list="yes" optional="yes">
@@ -269,7 +269,7 @@
         </cd:arguments>
     </cd:command>
 
-    <cd:command name="prettyprintbuffer" level="style" category="buffer" keywords="verbatim" file="lxml-ini.mkiv">
+    <cd:command name="prettyprintbuffer" level="style" category="buffer" keywords="verbatim" file="lxml-ini.mkxl">
         <cd:arguments>
             <cd:resolve name="argument-buffer"/>
             <cd:keywords delimiters="braces">
@@ -278,7 +278,7 @@
         </cd:arguments>
     </cd:command>
 
-    <cd:command name="inlineprettyprintbuffer" level="style" category="buffer" keywords="verbatim" file="lxml-ini.mkiv">
+    <cd:command name="inlineprettyprintbuffer" level="style" category="buffer" keywords="verbatim" file="lxml-ini.mkxl">
         <cd:arguments>
             <cd:resolve name="argument-buffer"/>
             <cd:keywords delimiters="braces">
@@ -287,7 +287,7 @@
         </cd:arguments>
     </cd:command>
 
-    <cd:command name="typeinlinebuffer" level="style" category="buffer" keywords="verbatim" file="buff-ver.mkiv">
+    <cd:command name="typeinlinebuffer" level="style" category="buffer" keywords="verbatim" file="buff-ver.mkxl">
         <cd:arguments>
             <cd:resolve name="keyword-buffer-list-optional"/>
             <cd:assignments list="yes" optional="yes">
