@@ -411,7 +411,7 @@
         </cd:arguments>
     </cd:command>
 
-    <cd:command name="setdate" file="core-con.mkxl">
+    <cd:command name="setdate" level="style" category="counter" keywords="language" file="core-con.mkxl">
         <cd:arguments>
             <cd:assignments list="yes">
                 <cd:parameter name="d">

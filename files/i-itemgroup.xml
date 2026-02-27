@@ -641,7 +641,7 @@
         </cd:instances>
     </cd:command>
 
-    <cd:command name="upcomingnofitems" file="strc-itm.mklx">
+    <cd:command name="upcomingnofitems" level="system" category="structure" file="strc-itm.mklx">
         <cd:arguments>
             <cd:resolve name="argument-name"/>>
         </cd:arguments>

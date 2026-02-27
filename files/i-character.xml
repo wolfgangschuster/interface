@@ -64,7 +64,7 @@
 
     <cd:command name="letterexclamationmark" level="document" category="characters" file="catc-sym.mkxl"/>
 
-    <cd:command name="chr" file="char-tex.lmt">
+    <cd:command name="chr" level="document" category="characters" file="char-tex.lmt">
         <cd:arguments>
             <cd:resolve name="argument-text"/>
         </cd:arguments>

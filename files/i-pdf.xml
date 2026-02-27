@@ -147,14 +147,14 @@
         </cd:arguments>
     </cd:command>
 
-    <cd:command name="PDFhighlight" type="environment" file="scrn-hlt.mkxl">
+    <cd:command name="PDFhighlight" type="environment" level="document" category="pdf" file="scrn-hlt.mkxl">
         <cd:arguments>
             <cd:resolve name="keyword-name"/>
             <cd:resolve name="keyword-text-optional"/>
         </cd:arguments>
     </cd:command>
 
-    <cd:command name="PDFhighlight" file="scrn-hlt.mkxl">
+    <cd:command name="PDFhighlight" level="document" category="pdf" file="scrn-hlt.mkxl">
         <cd:arguments>
             <cd:resolve name="keyword-name"/>
             <cd:resolve name="keyword-text-optional"/>

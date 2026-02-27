@@ -678,7 +678,7 @@
         </cd:instances>
     </cd:command>
 
-    <cd:command name="placefloattext" type="environment" file="strc-flt.mkxl">
+    <cd:command name="placefloattext" type="environment" level="document" category="structure" file="strc-flt.mkxl">
         <cd:arguments>
             <cd:resolve name="keyword-name"/>
             <cd:resolve name="assignment-floatdata-list-optional"/>
@@ -686,7 +686,7 @@
         </cd:arguments>
     </cd:command>
 
-    <cd:command name="placefloattext" type="environment" generated="yes" variant="instance" file="strc-flt.mkxl">
+    <cd:command name="placefloattext" type="environment" generated="yes" variant="instance" level="document" category="structure" file="strc-flt.mkxl">
         <cd:sequence>
             <cd:string value="place"/>
             <cd:instance value="float"/>
@@ -934,15 +934,15 @@
 
     <cd:command name="splittext" type="environment" level="document" category="structure" file="tabl-tsp.mkxl"/>
 
-    <cd:command name="checksidefloat" category="structure" file="page-sid.mkxl"/>
+    <cd:command name="checksidefloat" level="style" category="structure" file="page-sid.mkxl"/>
 
-    <cd:command name="flushsidefloats" category="structure" file="page-sid.mkxl"/>
+    <cd:command name="flushsidefloats" level="style" category="structure" file="page-sid.mkxl"/>
 
-    <cd:command name="flushsidefloatsafterpar" category="structure" file="page-sid.mkxl"/>
+    <cd:command name="flushsidefloatsafterpar" level="style" category="structure" file="page-sid.mkxl"/>
 
-    <cd:command name="forgetsidefloats" category="structure" file="page-sid.mkxl"/>
+    <cd:command name="forgetsidefloats" level="style" category="structure" file="page-sid.mkxl"/>
 
-    <cd:command name="reorderfloats" file="strc-lst.lmt">
+    <cd:command name="reorderfloats" level="style" category="structure" file="strc-lst.lmt">
         <cd:arguments>
             <cd:resolve name="keyword-name-list"/>
         </cd:arguments>

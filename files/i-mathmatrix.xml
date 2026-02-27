@@ -144,7 +144,7 @@
         </cd:arguments>
     </cd:command>
 
-    <cd:command name="setmathmatrixanchoring" file="math-ali.mkxl">
+    <cd:command name="setmathmatrixanchoring" level="document" category="mathematics" keywords="tables" file="math-ali.mkxl">
         <cd:arguments>
             <cd:keywords>
                 <cd:constant type="yes"/>

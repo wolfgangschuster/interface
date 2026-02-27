@@ -113,7 +113,7 @@
         </cd:arguments>
     </cd:command>
 
-    <cd:command name="buffer" type="environment" generated="yes" variant="instance" category="buffer" level="document" file="buff-ini.mkxl">
+    <cd:command name="buffer" type="environment" generated="yes" variant="instance" level="document" category="buffer" file="buff-ini.mkxl">
         <cd:sequence>
             <cd:instance value="buffer"/>
         </cd:sequence>
@@ -145,7 +145,7 @@
         </cd:arguments>
     </cd:command>
 
-    <cd:command name="definesavebuffer" file="buff-ini.mkxl">
+    <cd:command name="definesavebuffer" level="style" category="buffer" file="buff-ini.mkxl">
         <cd:arguments>
             <cd:resolve name="keyword-name"/>
             <cd:resolve name="keyword-name-optional"/>
@@ -155,7 +155,7 @@
         </cd:arguments>
     </cd:command>
 
-    <cd:command name="setupsavebuffer" file="buff-ini.mkxl">
+    <cd:command name="setupsavebuffer" level="style" category="buffer" file="buff-ini.mkxl">
         <cd:arguments>
             <cd:resolve name="keyword-name-list-optional"/>
             <cd:assignments list="yes">

@@ -270,21 +270,21 @@
         </cd:arguments>
     </cd:command>
 
-    <cd:command name="setdocumentfilename" category="strings" level="system" file="luat-ini.mkxl">
+    <cd:command name="setdocumentfilename" level="system" category="strings" file="luat-ini.mkxl">
         <cd:arguments>
             <cd:resolve name="argument-number"/>
             <cd:resolve name="argument-text"/>
         </cd:arguments>
     </cd:command>
 
-    <cd:command name="setdocumentargument" category="strings" level="system" file="luat-ini.mkxl">
+    <cd:command name="setdocumentargument" level="system" category="strings" file="luat-ini.mkxl">
         <cd:arguments>
             <cd:resolve name="argument-name"/>
             <cd:resolve name="argument-text"/>
         </cd:arguments>
     </cd:command>
 
-    <cd:command name="setdocumentargumentdefault" category="strings" level="system" file="luat-ini.mkxl">
+    <cd:command name="setdocumentargumentdefault" level="system" category="strings" file="luat-ini.mkxl">
         <cd:arguments>
             <cd:resolve name="argument-name"/>
             <cd:resolve name="argument-text"/>

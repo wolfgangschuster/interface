@@ -659,7 +659,7 @@
         </cd:arguments>
     </cd:command>
 
-    <cd:command name="commalistelement" level="system" file="syst-aux.mkxl"/>
+    <cd:command name="commalistelement" level="system" category="system" file="syst-aux.mkxl"/>
 
     <cd:command name="firstcharacter" level="system" category="strings" file="syst-aux.mkxl"/>
 
@@ -3809,7 +3809,7 @@
         </cd:arguments>
     </cd:command>
 
-    <cd:command name="resetmacros" level="system" file="syst-aux.mkxl">
+    <cd:command name="resetmacros" level="system" category="system" file="syst-aux.mkxl">
         <cd:arguments>
             <cd:keywords list="yes">
                 <cd:constant type="cd:name"/>

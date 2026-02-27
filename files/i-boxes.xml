@@ -1269,27 +1269,27 @@
         </cd:arguments>
     </cd:command>
 
-    <cd:command name="vreflected" file="supp-box.mkxl">
+    <cd:command name="vreflected" level="system" category="boxes" file="supp-box.mkxl">
         <cd:arguments>
             <cd:content/>
         </cd:arguments>
     </cd:command>
 
-    <cd:command name="hcontainer" file="node-ext.mkxl">
-        <cd:arguments>
-            <cd:resolve name="string-boxoptions"/>
-            <cd:content/>
-        </cd:arguments>
-    </cd:command>
-
-    <cd:command name="vcontainer" file="node-ext.mkxl">
+    <cd:command name="hcontainer" level="system" category="boxes" file="node-ext.mkxl">
         <cd:arguments>
             <cd:resolve name="string-boxoptions"/>
             <cd:content/>
         </cd:arguments>
     </cd:command>
 
-    <cd:command name="tcontainer" file="node-ext.mkxl">
+    <cd:command name="vcontainer" level="system" category="boxes" file="node-ext.mkxl">
+        <cd:arguments>
+            <cd:resolve name="string-boxoptions"/>
+            <cd:content/>
+        </cd:arguments>
+    </cd:command>
+
+    <cd:command name="tcontainer" level="system" category="boxes" file="node-ext.mkxl">
         <cd:arguments>
             <cd:resolve name="string-boxoptions"/>
             <cd:content/>
